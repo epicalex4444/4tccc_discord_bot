@@ -5,17 +5,23 @@ import zlib
 from simplejson.errors import JSONDecodeError
 
 aliasAddress = './aliases.json'
-leaderboardAddress = './leaderboard.json'
-remainingCombosAddress = './remaining_combos.json'
-submittedCombosAddress = './submitted_combos.json'
-hastebinUrl = 'http://hastebin.com/'
+lbAddress = './leaderboard.json'
+remainingAddress = './remaining_combos.json'
+submittedAddress = './submitted_combos.json'
+
+hastebinUrl = 'https://hastebin.com/'
+
+hereos4tc = ['Quincy', 'Gwen', 'Striker', 'Obyn', 'Church', 'Ben', 'Ezili', 'Pat', 'Adora', 'Brick', 'Etienne']
+towers4tc = ['Dart', 'Boomer', 'Bomb', 'Tack', 'Ice', 'Glue', 'Sniper', 'Bucc', 'Sub', 'Ace', 'Heli', 'Mortar', 'Dartling', 'Wizard', 'Super', 'Ninja', 'Alch', 'Druid', 'Spac', 'Village', 'Engi']
+hereosNK = ['Quincy', 'Gwendolin', 'StrikerJones', 'ObynGreenfoot', 'CaptainChurchill', 'Benjamin', 'Ezili', 'PatFusty', 'Adora', 'AdmiralBrickell', 'Etienne']
+towersNK = ['DartMonkey', 'BoomerangMonkey', 'BombShooter', 'TackShooter', 'IceMonkey', 'GlueGunner', 'SniperMonkey', 'MonkeySub', 'MonkeyBuccaneer', 'MonkeyAce', 'HeliPilot', 'MortarMonkey', 'DartlingGunner', 'WizardMonkey', 'SuperMonkey', 'NinjaMonkey', 'Alchemist', 'Druid', 'SpikeFactory', 'MonkeyVillage', 'EngineerMonkey']
 
 #checks if the towers are valid, towers are capitalised
 def validate_towers(towers):
     for i in range(len(towers)):
         towers[i] = towers[i].capitalize()
         
-    validTowers = ['Quincy', 'Gwen', 'Striker', 'Obyn', 'Church', 'Ben', 'Ezili', 'Pat', 'Adora', 'Brick', 'Etienne', 'Dart', 'Boomer', 'Bomb', 'Tack', 'Ice', 'Glue', 'Sniper', 'Sub', 'Bucc', 'Ace', 'Heli', 'Mortar', 'Dartling', 'Wizard', 'Super', 'Ninja', 'Alch', 'Druid', 'Spac', 'Village', 'Engi']
+    validTowers = hereos4tc + towers4tc
     if is_subset(towers, validTowers):
         return True
     return False
@@ -51,9 +57,9 @@ def tower_print(towers):
 #takes towers list with 0-4, towers can be unordered, returns found 4tc formatted for easy reading
 def find4tc(towers):
     if not validate_towers(towers):
-        return 'Invalid towers'
+        return 'Invalid towers, use !help towers to see tower names'
 
-    file = open(remainingCombosAddress)
+    file = open(remainingAddress)
     remaningCombos = json.load(file)
     file.close()
 
@@ -72,7 +78,7 @@ def find4tc(towers):
 #returns leaderboard formatted for easy reading
 #if name is provided returns score, if amount is provided it returns a shortened version of the leaderboard
 def get_leaderboard(name=None, amount=None):
-    file = open(leaderboardAddress)
+    file = open(lbAddress)
     leaderboard = json.load(file)
     file.close()
 
@@ -99,7 +105,7 @@ def get_leaderboard(name=None, amount=None):
 #returns all the submission formatted for easy reading, if a name is provided if returns ony submissions by that person
 #if towers is provided it returns who completed the combo, must have 4 towers
 def get_submissions(name=None):
-    file = open(submittedCombosAddress)
+    file = open(submittedAddress)
     submittedCombos = json.load(file)
     file.close()
 
@@ -121,7 +127,7 @@ def get_submissions(name=None):
 
 #change name in submissions and leaderboard
 def change_name(old, new):
-    file = open(leaderboardAddress)
+    file = open(lbAddress)
     leaderboard = json.load(file)
     file.close()
 
@@ -133,11 +139,11 @@ def change_name(old, new):
         if score[0] == old:
             score[0] = new
 
-    file = open(leaderboardAddress, 'w')
+    file = open(lbAddress, 'w')
     json.dump(leaderboard, file, indent=4)
     file.close()
 
-    file = open(submittedCombosAddress)
+    file = open(submittedAddress)
     submittedCombos = json.load(file)
     file.close()
 
@@ -145,7 +151,7 @@ def change_name(old, new):
         if submission[0] == old:
             submission[0] = new
 
-    file = open(submittedCombosAddress, 'w')
+    file = open(submittedAddress, 'w')
     json.dump(submittedCombos, file, indent=4)
     file.close()
     
@@ -164,7 +170,7 @@ def set_alias(discordId, name):
         try:
             change_name(alias, name)
         except Exception as e:
-            return e
+            return str(e)
         displayStr = '{0} changed to {1}'.format(alias, name)
     
     aliases[discordId] = name
@@ -216,10 +222,11 @@ def get_version(cD):
     if cD.get('displayIncludedPowers', 'undefined') == 'undefined':
         return 18 #18.0 - 18.1
     if cD['towers'][11]['tower'] != 'Etienne':
-        return 19 #19.0 - 20.1
-    #uniqueDCId can't be used to determine versions as it doesn't seem to be always used
+        return 19 #19.0 - 19.2
     if cD.get('roundSets', 'undefined') == 'undefined':
-        return 21 #21.0 - 21.1
+        return 20 #20.0 - 20.1
+    if cD['bloonModifiers'].get('regrowRateMultiplier', 'undefined') == 'undefined':
+        return 21 # 21.0 - 21.1
     return 22 #22.0 - current
 
 #checks if the settings of the challenge match a valid 4tc challenge, cD = challengeData
@@ -281,8 +288,8 @@ def get_towers(challengeData):
         if tower['max'] != 0:
             towers.append(tower['tower'])
 
-    namesNK = ('Quincy', 'Gwendolin', 'StrikerJones', 'ObynGreenfoot', 'CaptainChurchill', 'Benjamin', 'Ezili', 'PatFusty', 'Adora', 'AdmiralBrickell', 'Etienne', 'DartMonkey', 'BoomerangMonkey', 'BombShooter', 'TackShooter', 'IceMonkey', 'GlueGunner', 'SniperMonkey', 'MonkeySub', 'MonkeyBuccaneer', 'MonkeyAce', 'HeliPilot', 'MortarMonkey', 'DartlingGunner', 'WizardMonkey', 'SuperMonkey', 'NinjaMonkey', 'Alchemist', 'Druid', 'SpikeFactory', 'MonkeyVillage', 'EngineerMonkey')
-    names4tc = ('Quincy', 'Gwen', 'Striker', 'Obyn', 'Church', 'Ben', 'Ezili', 'Pat', 'Adora', 'Brick', 'Etienne', 'Dart', 'Boomer', 'Bomb', 'Tack', 'Ice', 'Glue', 'Sniper', 'Sub', 'Bucc', 'Ace', 'Heli', 'Mortar', 'Dartling', 'Wizard', 'Super', 'Ninja', 'Alch', 'Druid', 'Spac', 'Village', 'Engi')
+    namesNK = hereosNK + towersNK
+    names4tc = hereos4tc + towers4tc
 
     for i in range(len(towers)):
         for x in range(len(namesNK)):
@@ -293,7 +300,7 @@ def get_towers(challengeData):
 
 #removes combos from remaining combos
 def remove4tc(towers):
-    file = open(remainingCombosAddress)
+    file = open(remainingAddress)
     remainingCombos = json.load(file)
     file.close()
 
@@ -307,14 +314,14 @@ def remove4tc(towers):
         file.close()
         raise Exception('Already submitted')
 
-    file = open(remainingCombosAddress, 'w')
+    file = open(remainingAddress, 'w')
     json.dump(remainingCombos, file, indent=4)
     file.close()
     return matches
 
 #updates leaderboard with new combos
 def update_leaderboard(name, combos):
-    file = open(leaderboardAddress)
+    file = open(lbAddress)
     leaderboard = json.load(file)
     file.close()
     
@@ -331,17 +338,17 @@ def update_leaderboard(name, combos):
     #sort leaderboard in descending order of combos completed
     leaderboard.sort(reverse=True, key=lambda score: score[1])
 
-    file = open(leaderboardAddress, 'w')
+    file = open(lbAddress, 'w')
     json.dump(leaderboard, file, indent=4)
     file.close()
 
 #adds a new submission
 def add_submission(name, code, towers):
-    file = open(submittedCombosAddress)
+    file = open(submittedAddress)
     submittedCombos = json.load(file)
     file.close()
     submittedCombos.append([name, code, towers])
-    file = open(submittedCombosAddress, 'w')
+    file = open(submittedAddress, 'w')
     json.dump(submittedCombos, file, indent=4)
     file.close
 
@@ -351,7 +358,7 @@ def submit4tc(code, name=None, discordId=None):
         try:
             name = get_alias(discordId)
         except Exception as e:
-            return e
+            return str(e)
     
     code = code.upper()
 
@@ -370,15 +377,151 @@ def submit4tc(code, name=None, discordId=None):
         add_submission(name, code, towers)
         return '```Submission:\nName: {0}\nCode: {1}\nTowers: {2}\nCombos removed: {3}```'.format(name, code, ', '.join(towers), combosRemoved)
     except Exception as e:
-        return e
+        return str(e)
 
 #creates a hastebin page conataining message and returns the url to it
 def create_hastebin_link(message):
     try:
-        response = requests.post(hastebinUrl + 'documents', message, timeout=10)
+        response = requests.post(hastebinUrl + 'documents', message.encode('utf-8'), timeout=10)
         response.raise_for_status()
         return hastebinUrl + response.json()['key']
     except (requests.exceptions.RequestException, JSONDecodeError, KeyError):
         return "Couldn't create hastebin link, I am working on fixing this issue"
 
-print(create_hastebin_link('jhajdsad'))
+
+'''
+these commands are not currently being used for any discord commands but they might be used for admin only commands in the future
+'''
+
+
+#generates all unique combinations of 4 towers, in the standard 4tc order
+def generate_all_4tcs():
+    remainingCombos = []
+    heroAmount = len(hereos4tc)
+    towerAmount = len(towers4tc)
+    
+    pos1 = 0
+    pos2 = 1
+    pos3 = 2
+    pos4 = 3
+
+    #generates all the non hero combos
+    while True:
+        remainingCombos.append([towers4tc[pos1], towers4tc[pos2], towers4tc[pos3], towers4tc[pos4]])
+        if pos4 != towerAmount - 1:
+            pos4 += 1
+        elif pos3 != towerAmount - 2:
+            pos3 += 1
+            pos4 = pos3 + 1
+        elif pos2 != towerAmount - 3:
+            pos2 += 1
+            pos3 = pos2 + 1
+            pos4 = pos3 + 1
+        elif pos1 != towerAmount - 4:
+            pos1 += 1
+            pos2 = pos1 + 1
+            pos3 = pos2 + 1
+            pos4 = pos3 + 1
+        else:
+            break
+
+    pos1 = 0
+    pos2 = 0
+    pos3 = 1
+    pos4 = 2
+
+    #generates all the hero combos
+    while True:
+        remainingCombos.append([hereos4tc[pos1], towers4tc[pos2], towers4tc[pos3], towers4tc[pos4]])
+        if pos4 != towerAmount - 1:
+            pos4 += 1
+        elif pos3 != towerAmount - 2:
+            pos3 += 1
+            pos4 = pos3 + 1
+        elif pos2 != towerAmount - 3:
+            pos2 += 1
+            pos3 = pos2 + 1
+            pos4 = pos3 + 1
+        elif pos1 != heroAmount - 1:
+            pos1 += 1
+            pos2 = 0
+            pos3 = 1
+            pos4 = 2
+        else:
+            break
+
+    file = open(remainingAddress, 'w')
+    json.dump(remainingCombos, file, indent=4)
+    file.close()
+
+#returns whether the towers are mathematically possible to be a 4tc, bomb starts and alch + village starts are removed as well
+def mathematically_possible(towers):
+    canBeat6 = False
+    canBeat24 = False
+
+    for tower in towers:
+        if tower in ['Quincy', 'Ezili', 'Dart', 'Boomer', 'Tack', 'Ice', 'Sniper', 'Sub', 'Bucc', 'Wizard', 'Ninja', 'Alch', 'Druid', 'Engi']:
+            canBeat6 = True
+
+    if 'Bomb' in towers and 'Glue' in towers:
+        canBeat6 = True
+
+    for tower in towers:
+        if tower in ['Quincy', 'Gwen', 'Obyn', 'Etienne', 'Ezili', 'Dart', 'Sniper', 'Sub', 'Bucc', 'Ace', 'Heli', 'Mortar', 'Dartling', 'Wizard', 'Ninja', 'Spac', 'Engi']:
+            canBeat24 = True
+
+    #Village is expensive so some ice starts and all bomb + glue starts are mathematically impossible, since the money required to beat 20 or 22 makes affording 020 village impossible
+    if 'Village' in towers:
+        if 'Boomer' in towers or 'Tack' in towers or 'Druid' in towers:
+            canBeat24 = True
+        if 'Ice' in towers and ('Striker' in towers or 'Bomb' in towers):
+            canBeat24 = True
+
+    #all 4tc combos can mathematically beat all the other threats such as 28 and 25
+    return canBeat6 and canBeat24
+
+#removes mathematically impossible combos from the remainingCombos
+def remove_impossible_combos():
+    file = open(remainingAddress)
+    remainingCombos = json.load(file)
+    file.close()
+
+    newRemainingCombos = []
+    for combo in remainingCombos:
+        if mathematically_possible(combo):
+            newRemainingCombos.append(combo)
+
+    file = open(remainingAddress, 'w')
+    json.dump(newRemainingCombos, file, indent=4)
+    file.close()
+
+#resets leaderboard and remainingCombos then iterates through all the submitted combos and tries to submit them, then removes mathemeatically impossible combos
+def clean_submissions():
+    generate_all_4tcs()
+
+    file = open(lbAddress, 'w')
+    file.write('[]')
+    file.close()
+
+    file = open(submittedAddress)
+    submittedCombos = json.load(file)
+    file.close()
+
+    file = open(submittedAddress, 'w')
+    file.write('[]')
+    file.close()
+
+    invalidCombos = []
+    combosRemaining = len(submittedCombos)
+    for combo in submittedCombos:
+        combosRemaining -= 1
+        print(combosRemaining) #progress metre
+        response = submit4tc(combo[1], name=combo[0])
+        if not response.startswith('```Submission:'): #weird i know, didn't make the submit4tc function with this in mind
+            invalidCombos.append([combo[0], combo[1], combo[2], response])
+
+    file = open('./invalid_combos.json', 'w')
+    json.dump(invalidCombos, file, indent=4)
+    file.close()
+
+    remove_impossible_combos()
