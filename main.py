@@ -34,7 +34,7 @@ async def help(ctx, arg=None):
             if len(command.aliases) != 0:
                 helpMessage += 'Aliases: {0}\n'.format(', '.join(command.aliases))
             helpMessage += '\n'
-        helpMessage += '\nIf you have found a bug, report it to epicalex4444#5552 on discord\nFor more in depth info see https://github.com/epicalex4444/4tccc_discord_bot/blob/main/README.md```'
+        helpMessage += '\nIf you have found a bug, report it to epicalex4444#5552 on discord\nFor more in depth info see https://github.com/epicalex4444/4tccc_discord_bot```'
     else:
         if arg == 'towers':
             return await ctx.send("```Towers names: Quincy, Gwen, Striker, Obyn, Church, Ben, Ezili, Pat, Adora, Brick, Etienne, Dart, Boomer, Bomb, Tack, Ice, Glue, Sniper, Sub, Bucc, Ace, Heli, Mortar, Dartling, Wizard, Super, Ninja, Alch, Druid, Spac, Village, Engi\nTower names don't have to be capitalised```")
@@ -111,5 +111,13 @@ async def submit(ctx, *, arg):
         response = submit4tc(arg[1:], discordId=ctx.author.id)
         
     await ctx.send(response)
+
+@bot.command(name='bot', help='!bot', description='shows bot invite link')
+async def bot_invite(ctx):
+    await ctx.send('https://discord.com/api/oauth2/authorize?client_id=790526190749745192&permissions=2048&scope=bot')
+
+@bot.command(name='server', help='!server', description='shows server invite')
+async def server_invite(ctx):
+    await ctx.send('https://discord.gg/Gapyp6kw3b')
 
 bot.run(token)
