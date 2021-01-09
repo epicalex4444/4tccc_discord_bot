@@ -52,3 +52,4 @@ shows 4tccc server invite link
 
 commands are set to ignore things past the last arguement, but the name arguements can have spaces so anything after a name will be part of the name
 discord has a charecter per message limit of 2000 so any message after that is sent as a hastebin link instead, this also keeps chats cleaner
+
