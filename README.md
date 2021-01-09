@@ -1,4 +1,7 @@
 # 4tccc_discord_bot
+if you don't know what 4tccc is go here https://www.reddit.com/r/btd6/comments/eeqcn8/reintroducing_the_4tc_community_challenge_a/  
+
+### invites:
 bot invite: https://discord.com/api/oauth2/authorize?client_id=790526190749745192&permissions=2048&scope=bot  
 4tccc server: https://discord.gg/Gapyp6kw3b  
 
@@ -51,5 +54,4 @@ usage: !server
 shows 4tccc server invite link  
 
 commands are set to ignore things past the last arguement, but the name arguements can have spaces so anything after a name will be part of the name  
-discord has a charecter per message limit of 2000 so any message after that is sent as a hastebin link instead, this also keeps chats cleaner  
-
+discord has a character per message limit of 2000 so any message after that is sent as a hastebin link instead, this also keeps chats cleaner  
