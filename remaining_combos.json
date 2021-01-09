@@ -135,7 +135,7 @@
         "Dart",
         "Bomb",
         "Tack",
-        "Sub"
+        "Bucc"
     ],
     [
         "Dart",
@@ -285,7 +285,7 @@
         "Dart",
         "Tack",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Dart",
@@ -458,7 +458,7 @@
     [
         "Dart",
         "Glue",
-        "Sub",
+        "Bucc",
         "Engi"
     ],
     [
@@ -513,12 +513,6 @@
         "Dart",
         "Sniper",
         "Ninja",
-        "Village"
-    ],
-    [
-        "Dart",
-        "Sniper",
-        "Ninja",
         "Engi"
     ],
     [
@@ -544,12 +538,6 @@
         "Ninja",
         "Alch",
         "Druid"
-    ],
-    [
-        "Dart",
-        "Ninja",
-        "Alch",
-        "Village"
     ],
     [
         "Dart",
@@ -585,7 +573,7 @@
         "Boomer",
         "Bomb",
         "Tack",
-        "Sub"
+        "Bucc"
     ],
     [
         "Boomer",
@@ -615,7 +603,7 @@
         "Boomer",
         "Bomb",
         "Ice",
-        "Sub"
+        "Bucc"
     ],
     [
         "Boomer",
@@ -639,7 +627,7 @@
         "Boomer",
         "Bomb",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Boomer",
@@ -723,7 +711,7 @@
         "Boomer",
         "Tack",
         "Ice",
-        "Sub"
+        "Bucc"
     ],
     [
         "Boomer",
@@ -747,7 +735,7 @@
         "Boomer",
         "Tack",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Boomer",
@@ -837,7 +825,7 @@
         "Boomer",
         "Ice",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Boomer",
@@ -1035,7 +1023,7 @@
         "Bomb",
         "Tack",
         "Ice",
-        "Sub"
+        "Bucc"
     ],
     [
         "Bomb",
@@ -1065,7 +1053,7 @@
         "Bomb",
         "Tack",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Bomb",
@@ -1095,7 +1083,7 @@
         "Bomb",
         "Tack",
         "Sniper",
-        "Sub"
+        "Bucc"
     ],
     [
         "Bomb",
@@ -1124,31 +1112,31 @@
     [
         "Bomb",
         "Tack",
-        "Bucc",
+        "Sub",
         "Dartling"
     ],
     [
         "Bomb",
         "Tack",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Bomb",
         "Tack",
-        "Bucc",
+        "Sub",
         "Druid"
     ],
     [
         "Bomb",
         "Tack",
-        "Bucc",
+        "Sub",
         "Engi"
     ],
     [
         "Bomb",
         "Tack",
-        "Sub",
+        "Bucc",
         "Alch"
     ],
     [
@@ -1168,12 +1156,6 @@
         "Tack",
         "Dartling",
         "Alch"
-    ],
-    [
-        "Bomb",
-        "Tack",
-        "Dartling",
-        "Engi"
     ],
     [
         "Bomb",
@@ -1221,13 +1203,13 @@
         "Bomb",
         "Ice",
         "Glue",
-        "Bucc"
+        "Sub"
     ],
     [
         "Bomb",
         "Ice",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Bomb",
@@ -1251,18 +1233,18 @@
         "Bomb",
         "Ice",
         "Sniper",
-        "Bucc"
-    ],
-    [
-        "Bomb",
-        "Ice",
-        "Sniper",
         "Sub"
     ],
     [
         "Bomb",
         "Ice",
         "Sniper",
+        "Bucc"
+    ],
+    [
+        "Bomb",
+        "Ice",
+        "Sniper",
         "Ninja"
     ],
     [
@@ -1286,32 +1268,14 @@
     [
         "Bomb",
         "Ice",
-        "Bucc",
+        "Sub",
         "Dartling"
     ],
     [
         "Bomb",
         "Ice",
-        "Bucc",
+        "Sub",
         "Ninja"
-    ],
-    [
-        "Bomb",
-        "Ice",
-        "Bucc",
-        "Alch"
-    ],
-    [
-        "Bomb",
-        "Ice",
-        "Bucc",
-        "Druid"
-    ],
-    [
-        "Bomb",
-        "Ice",
-        "Bucc",
-        "Engi"
     ],
     [
         "Bomb",
@@ -1322,62 +1286,62 @@
     [
         "Bomb",
         "Ice",
-        "Heli",
-        "Dartling"
-    ],
-    [
-        "Bomb",
-        "Ice",
-        "Heli",
+        "Sub",
         "Druid"
     ],
     [
         "Bomb",
         "Ice",
-        "Mortar",
-        "Ninja"
-    ],
-    [
-        "Bomb",
-        "Ice",
-        "Mortar",
-        "Alch"
-    ],
-    [
-        "Bomb",
-        "Ice",
-        "Mortar",
-        "Druid"
-    ],
-    [
-        "Bomb",
-        "Ice",
-        "Mortar",
-        "Village"
-    ],
-    [
-        "Bomb",
-        "Ice",
-        "Dartling",
-        "Ninja"
-    ],
-    [
-        "Bomb",
-        "Ice",
-        "Dartling",
-        "Alch"
-    ],
-    [
-        "Bomb",
-        "Ice",
-        "Dartling",
-        "Village"
-    ],
-    [
-        "Bomb",
-        "Ice",
-        "Dartling",
+        "Sub",
         "Engi"
+    ],
+    [
+        "Bomb",
+        "Ice",
+        "Bucc",
+        "Alch"
+    ],
+    [
+        "Bomb",
+        "Ice",
+        "Heli",
+        "Druid"
+    ],
+    [
+        "Bomb",
+        "Ice",
+        "Mortar",
+        "Ninja"
+    ],
+    [
+        "Bomb",
+        "Ice",
+        "Mortar",
+        "Alch"
+    ],
+    [
+        "Bomb",
+        "Ice",
+        "Mortar",
+        "Druid"
+    ],
+    [
+        "Bomb",
+        "Ice",
+        "Mortar",
+        "Village"
+    ],
+    [
+        "Bomb",
+        "Ice",
+        "Dartling",
+        "Ninja"
+    ],
+    [
+        "Bomb",
+        "Ice",
+        "Dartling",
+        "Alch"
     ],
     [
         "Bomb",
@@ -1466,25 +1430,25 @@
     [
         "Bomb",
         "Glue",
-        "Bucc",
+        "Sub",
         "Alch"
     ],
     [
         "Bomb",
         "Glue",
-        "Bucc",
+        "Sub",
         "Druid"
     ],
     [
         "Bomb",
         "Glue",
-        "Bucc",
+        "Sub",
         "Engi"
     ],
     [
         "Bomb",
         "Glue",
-        "Sub",
+        "Bucc",
         "Alch"
     ],
     [
@@ -1538,19 +1502,19 @@
     [
         "Bomb",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Bomb",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Alch"
     ],
     [
         "Bomb",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Engi"
     ],
     [
@@ -1597,49 +1561,43 @@
     ],
     [
         "Bomb",
-        "Bucc",
+        "Sub",
         "Dartling",
         "Ninja"
     ],
     [
         "Bomb",
-        "Bucc",
-        "Dartling",
-        "Engi"
-    ],
-    [
-        "Bomb",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Alch"
     ],
     [
         "Bomb",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Druid"
     ],
     [
         "Bomb",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Engi"
     ],
     [
         "Bomb",
-        "Bucc",
+        "Sub",
         "Alch",
         "Druid"
     ],
     [
         "Bomb",
-        "Bucc",
+        "Sub",
         "Alch",
         "Engi"
     ],
     [
         "Bomb",
-        "Bucc",
+        "Sub",
         "Druid",
         "Engi"
     ],
@@ -1672,18 +1630,6 @@
         "Mortar",
         "Druid",
         "Village"
-    ],
-    [
-        "Bomb",
-        "Dartling",
-        "Ninja",
-        "Engi"
-    ],
-    [
-        "Bomb",
-        "Dartling",
-        "Alch",
-        "Engi"
     ],
     [
         "Bomb",
@@ -1725,7 +1671,7 @@
         "Tack",
         "Ice",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Tack",
@@ -1743,7 +1689,7 @@
         "Tack",
         "Ice",
         "Sniper",
-        "Sub"
+        "Bucc"
     ],
     [
         "Tack",
@@ -1772,31 +1718,31 @@
     [
         "Tack",
         "Ice",
-        "Bucc",
+        "Sub",
         "Dartling"
     ],
     [
         "Tack",
         "Ice",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Tack",
         "Ice",
-        "Bucc",
+        "Sub",
         "Druid"
     ],
     [
         "Tack",
         "Ice",
-        "Bucc",
+        "Sub",
         "Engi"
     ],
     [
         "Tack",
         "Ice",
-        "Sub",
+        "Bucc",
         "Alch"
     ],
     [
@@ -1880,25 +1826,25 @@
     [
         "Tack",
         "Glue",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Tack",
         "Glue",
-        "Bucc",
+        "Sub",
         "Druid"
     ],
     [
         "Tack",
         "Glue",
-        "Bucc",
+        "Sub",
         "Engi"
     ],
     [
         "Tack",
         "Glue",
-        "Sub",
+        "Bucc",
         "Alch"
     ],
     [
@@ -2005,31 +1951,31 @@
     ],
     [
         "Tack",
-        "Bucc",
+        "Sub",
         "Dartling",
         "Ninja"
     ],
     [
         "Tack",
-        "Bucc",
+        "Sub",
         "Dartling",
         "Engi"
     ],
     [
         "Tack",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Druid"
     ],
     [
         "Tack",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Engi"
     ],
     [
         "Tack",
-        "Bucc",
+        "Sub",
         "Druid",
         "Engi"
     ],
@@ -2103,24 +2049,6 @@
         "Ice",
         "Glue",
         "Sniper",
-        "Engi"
-    ],
-    [
-        "Ice",
-        "Glue",
-        "Bucc",
-        "Alch"
-    ],
-    [
-        "Ice",
-        "Glue",
-        "Bucc",
-        "Druid"
-    ],
-    [
-        "Ice",
-        "Glue",
-        "Bucc",
         "Engi"
     ],
     [
@@ -2132,6 +2060,24 @@
     [
         "Ice",
         "Glue",
+        "Sub",
+        "Druid"
+    ],
+    [
+        "Ice",
+        "Glue",
+        "Sub",
+        "Engi"
+    ],
+    [
+        "Ice",
+        "Glue",
+        "Bucc",
+        "Alch"
+    ],
+    [
+        "Ice",
+        "Glue",
         "Mortar",
         "Druid"
     ],
@@ -2146,12 +2092,6 @@
         "Glue",
         "Dartling",
         "Alch"
-    ],
-    [
-        "Ice",
-        "Glue",
-        "Dartling",
-        "Village"
     ],
     [
         "Ice",
@@ -2198,25 +2138,25 @@
     [
         "Ice",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Ice",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Alch"
     ],
     [
         "Ice",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Engi"
     ],
     [
         "Ice",
         "Sniper",
-        "Sub",
+        "Bucc",
         "Ninja"
     ],
     [
@@ -2293,109 +2233,109 @@
     ],
     [
         "Ice",
-        "Bucc",
+        "Sub",
         "Mortar",
         "Druid"
     ],
     [
         "Ice",
-        "Bucc",
+        "Sub",
         "Dartling",
         "Ninja"
     ],
     [
         "Ice",
-        "Bucc",
+        "Sub",
         "Dartling",
         "Engi"
     ],
     [
         "Ice",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Alch"
     ],
     [
         "Ice",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Druid"
     ],
     [
         "Ice",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Spac"
     ],
     [
         "Ice",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Village"
     ],
     [
         "Ice",
-        "Bucc",
+        "Sub",
         "Ninja",
-        "Engi"
-    ],
-    [
-        "Ice",
-        "Bucc",
-        "Alch",
-        "Druid"
-    ],
-    [
-        "Ice",
-        "Bucc",
-        "Alch",
-        "Spac"
-    ],
-    [
-        "Ice",
-        "Bucc",
-        "Alch",
-        "Village"
-    ],
-    [
-        "Ice",
-        "Bucc",
-        "Alch",
-        "Engi"
-    ],
-    [
-        "Ice",
-        "Bucc",
-        "Druid",
-        "Spac"
-    ],
-    [
-        "Ice",
-        "Bucc",
-        "Druid",
-        "Village"
-    ],
-    [
-        "Ice",
-        "Bucc",
-        "Druid",
-        "Engi"
-    ],
-    [
-        "Ice",
-        "Bucc",
-        "Spac",
-        "Village"
-    ],
-    [
-        "Ice",
-        "Bucc",
-        "Spac",
         "Engi"
     ],
     [
         "Ice",
         "Sub",
+        "Alch",
+        "Druid"
+    ],
+    [
+        "Ice",
+        "Sub",
+        "Alch",
+        "Spac"
+    ],
+    [
+        "Ice",
+        "Sub",
+        "Alch",
+        "Village"
+    ],
+    [
+        "Ice",
+        "Sub",
+        "Alch",
+        "Engi"
+    ],
+    [
+        "Ice",
+        "Sub",
+        "Druid",
+        "Spac"
+    ],
+    [
+        "Ice",
+        "Sub",
+        "Druid",
+        "Village"
+    ],
+    [
+        "Ice",
+        "Sub",
+        "Druid",
+        "Engi"
+    ],
+    [
+        "Ice",
+        "Sub",
+        "Spac",
+        "Village"
+    ],
+    [
+        "Ice",
+        "Sub",
+        "Spac",
+        "Engi"
+    ],
+    [
+        "Ice",
+        "Bucc",
         "Ninja",
         "Alch"
     ],
@@ -2534,24 +2474,6 @@
     [
         "Glue",
         "Sniper",
-        "Bucc",
-        "Ninja"
-    ],
-    [
-        "Glue",
-        "Sniper",
-        "Bucc",
-        "Alch"
-    ],
-    [
-        "Glue",
-        "Sniper",
-        "Bucc",
-        "Engi"
-    ],
-    [
-        "Glue",
-        "Sniper",
         "Ninja",
         "Alch"
     ],
@@ -2593,39 +2515,27 @@
     ],
     [
         "Glue",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Alch"
     ],
     [
         "Glue",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Druid"
     ],
     [
         "Glue",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Engi"
     ],
     [
         "Glue",
-        "Bucc",
+        "Sub",
         "Alch",
         "Druid"
-    ],
-    [
-        "Glue",
-        "Bucc",
-        "Alch",
-        "Engi"
-    ],
-    [
-        "Glue",
-        "Bucc",
-        "Druid",
-        "Engi"
     ],
     [
         "Glue",
@@ -2635,6 +2545,18 @@
     ],
     [
         "Glue",
+        "Sub",
+        "Druid",
+        "Engi"
+    ],
+    [
+        "Glue",
+        "Bucc",
+        "Alch",
+        "Engi"
+    ],
+    [
+        "Glue",
         "Dartling",
         "Alch",
         "Engi"
@@ -2707,37 +2629,37 @@
     ],
     [
         "Sniper",
-        "Bucc",
+        "Sub",
         "Dartling",
         "Ninja"
     ],
     [
         "Sniper",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Alch"
     ],
     [
         "Sniper",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Village"
     ],
     [
         "Sniper",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Engi"
     ],
     [
         "Sniper",
-        "Bucc",
+        "Sub",
         "Alch",
         "Village"
     ],
     [
         "Sniper",
-        "Bucc",
+        "Sub",
         "Alch",
         "Engi"
     ],
@@ -2802,103 +2724,103 @@
         "Village"
     ],
     [
-        "Bucc",
+        "Sub",
         "Mortar",
         "Dartling",
         "Ninja"
     ],
     [
-        "Bucc",
+        "Sub",
         "Mortar",
         "Ninja",
         "Druid"
     ],
     [
-        "Bucc",
+        "Sub",
         "Dartling",
         "Ninja",
         "Engi"
     ],
     [
-        "Bucc",
+        "Sub",
         "Ninja",
         "Alch",
         "Druid"
     ],
     [
-        "Bucc",
+        "Sub",
         "Ninja",
         "Alch",
         "Spac"
     ],
     [
-        "Bucc",
+        "Sub",
         "Ninja",
         "Alch",
         "Village"
     ],
     [
-        "Bucc",
+        "Sub",
         "Ninja",
         "Alch",
         "Engi"
     ],
     [
-        "Bucc",
+        "Sub",
         "Ninja",
         "Druid",
         "Spac"
     ],
     [
-        "Bucc",
+        "Sub",
         "Ninja",
         "Druid",
         "Village"
     ],
     [
-        "Bucc",
+        "Sub",
         "Ninja",
         "Druid",
         "Engi"
     ],
     [
-        "Bucc",
+        "Sub",
         "Ninja",
         "Spac",
         "Village"
     ],
     [
-        "Bucc",
+        "Sub",
         "Ninja",
         "Spac",
         "Engi"
     ],
     [
-        "Bucc",
+        "Sub",
         "Alch",
         "Druid",
         "Engi"
     ],
     [
-        "Bucc",
+        "Sub",
         "Alch",
         "Spac",
         "Village"
     ],
     [
-        "Bucc",
+        "Sub",
         "Alch",
         "Spac",
         "Engi"
     ],
     [
-        "Bucc",
+        "Sub",
         "Druid",
         "Spac",
         "Village"
     ],
     [
-        "Bucc",
+        "Sub",
         "Druid",
         "Spac",
         "Engi"
@@ -3009,7 +2931,7 @@
         "Quincy",
         "Dart",
         "Bomb",
-        "Sub"
+        "Bucc"
     ],
     [
         "Quincy",
@@ -3051,7 +2973,7 @@
         "Quincy",
         "Dart",
         "Tack",
-        "Sub"
+        "Bucc"
     ],
     [
         "Quincy",
@@ -3081,12 +3003,6 @@
         "Quincy",
         "Dart",
         "Ice",
-        "Bucc"
-    ],
-    [
-        "Quincy",
-        "Dart",
-        "Ice",
         "Ninja"
     ],
     [
@@ -3111,7 +3027,7 @@
         "Quincy",
         "Dart",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Quincy",
@@ -3148,6 +3064,12 @@
         "Dart",
         "Sniper",
         "Engi"
+    ],
+    [
+        "Quincy",
+        "Dart",
+        "Sub",
+        "Ninja"
     ],
     [
         "Quincy",
@@ -3158,13 +3080,7 @@
     [
         "Quincy",
         "Dart",
-        "Sub",
-        "Ninja"
-    ],
-    [
-        "Quincy",
-        "Dart",
-        "Sub",
+        "Bucc",
         "Engi"
     ],
     [
@@ -3231,7 +3147,7 @@
         "Quincy",
         "Boomer",
         "Bomb",
-        "Sub"
+        "Bucc"
     ],
     [
         "Quincy",
@@ -3279,7 +3195,7 @@
         "Quincy",
         "Boomer",
         "Tack",
-        "Sub"
+        "Bucc"
     ],
     [
         "Quincy",
@@ -3321,13 +3237,13 @@
         "Quincy",
         "Boomer",
         "Ice",
-        "Bucc"
+        "Sub"
     ],
     [
         "Quincy",
         "Boomer",
         "Ice",
-        "Sub"
+        "Bucc"
     ],
     [
         "Quincy",
@@ -3357,7 +3273,7 @@
         "Quincy",
         "Boomer",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Quincy",
@@ -3404,7 +3320,7 @@
     [
         "Quincy",
         "Boomer",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
@@ -3453,13 +3369,13 @@
         "Quincy",
         "Bomb",
         "Tack",
-        "Bucc"
+        "Sub"
     ],
     [
         "Quincy",
         "Bomb",
         "Tack",
-        "Sub"
+        "Bucc"
     ],
     [
         "Quincy",
@@ -3507,13 +3423,13 @@
         "Quincy",
         "Bomb",
         "Ice",
-        "Bucc"
+        "Sub"
     ],
     [
         "Quincy",
         "Bomb",
         "Ice",
-        "Sub"
+        "Bucc"
     ],
     [
         "Quincy",
@@ -3561,13 +3477,13 @@
         "Quincy",
         "Bomb",
         "Glue",
-        "Bucc"
+        "Sub"
     ],
     [
         "Quincy",
         "Bomb",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Quincy",
@@ -3597,18 +3513,18 @@
         "Quincy",
         "Bomb",
         "Sniper",
-        "Bucc"
-    ],
-    [
-        "Quincy",
-        "Bomb",
-        "Sniper",
         "Sub"
     ],
     [
         "Quincy",
         "Bomb",
         "Sniper",
+        "Bucc"
+    ],
+    [
+        "Quincy",
+        "Bomb",
+        "Sniper",
         "Ninja"
     ],
     [
@@ -3626,32 +3542,26 @@
     [
         "Quincy",
         "Bomb",
-        "Bucc",
+        "Sub",
         "Dartling"
     ],
     [
         "Quincy",
         "Bomb",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Quincy",
         "Bomb",
-        "Bucc",
+        "Sub",
         "Druid"
     ],
     [
         "Quincy",
         "Bomb",
-        "Bucc",
+        "Sub",
         "Engi"
-    ],
-    [
-        "Quincy",
-        "Bomb",
-        "Heli",
-        "Dartling"
     ],
     [
         "Quincy",
@@ -3682,12 +3592,6 @@
         "Bomb",
         "Dartling",
         "Ninja"
-    ],
-    [
-        "Quincy",
-        "Bomb",
-        "Dartling",
-        "Engi"
     ],
     [
         "Quincy",
@@ -3723,13 +3627,13 @@
         "Quincy",
         "Tack",
         "Ice",
-        "Bucc"
+        "Sub"
     ],
     [
         "Quincy",
         "Tack",
         "Ice",
-        "Sub"
+        "Bucc"
     ],
     [
         "Quincy",
@@ -3765,13 +3669,13 @@
         "Quincy",
         "Tack",
         "Glue",
-        "Bucc"
+        "Sub"
     ],
     [
         "Quincy",
         "Tack",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Quincy",
@@ -3807,7 +3711,7 @@
         "Quincy",
         "Tack",
         "Sniper",
-        "Sub"
+        "Bucc"
     ],
     [
         "Quincy",
@@ -3836,19 +3740,19 @@
     [
         "Quincy",
         "Tack",
-        "Bucc",
+        "Sub",
         "Dartling"
     ],
     [
         "Quincy",
         "Tack",
-        "Bucc",
+        "Sub",
         "Druid"
     ],
     [
         "Quincy",
         "Tack",
-        "Bucc",
+        "Sub",
         "Engi"
     ],
     [
@@ -3897,13 +3801,13 @@
         "Quincy",
         "Ice",
         "Glue",
-        "Bucc"
+        "Sub"
     ],
     [
         "Quincy",
         "Ice",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Quincy",
@@ -3939,13 +3843,13 @@
         "Quincy",
         "Ice",
         "Sniper",
-        "Bucc"
+        "Sub"
     ],
     [
         "Quincy",
         "Ice",
         "Sniper",
-        "Sub"
+        "Bucc"
     ],
     [
         "Quincy",
@@ -3980,44 +3884,14 @@
     [
         "Quincy",
         "Ice",
-        "Bucc",
+        "Sub",
         "Mortar"
     ],
     [
         "Quincy",
         "Ice",
-        "Bucc",
+        "Sub",
         "Dartling"
-    ],
-    [
-        "Quincy",
-        "Ice",
-        "Bucc",
-        "Ninja"
-    ],
-    [
-        "Quincy",
-        "Ice",
-        "Bucc",
-        "Druid"
-    ],
-    [
-        "Quincy",
-        "Ice",
-        "Bucc",
-        "Spac"
-    ],
-    [
-        "Quincy",
-        "Ice",
-        "Bucc",
-        "Village"
-    ],
-    [
-        "Quincy",
-        "Ice",
-        "Bucc",
-        "Engi"
     ],
     [
         "Quincy",
@@ -4028,8 +3902,32 @@
     [
         "Quincy",
         "Ice",
-        "Heli",
-        "Dartling"
+        "Sub",
+        "Druid"
+    ],
+    [
+        "Quincy",
+        "Ice",
+        "Sub",
+        "Spac"
+    ],
+    [
+        "Quincy",
+        "Ice",
+        "Sub",
+        "Village"
+    ],
+    [
+        "Quincy",
+        "Ice",
+        "Sub",
+        "Engi"
+    ],
+    [
+        "Quincy",
+        "Ice",
+        "Bucc",
+        "Ninja"
     ],
     [
         "Quincy",
@@ -4125,12 +4023,6 @@
         "Quincy",
         "Glue",
         "Sniper",
-        "Bucc"
-    ],
-    [
-        "Quincy",
-        "Glue",
-        "Sniper",
         "Ninja"
     ],
     [
@@ -4154,20 +4046,14 @@
     [
         "Quincy",
         "Glue",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Quincy",
         "Glue",
-        "Bucc",
+        "Sub",
         "Druid"
-    ],
-    [
-        "Quincy",
-        "Glue",
-        "Bucc",
-        "Engi"
     ],
     [
         "Quincy",
@@ -4178,8 +4064,8 @@
     [
         "Quincy",
         "Glue",
-        "Heli",
-        "Dartling"
+        "Bucc",
+        "Engi"
     ],
     [
         "Quincy",
@@ -4220,26 +4106,8 @@
     [
         "Quincy",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Dartling"
-    ],
-    [
-        "Quincy",
-        "Sniper",
-        "Bucc",
-        "Ninja"
-    ],
-    [
-        "Quincy",
-        "Sniper",
-        "Bucc",
-        "Village"
-    ],
-    [
-        "Quincy",
-        "Sniper",
-        "Bucc",
-        "Engi"
     ],
     [
         "Quincy",
@@ -4251,6 +4119,24 @@
         "Quincy",
         "Sniper",
         "Sub",
+        "Village"
+    ],
+    [
+        "Quincy",
+        "Sniper",
+        "Sub",
+        "Engi"
+    ],
+    [
+        "Quincy",
+        "Sniper",
+        "Bucc",
+        "Ninja"
+    ],
+    [
+        "Quincy",
+        "Sniper",
+        "Bucc",
         "Engi"
     ],
     [
@@ -4315,67 +4201,67 @@
     ],
     [
         "Quincy",
-        "Bucc",
+        "Sub",
         "Mortar",
         "Dartling"
     ],
     [
         "Quincy",
-        "Bucc",
+        "Sub",
         "Mortar",
         "Ninja"
     ],
     [
         "Quincy",
-        "Bucc",
+        "Sub",
         "Mortar",
         "Druid"
     ],
     [
         "Quincy",
-        "Bucc",
+        "Sub",
         "Dartling",
         "Ninja"
     ],
     [
         "Quincy",
-        "Bucc",
+        "Sub",
         "Dartling",
         "Engi"
     ],
     [
         "Quincy",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Druid"
     ],
     [
         "Quincy",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Spac"
     ],
     [
         "Quincy",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Engi"
     ],
     [
         "Quincy",
-        "Bucc",
+        "Sub",
         "Druid",
         "Spac"
     ],
     [
         "Quincy",
-        "Bucc",
+        "Sub",
         "Druid",
         "Engi"
     ],
     [
         "Quincy",
-        "Bucc",
+        "Sub",
         "Spac",
         "Engi"
     ],
@@ -4581,12 +4467,6 @@
         "Gwen",
         "Dart",
         "Ice",
-        "Bucc"
-    ],
-    [
-        "Gwen",
-        "Dart",
-        "Ice",
         "Ninja"
     ],
     [
@@ -4635,12 +4515,6 @@
         "Gwen",
         "Dart",
         "Glue",
-        "Village"
-    ],
-    [
-        "Gwen",
-        "Dart",
-        "Glue",
         "Engi"
     ],
     [
@@ -4665,18 +4539,12 @@
         "Gwen",
         "Dart",
         "Sniper",
-        "Village"
-    ],
-    [
-        "Gwen",
-        "Dart",
-        "Sniper",
         "Engi"
     ],
     [
         "Gwen",
         "Dart",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
@@ -4821,7 +4689,7 @@
         "Gwen",
         "Boomer",
         "Ice",
-        "Bucc"
+        "Sub"
     ],
     [
         "Gwen",
@@ -4904,7 +4772,7 @@
     [
         "Gwen",
         "Boomer",
-        "Bucc",
+        "Sub",
         "Village"
     ],
     [
@@ -4965,7 +4833,7 @@
         "Gwen",
         "Bomb",
         "Tack",
-        "Sub"
+        "Bucc"
     ],
     [
         "Gwen",
@@ -5013,13 +4881,13 @@
         "Gwen",
         "Bomb",
         "Ice",
-        "Bucc"
+        "Sub"
     ],
     [
         "Gwen",
         "Bomb",
         "Ice",
-        "Sub"
+        "Bucc"
     ],
     [
         "Gwen",
@@ -5079,13 +4947,13 @@
         "Gwen",
         "Bomb",
         "Glue",
-        "Bucc"
+        "Sub"
     ],
     [
         "Gwen",
         "Bomb",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Gwen",
@@ -5133,13 +5001,13 @@
         "Gwen",
         "Bomb",
         "Sniper",
-        "Bucc"
+        "Sub"
     ],
     [
         "Gwen",
         "Bomb",
         "Sniper",
-        "Sub"
+        "Bucc"
     ],
     [
         "Gwen",
@@ -5174,31 +5042,31 @@
     [
         "Gwen",
         "Bomb",
-        "Bucc",
+        "Sub",
         "Dartling"
     ],
     [
         "Gwen",
         "Bomb",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Gwen",
         "Bomb",
-        "Bucc",
+        "Sub",
         "Alch"
     ],
     [
         "Gwen",
         "Bomb",
-        "Bucc",
+        "Sub",
         "Druid"
     ],
     [
         "Gwen",
         "Bomb",
-        "Bucc",
+        "Sub",
         "Engi"
     ],
     [
@@ -5230,12 +5098,6 @@
         "Bomb",
         "Dartling",
         "Ninja"
-    ],
-    [
-        "Gwen",
-        "Bomb",
-        "Dartling",
-        "Engi"
     ],
     [
         "Gwen",
@@ -5295,13 +5157,13 @@
         "Gwen",
         "Tack",
         "Ice",
-        "Bucc"
+        "Sub"
     ],
     [
         "Gwen",
         "Tack",
         "Ice",
-        "Sub"
+        "Bucc"
     ],
     [
         "Gwen",
@@ -5343,13 +5205,13 @@
         "Gwen",
         "Tack",
         "Glue",
-        "Bucc"
+        "Sub"
     ],
     [
         "Gwen",
         "Tack",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Gwen",
@@ -5391,7 +5253,7 @@
         "Gwen",
         "Tack",
         "Sniper",
-        "Sub"
+        "Bucc"
     ],
     [
         "Gwen",
@@ -5426,7 +5288,7 @@
     [
         "Gwen",
         "Tack",
-        "Bucc",
+        "Sub",
         "Dartling"
     ],
     [
@@ -5493,13 +5355,13 @@
         "Gwen",
         "Ice",
         "Glue",
-        "Bucc"
+        "Sub"
     ],
     [
         "Gwen",
         "Ice",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Gwen",
@@ -5547,18 +5409,18 @@
         "Gwen",
         "Ice",
         "Sniper",
-        "Bucc"
-    ],
-    [
-        "Gwen",
-        "Ice",
-        "Sniper",
         "Sub"
     ],
     [
         "Gwen",
         "Ice",
         "Sniper",
+        "Bucc"
+    ],
+    [
+        "Gwen",
+        "Ice",
+        "Sniper",
         "Ninja"
     ],
     [
@@ -5594,44 +5456,8 @@
     [
         "Gwen",
         "Ice",
-        "Bucc",
+        "Sub",
         "Dartling"
-    ],
-    [
-        "Gwen",
-        "Ice",
-        "Bucc",
-        "Ninja"
-    ],
-    [
-        "Gwen",
-        "Ice",
-        "Bucc",
-        "Alch"
-    ],
-    [
-        "Gwen",
-        "Ice",
-        "Bucc",
-        "Druid"
-    ],
-    [
-        "Gwen",
-        "Ice",
-        "Bucc",
-        "Spac"
-    ],
-    [
-        "Gwen",
-        "Ice",
-        "Bucc",
-        "Village"
-    ],
-    [
-        "Gwen",
-        "Ice",
-        "Bucc",
-        "Engi"
     ],
     [
         "Gwen",
@@ -5642,6 +5468,42 @@
     [
         "Gwen",
         "Ice",
+        "Sub",
+        "Alch"
+    ],
+    [
+        "Gwen",
+        "Ice",
+        "Sub",
+        "Druid"
+    ],
+    [
+        "Gwen",
+        "Ice",
+        "Sub",
+        "Spac"
+    ],
+    [
+        "Gwen",
+        "Ice",
+        "Sub",
+        "Village"
+    ],
+    [
+        "Gwen",
+        "Ice",
+        "Sub",
+        "Engi"
+    ],
+    [
+        "Gwen",
+        "Ice",
+        "Bucc",
+        "Ninja"
+    ],
+    [
+        "Gwen",
+        "Ice",
         "Mortar",
         "Ninja"
     ],
@@ -5668,12 +5530,6 @@
         "Ice",
         "Dartling",
         "Ninja"
-    ],
-    [
-        "Gwen",
-        "Ice",
-        "Dartling",
-        "Village"
     ],
     [
         "Gwen",
@@ -5739,12 +5595,6 @@
         "Gwen",
         "Glue",
         "Sniper",
-        "Bucc"
-    ],
-    [
-        "Gwen",
-        "Glue",
-        "Sniper",
         "Ninja"
     ],
     [
@@ -5763,36 +5613,36 @@
         "Gwen",
         "Glue",
         "Sniper",
-        "Engi"
-    ],
-    [
-        "Gwen",
-        "Glue",
-        "Bucc",
-        "Ninja"
-    ],
-    [
-        "Gwen",
-        "Glue",
-        "Bucc",
-        "Alch"
-    ],
-    [
-        "Gwen",
-        "Glue",
-        "Bucc",
-        "Druid"
-    ],
-    [
-        "Gwen",
-        "Glue",
-        "Bucc",
         "Engi"
     ],
     [
         "Gwen",
         "Glue",
         "Sub",
+        "Ninja"
+    ],
+    [
+        "Gwen",
+        "Glue",
+        "Sub",
+        "Alch"
+    ],
+    [
+        "Gwen",
+        "Glue",
+        "Sub",
+        "Druid"
+    ],
+    [
+        "Gwen",
+        "Glue",
+        "Sub",
+        "Engi"
+    ],
+    [
+        "Gwen",
+        "Glue",
+        "Bucc",
         "Engi"
     ],
     [
@@ -5870,43 +5720,43 @@
     [
         "Gwen",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Dartling"
     ],
     [
         "Gwen",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Gwen",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Alch"
     ],
     [
         "Gwen",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Village"
     ],
     [
         "Gwen",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Engi"
     ],
     [
         "Gwen",
         "Sniper",
-        "Sub",
+        "Bucc",
         "Ninja"
     ],
     [
         "Gwen",
         "Sniper",
-        "Sub",
+        "Bucc",
         "Engi"
     ],
     [
@@ -5983,49 +5833,49 @@
     ],
     [
         "Gwen",
-        "Bucc",
+        "Sub",
         "Dartling",
         "Ninja"
     ],
     [
         "Gwen",
-        "Bucc",
+        "Sub",
         "Dartling",
         "Engi"
     ],
     [
         "Gwen",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Alch"
     ],
     [
         "Gwen",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Spac"
     ],
     [
         "Gwen",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Engi"
     ],
     [
         "Gwen",
-        "Bucc",
+        "Sub",
         "Alch",
         "Engi"
     ],
     [
         "Gwen",
-        "Bucc",
+        "Sub",
         "Druid",
         "Engi"
     ],
     [
         "Gwen",
-        "Bucc",
+        "Sub",
         "Spac",
         "Engi"
     ],
@@ -6171,7 +6021,7 @@
         "Striker",
         "Dart",
         "Bomb",
-        "Sub"
+        "Bucc"
     ],
     [
         "Striker",
@@ -6213,7 +6063,7 @@
         "Striker",
         "Dart",
         "Tack",
-        "Sub"
+        "Bucc"
     ],
     [
         "Striker",
@@ -6249,12 +6099,6 @@
         "Striker",
         "Dart",
         "Ice",
-        "Bucc"
-    ],
-    [
-        "Striker",
-        "Dart",
-        "Ice",
         "Ninja"
     ],
     [
@@ -6285,7 +6129,7 @@
         "Striker",
         "Dart",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Striker",
@@ -6304,12 +6148,6 @@
         "Dart",
         "Glue",
         "Druid"
-    ],
-    [
-        "Striker",
-        "Dart",
-        "Glue",
-        "Village"
     ],
     [
         "Striker",
@@ -6339,13 +6177,13 @@
         "Striker",
         "Dart",
         "Sniper",
-        "Village"
+        "Engi"
     ],
     [
         "Striker",
         "Dart",
-        "Sniper",
-        "Engi"
+        "Sub",
+        "Ninja"
     ],
     [
         "Striker",
@@ -6356,13 +6194,7 @@
     [
         "Striker",
         "Dart",
-        "Sub",
-        "Ninja"
-    ],
-    [
-        "Striker",
-        "Dart",
-        "Sub",
+        "Bucc",
         "Engi"
     ],
     [
@@ -6429,7 +6261,7 @@
         "Striker",
         "Boomer",
         "Bomb",
-        "Sub"
+        "Bucc"
     ],
     [
         "Striker",
@@ -6459,7 +6291,7 @@
         "Striker",
         "Boomer",
         "Tack",
-        "Sub"
+        "Bucc"
     ],
     [
         "Striker",
@@ -6484,6 +6316,12 @@
         "Boomer",
         "Ice",
         "Sniper"
+    ],
+    [
+        "Striker",
+        "Boomer",
+        "Ice",
+        "Sub"
     ],
     [
         "Striker",
@@ -6495,12 +6333,6 @@
         "Striker",
         "Boomer",
         "Ice",
-        "Sub"
-    ],
-    [
-        "Striker",
-        "Boomer",
-        "Ice",
         "Ninja"
     ],
     [
@@ -6519,7 +6351,7 @@
         "Striker",
         "Boomer",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Striker",
@@ -6566,7 +6398,7 @@
     [
         "Striker",
         "Boomer",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
@@ -6615,7 +6447,7 @@
         "Striker",
         "Bomb",
         "Tack",
-        "Sub"
+        "Bucc"
     ],
     [
         "Striker",
@@ -6657,13 +6489,13 @@
         "Striker",
         "Bomb",
         "Ice",
-        "Bucc"
+        "Sub"
     ],
     [
         "Striker",
         "Bomb",
         "Ice",
-        "Sub"
+        "Bucc"
     ],
     [
         "Striker",
@@ -6711,13 +6543,13 @@
         "Striker",
         "Bomb",
         "Glue",
-        "Bucc"
+        "Sub"
     ],
     [
         "Striker",
         "Bomb",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Striker",
@@ -6747,18 +6579,18 @@
         "Striker",
         "Bomb",
         "Sniper",
-        "Bucc"
-    ],
-    [
-        "Striker",
-        "Bomb",
-        "Sniper",
         "Sub"
     ],
     [
         "Striker",
         "Bomb",
         "Sniper",
+        "Bucc"
+    ],
+    [
+        "Striker",
+        "Bomb",
+        "Sniper",
         "Ninja"
     ],
     [
@@ -6777,42 +6609,42 @@
         "Striker",
         "Bomb",
         "Sniper",
-        "Engi"
-    ],
-    [
-        "Striker",
-        "Bomb",
-        "Bucc",
-        "Dartling"
-    ],
-    [
-        "Striker",
-        "Bomb",
-        "Bucc",
-        "Ninja"
-    ],
-    [
-        "Striker",
-        "Bomb",
-        "Bucc",
-        "Alch"
-    ],
-    [
-        "Striker",
-        "Bomb",
-        "Bucc",
-        "Druid"
-    ],
-    [
-        "Striker",
-        "Bomb",
-        "Bucc",
         "Engi"
     ],
     [
         "Striker",
         "Bomb",
         "Sub",
+        "Dartling"
+    ],
+    [
+        "Striker",
+        "Bomb",
+        "Sub",
+        "Ninja"
+    ],
+    [
+        "Striker",
+        "Bomb",
+        "Sub",
+        "Alch"
+    ],
+    [
+        "Striker",
+        "Bomb",
+        "Sub",
+        "Druid"
+    ],
+    [
+        "Striker",
+        "Bomb",
+        "Sub",
+        "Engi"
+    ],
+    [
+        "Striker",
+        "Bomb",
+        "Bucc",
         "Alch"
     ],
     [
@@ -6838,12 +6670,6 @@
         "Bomb",
         "Dartling",
         "Alch"
-    ],
-    [
-        "Striker",
-        "Bomb",
-        "Dartling",
-        "Engi"
     ],
     [
         "Striker",
@@ -6897,13 +6723,13 @@
         "Striker",
         "Tack",
         "Ice",
-        "Bucc"
+        "Sub"
     ],
     [
         "Striker",
         "Tack",
         "Ice",
-        "Sub"
+        "Bucc"
     ],
     [
         "Striker",
@@ -6939,13 +6765,13 @@
         "Striker",
         "Tack",
         "Glue",
-        "Bucc"
+        "Sub"
     ],
     [
         "Striker",
         "Tack",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Striker",
@@ -6981,7 +6807,7 @@
         "Striker",
         "Tack",
         "Sniper",
-        "Sub"
+        "Bucc"
     ],
     [
         "Striker",
@@ -7016,31 +6842,31 @@
     [
         "Striker",
         "Tack",
-        "Bucc",
+        "Sub",
         "Dartling"
     ],
     [
         "Striker",
         "Tack",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Striker",
         "Tack",
-        "Bucc",
+        "Sub",
         "Druid"
     ],
     [
         "Striker",
         "Tack",
-        "Bucc",
+        "Sub",
         "Engi"
     ],
     [
         "Striker",
         "Tack",
-        "Sub",
+        "Bucc",
         "Alch"
     ],
     [
@@ -7125,13 +6951,13 @@
         "Striker",
         "Ice",
         "Glue",
-        "Bucc"
+        "Sub"
     ],
     [
         "Striker",
         "Ice",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Striker",
@@ -7167,18 +6993,18 @@
         "Striker",
         "Ice",
         "Sniper",
-        "Bucc"
-    ],
-    [
-        "Striker",
-        "Ice",
-        "Sniper",
         "Sub"
     ],
     [
         "Striker",
         "Ice",
         "Sniper",
+        "Bucc"
+    ],
+    [
+        "Striker",
+        "Ice",
+        "Sniper",
         "Ninja"
     ],
     [
@@ -7214,55 +7040,55 @@
     [
         "Striker",
         "Ice",
-        "Bucc",
+        "Sub",
         "Dartling"
     ],
     [
         "Striker",
         "Ice",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Striker",
         "Ice",
-        "Bucc",
+        "Sub",
         "Alch"
     ],
     [
         "Striker",
         "Ice",
-        "Bucc",
+        "Sub",
         "Druid"
     ],
     [
         "Striker",
         "Ice",
-        "Bucc",
+        "Sub",
         "Spac"
     ],
     [
         "Striker",
         "Ice",
-        "Bucc",
+        "Sub",
         "Village"
     ],
     [
         "Striker",
         "Ice",
-        "Bucc",
+        "Sub",
         "Engi"
     ],
     [
         "Striker",
         "Ice",
-        "Sub",
+        "Bucc",
         "Ninja"
     ],
     [
         "Striker",
         "Ice",
-        "Sub",
+        "Bucc",
         "Alch"
     ],
     [
@@ -7306,12 +7132,6 @@
         "Ice",
         "Dartling",
         "Alch"
-    ],
-    [
-        "Striker",
-        "Ice",
-        "Dartling",
-        "Village"
     ],
     [
         "Striker",
@@ -7413,12 +7233,6 @@
         "Striker",
         "Glue",
         "Sniper",
-        "Bucc"
-    ],
-    [
-        "Striker",
-        "Glue",
-        "Sniper",
         "Ninja"
     ],
     [
@@ -7448,37 +7262,37 @@
     [
         "Striker",
         "Glue",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Striker",
         "Glue",
-        "Bucc",
+        "Sub",
         "Alch"
     ],
     [
         "Striker",
         "Glue",
-        "Bucc",
+        "Sub",
         "Druid"
     ],
     [
         "Striker",
         "Glue",
-        "Bucc",
+        "Sub",
         "Engi"
     ],
     [
         "Striker",
         "Glue",
-        "Sub",
+        "Bucc",
         "Alch"
     ],
     [
         "Striker",
         "Glue",
-        "Sub",
+        "Bucc",
         "Engi"
     ],
     [
@@ -7568,43 +7382,43 @@
     [
         "Striker",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Dartling"
     ],
     [
         "Striker",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Striker",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Alch"
     ],
     [
         "Striker",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Village"
     ],
     [
         "Striker",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Engi"
     ],
     [
         "Striker",
         "Sniper",
-        "Sub",
+        "Bucc",
         "Ninja"
     ],
     [
         "Striker",
         "Sniper",
-        "Sub",
+        "Bucc",
         "Engi"
     ],
     [
@@ -7693,102 +7507,18 @@
     ],
     [
         "Striker",
-        "Bucc",
+        "Sub",
         "Dartling",
         "Ninja"
     ],
     [
         "Striker",
-        "Bucc",
+        "Sub",
         "Dartling",
         "Engi"
     ],
     [
         "Striker",
-        "Bucc",
-        "Ninja",
-        "Alch"
-    ],
-    [
-        "Striker",
-        "Bucc",
-        "Ninja",
-        "Druid"
-    ],
-    [
-        "Striker",
-        "Bucc",
-        "Ninja",
-        "Spac"
-    ],
-    [
-        "Striker",
-        "Bucc",
-        "Ninja",
-        "Village"
-    ],
-    [
-        "Striker",
-        "Bucc",
-        "Ninja",
-        "Engi"
-    ],
-    [
-        "Striker",
-        "Bucc",
-        "Alch",
-        "Druid"
-    ],
-    [
-        "Striker",
-        "Bucc",
-        "Alch",
-        "Spac"
-    ],
-    [
-        "Striker",
-        "Bucc",
-        "Alch",
-        "Village"
-    ],
-    [
-        "Striker",
-        "Bucc",
-        "Alch",
-        "Engi"
-    ],
-    [
-        "Striker",
-        "Bucc",
-        "Druid",
-        "Spac"
-    ],
-    [
-        "Striker",
-        "Bucc",
-        "Druid",
-        "Village"
-    ],
-    [
-        "Striker",
-        "Bucc",
-        "Druid",
-        "Engi"
-    ],
-    [
-        "Striker",
-        "Bucc",
-        "Spac",
-        "Village"
-    ],
-    [
-        "Striker",
-        "Bucc",
-        "Spac",
-        "Engi"
-    ],
-    [
-        "Striker",
         "Sub",
         "Ninja",
         "Alch"
@@ -7796,6 +7526,90 @@
     [
         "Striker",
         "Sub",
+        "Ninja",
+        "Druid"
+    ],
+    [
+        "Striker",
+        "Sub",
+        "Ninja",
+        "Spac"
+    ],
+    [
+        "Striker",
+        "Sub",
+        "Ninja",
+        "Village"
+    ],
+    [
+        "Striker",
+        "Sub",
+        "Ninja",
+        "Engi"
+    ],
+    [
+        "Striker",
+        "Sub",
+        "Alch",
+        "Druid"
+    ],
+    [
+        "Striker",
+        "Sub",
+        "Alch",
+        "Spac"
+    ],
+    [
+        "Striker",
+        "Sub",
+        "Alch",
+        "Village"
+    ],
+    [
+        "Striker",
+        "Sub",
+        "Alch",
+        "Engi"
+    ],
+    [
+        "Striker",
+        "Sub",
+        "Druid",
+        "Spac"
+    ],
+    [
+        "Striker",
+        "Sub",
+        "Druid",
+        "Village"
+    ],
+    [
+        "Striker",
+        "Sub",
+        "Druid",
+        "Engi"
+    ],
+    [
+        "Striker",
+        "Sub",
+        "Spac",
+        "Village"
+    ],
+    [
+        "Striker",
+        "Sub",
+        "Spac",
+        "Engi"
+    ],
+    [
+        "Striker",
+        "Bucc",
+        "Ninja",
+        "Alch"
+    ],
+    [
+        "Striker",
+        "Bucc",
         "Alch",
         "Engi"
     ],
@@ -8019,7 +7833,7 @@
         "Obyn",
         "Dart",
         "Bomb",
-        "Sub"
+        "Bucc"
     ],
     [
         "Obyn",
@@ -8061,7 +7875,7 @@
         "Obyn",
         "Dart",
         "Tack",
-        "Sub"
+        "Bucc"
     ],
     [
         "Obyn",
@@ -8097,12 +7911,6 @@
         "Obyn",
         "Dart",
         "Ice",
-        "Bucc"
-    ],
-    [
-        "Obyn",
-        "Dart",
-        "Ice",
         "Ninja"
     ],
     [
@@ -8133,7 +7941,7 @@
         "Obyn",
         "Dart",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Obyn",
@@ -8181,17 +7989,17 @@
         "Obyn",
         "Dart",
         "Sniper",
-        "Village"
-    ],
-    [
-        "Obyn",
-        "Dart",
-        "Sniper",
         "Engi"
     ],
     [
         "Obyn",
         "Dart",
+        "Sub",
+        "Ninja"
+    ],
+    [
+        "Obyn",
+        "Dart",
         "Bucc",
         "Ninja"
     ],
@@ -8199,18 +8007,6 @@
         "Obyn",
         "Dart",
         "Bucc",
-        "Village"
-    ],
-    [
-        "Obyn",
-        "Dart",
-        "Sub",
-        "Ninja"
-    ],
-    [
-        "Obyn",
-        "Dart",
-        "Sub",
         "Engi"
     ],
     [
@@ -8235,12 +8031,6 @@
         "Obyn",
         "Dart",
         "Ninja",
-        "Village"
-    ],
-    [
-        "Obyn",
-        "Dart",
-        "Ninja",
         "Engi"
     ],
     [
@@ -8248,12 +8038,6 @@
         "Dart",
         "Alch",
         "Druid"
-    ],
-    [
-        "Obyn",
-        "Dart",
-        "Alch",
-        "Village"
     ],
     [
         "Obyn",
@@ -8295,7 +8079,7 @@
         "Obyn",
         "Boomer",
         "Bomb",
-        "Sub"
+        "Bucc"
     ],
     [
         "Obyn",
@@ -8343,7 +8127,7 @@
         "Obyn",
         "Boomer",
         "Tack",
-        "Sub"
+        "Bucc"
     ],
     [
         "Obyn",
@@ -8385,13 +8169,13 @@
         "Obyn",
         "Boomer",
         "Ice",
-        "Bucc"
+        "Sub"
     ],
     [
         "Obyn",
         "Boomer",
         "Ice",
-        "Sub"
+        "Bucc"
     ],
     [
         "Obyn",
@@ -8427,7 +8211,7 @@
         "Obyn",
         "Boomer",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Obyn",
@@ -8480,13 +8264,13 @@
     [
         "Obyn",
         "Boomer",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Obyn",
         "Boomer",
-        "Bucc",
+        "Sub",
         "Village"
     ],
     [
@@ -8547,13 +8331,13 @@
         "Obyn",
         "Bomb",
         "Tack",
-        "Bucc"
+        "Sub"
     ],
     [
         "Obyn",
         "Bomb",
         "Tack",
-        "Sub"
+        "Bucc"
     ],
     [
         "Obyn",
@@ -8607,13 +8391,13 @@
         "Obyn",
         "Bomb",
         "Ice",
-        "Bucc"
+        "Sub"
     ],
     [
         "Obyn",
         "Bomb",
         "Ice",
-        "Sub"
+        "Bucc"
     ],
     [
         "Obyn",
@@ -8673,13 +8457,13 @@
         "Obyn",
         "Bomb",
         "Glue",
-        "Bucc"
+        "Sub"
     ],
     [
         "Obyn",
         "Bomb",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Obyn",
@@ -8721,13 +8505,13 @@
         "Obyn",
         "Bomb",
         "Sniper",
-        "Bucc"
+        "Sub"
     ],
     [
         "Obyn",
         "Bomb",
         "Sniper",
-        "Sub"
+        "Bucc"
     ],
     [
         "Obyn",
@@ -8762,32 +8546,14 @@
     [
         "Obyn",
         "Bomb",
-        "Bucc",
+        "Sub",
         "Dartling"
     ],
     [
         "Obyn",
         "Bomb",
-        "Bucc",
+        "Sub",
         "Ninja"
-    ],
-    [
-        "Obyn",
-        "Bomb",
-        "Bucc",
-        "Alch"
-    ],
-    [
-        "Obyn",
-        "Bomb",
-        "Bucc",
-        "Druid"
-    ],
-    [
-        "Obyn",
-        "Bomb",
-        "Bucc",
-        "Engi"
     ],
     [
         "Obyn",
@@ -8798,6 +8564,24 @@
     [
         "Obyn",
         "Bomb",
+        "Sub",
+        "Druid"
+    ],
+    [
+        "Obyn",
+        "Bomb",
+        "Sub",
+        "Engi"
+    ],
+    [
+        "Obyn",
+        "Bomb",
+        "Bucc",
+        "Alch"
+    ],
+    [
+        "Obyn",
+        "Bomb",
         "Mortar",
         "Ninja"
     ],
@@ -8824,12 +8608,6 @@
         "Bomb",
         "Dartling",
         "Alch"
-    ],
-    [
-        "Obyn",
-        "Bomb",
-        "Dartling",
-        "Engi"
     ],
     [
         "Obyn",
@@ -8889,13 +8667,13 @@
         "Obyn",
         "Tack",
         "Ice",
-        "Bucc"
+        "Sub"
     ],
     [
         "Obyn",
         "Tack",
         "Ice",
-        "Sub"
+        "Bucc"
     ],
     [
         "Obyn",
@@ -8937,13 +8715,13 @@
         "Obyn",
         "Tack",
         "Glue",
-        "Bucc"
+        "Sub"
     ],
     [
         "Obyn",
         "Tack",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Obyn",
@@ -8985,7 +8763,7 @@
         "Obyn",
         "Tack",
         "Sniper",
-        "Sub"
+        "Bucc"
     ],
     [
         "Obyn",
@@ -9020,31 +8798,31 @@
     [
         "Obyn",
         "Tack",
-        "Bucc",
+        "Sub",
         "Dartling"
     ],
     [
         "Obyn",
         "Tack",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Obyn",
         "Tack",
-        "Bucc",
+        "Sub",
         "Druid"
     ],
     [
         "Obyn",
         "Tack",
-        "Bucc",
+        "Sub",
         "Engi"
     ],
     [
         "Obyn",
         "Tack",
-        "Sub",
+        "Bucc",
         "Alch"
     ],
     [
@@ -9123,13 +8901,13 @@
         "Obyn",
         "Ice",
         "Glue",
-        "Bucc"
+        "Sub"
     ],
     [
         "Obyn",
         "Ice",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Obyn",
@@ -9177,18 +8955,18 @@
         "Obyn",
         "Ice",
         "Sniper",
-        "Bucc"
-    ],
-    [
-        "Obyn",
-        "Ice",
-        "Sniper",
         "Sub"
     ],
     [
         "Obyn",
         "Ice",
         "Sniper",
+        "Bucc"
+    ],
+    [
+        "Obyn",
+        "Ice",
+        "Sniper",
         "Ninja"
     ],
     [
@@ -9224,61 +9002,61 @@
     [
         "Obyn",
         "Ice",
-        "Bucc",
+        "Sub",
         "Mortar"
     ],
     [
         "Obyn",
         "Ice",
-        "Bucc",
+        "Sub",
         "Dartling"
     ],
     [
         "Obyn",
         "Ice",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Obyn",
         "Ice",
-        "Bucc",
+        "Sub",
         "Alch"
     ],
     [
         "Obyn",
         "Ice",
-        "Bucc",
+        "Sub",
         "Druid"
     ],
     [
         "Obyn",
         "Ice",
-        "Bucc",
+        "Sub",
         "Spac"
     ],
     [
         "Obyn",
         "Ice",
-        "Bucc",
+        "Sub",
         "Village"
     ],
     [
         "Obyn",
         "Ice",
-        "Bucc",
+        "Sub",
         "Engi"
     ],
     [
         "Obyn",
         "Ice",
-        "Sub",
+        "Bucc",
         "Ninja"
     ],
     [
         "Obyn",
         "Ice",
-        "Sub",
+        "Bucc",
         "Alch"
     ],
     [
@@ -9316,12 +9094,6 @@
         "Ice",
         "Dartling",
         "Alch"
-    ],
-    [
-        "Obyn",
-        "Ice",
-        "Dartling",
-        "Village"
     ],
     [
         "Obyn",
@@ -9411,12 +9183,6 @@
         "Obyn",
         "Glue",
         "Sniper",
-        "Bucc"
-    ],
-    [
-        "Obyn",
-        "Glue",
-        "Sniper",
         "Ninja"
     ],
     [
@@ -9446,37 +9212,37 @@
     [
         "Obyn",
         "Glue",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Obyn",
         "Glue",
-        "Bucc",
+        "Sub",
         "Alch"
     ],
     [
         "Obyn",
         "Glue",
-        "Bucc",
+        "Sub",
         "Druid"
     ],
     [
         "Obyn",
         "Glue",
-        "Bucc",
+        "Sub",
         "Engi"
     ],
     [
         "Obyn",
         "Glue",
-        "Sub",
+        "Bucc",
         "Alch"
     ],
     [
         "Obyn",
         "Glue",
-        "Sub",
+        "Bucc",
         "Engi"
     ],
     [
@@ -9554,37 +9320,37 @@
     [
         "Obyn",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Dartling"
     ],
     [
         "Obyn",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Obyn",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Village"
     ],
     [
         "Obyn",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Engi"
     ],
     [
         "Obyn",
         "Sniper",
-        "Sub",
+        "Bucc",
         "Ninja"
     ],
     [
         "Obyn",
         "Sniper",
-        "Sub",
+        "Bucc",
         "Engi"
     ],
     [
@@ -9655,91 +9421,91 @@
     ],
     [
         "Obyn",
-        "Bucc",
+        "Sub",
         "Mortar",
         "Dartling"
     ],
     [
         "Obyn",
-        "Bucc",
+        "Sub",
         "Mortar",
         "Ninja"
     ],
     [
         "Obyn",
-        "Bucc",
+        "Sub",
         "Mortar",
         "Druid"
     ],
     [
         "Obyn",
-        "Bucc",
+        "Sub",
         "Dartling",
         "Ninja"
     ],
     [
         "Obyn",
-        "Bucc",
+        "Sub",
         "Dartling",
         "Engi"
     ],
     [
         "Obyn",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Alch"
     ],
     [
         "Obyn",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Druid"
     ],
     [
         "Obyn",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Engi"
     ],
     [
         "Obyn",
-        "Bucc",
+        "Sub",
         "Alch",
         "Druid"
     ],
     [
         "Obyn",
-        "Bucc",
+        "Sub",
         "Alch",
         "Village"
     ],
     [
         "Obyn",
-        "Bucc",
+        "Sub",
         "Alch",
         "Engi"
     ],
     [
         "Obyn",
-        "Bucc",
+        "Sub",
         "Druid",
         "Engi"
     ],
     [
         "Obyn",
-        "Bucc",
+        "Sub",
         "Spac",
         "Engi"
     ],
     [
         "Obyn",
-        "Sub",
+        "Bucc",
         "Ninja",
         "Alch"
     ],
     [
         "Obyn",
-        "Sub",
+        "Bucc",
         "Alch",
         "Engi"
     ],
@@ -9915,7 +9681,7 @@
         "Ben",
         "Dart",
         "Bomb",
-        "Sub"
+        "Bucc"
     ],
     [
         "Ben",
@@ -9957,7 +9723,7 @@
         "Ben",
         "Dart",
         "Tack",
-        "Sub"
+        "Bucc"
     ],
     [
         "Ben",
@@ -9993,12 +9759,6 @@
         "Ben",
         "Dart",
         "Ice",
-        "Bucc"
-    ],
-    [
-        "Ben",
-        "Dart",
-        "Ice",
         "Ninja"
     ],
     [
@@ -10029,7 +9789,7 @@
         "Ben",
         "Dart",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Ben",
@@ -10048,12 +9808,6 @@
         "Dart",
         "Glue",
         "Druid"
-    ],
-    [
-        "Ben",
-        "Dart",
-        "Glue",
-        "Village"
     ],
     [
         "Ben",
@@ -10083,13 +9837,13 @@
         "Ben",
         "Dart",
         "Sniper",
-        "Village"
+        "Engi"
     ],
     [
         "Ben",
         "Dart",
-        "Sniper",
-        "Engi"
+        "Sub",
+        "Ninja"
     ],
     [
         "Ben",
@@ -10100,13 +9854,7 @@
     [
         "Ben",
         "Dart",
-        "Sub",
-        "Ninja"
-    ],
-    [
-        "Ben",
-        "Dart",
-        "Sub",
+        "Bucc",
         "Engi"
     ],
     [
@@ -10167,12 +9915,6 @@
         "Ben",
         "Dart",
         "Alch",
-        "Village"
-    ],
-    [
-        "Ben",
-        "Dart",
-        "Alch",
         "Engi"
     ],
     [
@@ -10197,7 +9939,7 @@
         "Ben",
         "Boomer",
         "Bomb",
-        "Sub"
+        "Bucc"
     ],
     [
         "Ben",
@@ -10227,7 +9969,7 @@
         "Ben",
         "Boomer",
         "Tack",
-        "Sub"
+        "Bucc"
     ],
     [
         "Ben",
@@ -10252,6 +9994,12 @@
         "Boomer",
         "Ice",
         "Sniper"
+    ],
+    [
+        "Ben",
+        "Boomer",
+        "Ice",
+        "Sub"
     ],
     [
         "Ben",
@@ -10263,12 +10011,6 @@
         "Ben",
         "Boomer",
         "Ice",
-        "Sub"
-    ],
-    [
-        "Ben",
-        "Boomer",
-        "Ice",
         "Ninja"
     ],
     [
@@ -10287,7 +10029,7 @@
         "Ben",
         "Boomer",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Ben",
@@ -10334,13 +10076,13 @@
     [
         "Ben",
         "Boomer",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Ben",
         "Boomer",
-        "Bucc",
+        "Sub",
         "Village"
     ],
     [
@@ -10389,13 +10131,13 @@
         "Ben",
         "Bomb",
         "Tack",
-        "Bucc"
+        "Sub"
     ],
     [
         "Ben",
         "Bomb",
         "Tack",
-        "Sub"
+        "Bucc"
     ],
     [
         "Ben",
@@ -10437,13 +10179,13 @@
         "Ben",
         "Bomb",
         "Ice",
-        "Bucc"
+        "Sub"
     ],
     [
         "Ben",
         "Bomb",
         "Ice",
-        "Sub"
+        "Bucc"
     ],
     [
         "Ben",
@@ -10497,13 +10239,13 @@
         "Ben",
         "Bomb",
         "Glue",
-        "Bucc"
+        "Sub"
     ],
     [
         "Ben",
         "Bomb",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Ben",
@@ -10533,13 +10275,13 @@
         "Ben",
         "Bomb",
         "Sniper",
-        "Bucc"
+        "Sub"
     ],
     [
         "Ben",
         "Bomb",
         "Sniper",
-        "Sub"
+        "Bucc"
     ],
     [
         "Ben",
@@ -10574,37 +10316,37 @@
     [
         "Ben",
         "Bomb",
-        "Bucc",
+        "Sub",
         "Dartling"
     ],
     [
         "Ben",
         "Bomb",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Ben",
         "Bomb",
-        "Bucc",
+        "Sub",
         "Alch"
     ],
     [
         "Ben",
         "Bomb",
-        "Bucc",
+        "Sub",
         "Druid"
     ],
     [
         "Ben",
         "Bomb",
-        "Bucc",
+        "Sub",
         "Engi"
     ],
     [
         "Ben",
         "Bomb",
-        "Sub",
+        "Bucc",
         "Alch"
     ],
     [
@@ -10642,12 +10384,6 @@
         "Bomb",
         "Dartling",
         "Alch"
-    ],
-    [
-        "Ben",
-        "Bomb",
-        "Dartling",
-        "Engi"
     ],
     [
         "Ben",
@@ -10701,13 +10437,13 @@
         "Ben",
         "Tack",
         "Ice",
-        "Bucc"
+        "Sub"
     ],
     [
         "Ben",
         "Tack",
         "Ice",
-        "Sub"
+        "Bucc"
     ],
     [
         "Ben",
@@ -10743,13 +10479,13 @@
         "Ben",
         "Tack",
         "Glue",
-        "Bucc"
+        "Sub"
     ],
     [
         "Ben",
         "Tack",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Ben",
@@ -10785,7 +10521,7 @@
         "Ben",
         "Tack",
         "Sniper",
-        "Sub"
+        "Bucc"
     ],
     [
         "Ben",
@@ -10820,31 +10556,31 @@
     [
         "Ben",
         "Tack",
-        "Bucc",
+        "Sub",
         "Dartling"
     ],
     [
         "Ben",
         "Tack",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Ben",
         "Tack",
-        "Bucc",
+        "Sub",
         "Druid"
     ],
     [
         "Ben",
         "Tack",
-        "Bucc",
+        "Sub",
         "Engi"
     ],
     [
         "Ben",
         "Tack",
-        "Sub",
+        "Bucc",
         "Alch"
     ],
     [
@@ -10929,13 +10665,13 @@
         "Ben",
         "Ice",
         "Glue",
-        "Bucc"
+        "Sub"
     ],
     [
         "Ben",
         "Ice",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Ben",
@@ -10965,13 +10701,13 @@
         "Ben",
         "Ice",
         "Sniper",
-        "Bucc"
+        "Sub"
     ],
     [
         "Ben",
         "Ice",
         "Sniper",
-        "Sub"
+        "Bucc"
     ],
     [
         "Ben",
@@ -11012,68 +10748,62 @@
     [
         "Ben",
         "Ice",
-        "Bucc",
+        "Sub",
         "Mortar"
     ],
     [
         "Ben",
         "Ice",
-        "Bucc",
+        "Sub",
         "Dartling"
     ],
     [
         "Ben",
         "Ice",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Ben",
         "Ice",
-        "Bucc",
+        "Sub",
         "Alch"
     ],
     [
         "Ben",
         "Ice",
-        "Bucc",
+        "Sub",
         "Druid"
     ],
     [
         "Ben",
         "Ice",
-        "Bucc",
+        "Sub",
         "Spac"
     ],
     [
         "Ben",
         "Ice",
-        "Bucc",
+        "Sub",
         "Village"
     ],
     [
         "Ben",
         "Ice",
-        "Bucc",
+        "Sub",
         "Engi"
     ],
     [
         "Ben",
         "Ice",
-        "Sub",
+        "Bucc",
         "Ninja"
     ],
     [
         "Ben",
         "Ice",
-        "Sub",
+        "Bucc",
         "Alch"
-    ],
-    [
-        "Ben",
-        "Ice",
-        "Heli",
-        "Dartling"
     ],
     [
         "Ben",
@@ -11122,12 +10852,6 @@
         "Ice",
         "Dartling",
         "Alch"
-    ],
-    [
-        "Ben",
-        "Ice",
-        "Dartling",
-        "Village"
     ],
     [
         "Ben",
@@ -11217,12 +10941,6 @@
         "Ben",
         "Glue",
         "Sniper",
-        "Bucc"
-    ],
-    [
-        "Ben",
-        "Glue",
-        "Sniper",
         "Ninja"
     ],
     [
@@ -11252,37 +10970,37 @@
     [
         "Ben",
         "Glue",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Ben",
         "Glue",
-        "Bucc",
+        "Sub",
         "Alch"
     ],
     [
         "Ben",
         "Glue",
-        "Bucc",
+        "Sub",
         "Druid"
     ],
     [
         "Ben",
         "Glue",
-        "Bucc",
+        "Sub",
         "Engi"
     ],
     [
         "Ben",
         "Glue",
-        "Sub",
+        "Bucc",
         "Alch"
     ],
     [
         "Ben",
         "Glue",
-        "Sub",
+        "Bucc",
         "Engi"
     ],
     [
@@ -11372,43 +11090,43 @@
     [
         "Ben",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Dartling"
     ],
     [
         "Ben",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Ben",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Alch"
     ],
     [
         "Ben",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Village"
     ],
     [
         "Ben",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Engi"
     ],
     [
         "Ben",
         "Sniper",
-        "Sub",
+        "Bucc",
         "Ninja"
     ],
     [
         "Ben",
         "Sniper",
-        "Sub",
+        "Bucc",
         "Engi"
     ],
     [
@@ -11515,116 +11233,32 @@
     ],
     [
         "Ben",
-        "Bucc",
+        "Sub",
         "Mortar",
         "Dartling"
     ],
     [
         "Ben",
-        "Bucc",
+        "Sub",
         "Mortar",
         "Ninja"
     ],
     [
         "Ben",
-        "Bucc",
+        "Sub",
         "Mortar",
         "Druid"
     ],
     [
         "Ben",
-        "Bucc",
+        "Sub",
         "Dartling",
         "Ninja"
     ],
     [
         "Ben",
-        "Bucc",
+        "Sub",
         "Dartling",
-        "Engi"
-    ],
-    [
-        "Ben",
-        "Bucc",
-        "Ninja",
-        "Alch"
-    ],
-    [
-        "Ben",
-        "Bucc",
-        "Ninja",
-        "Druid"
-    ],
-    [
-        "Ben",
-        "Bucc",
-        "Ninja",
-        "Spac"
-    ],
-    [
-        "Ben",
-        "Bucc",
-        "Ninja",
-        "Village"
-    ],
-    [
-        "Ben",
-        "Bucc",
-        "Ninja",
-        "Engi"
-    ],
-    [
-        "Ben",
-        "Bucc",
-        "Alch",
-        "Druid"
-    ],
-    [
-        "Ben",
-        "Bucc",
-        "Alch",
-        "Spac"
-    ],
-    [
-        "Ben",
-        "Bucc",
-        "Alch",
-        "Village"
-    ],
-    [
-        "Ben",
-        "Bucc",
-        "Alch",
-        "Engi"
-    ],
-    [
-        "Ben",
-        "Bucc",
-        "Druid",
-        "Spac"
-    ],
-    [
-        "Ben",
-        "Bucc",
-        "Druid",
-        "Village"
-    ],
-    [
-        "Ben",
-        "Bucc",
-        "Druid",
-        "Engi"
-    ],
-    [
-        "Ben",
-        "Bucc",
-        "Spac",
-        "Village"
-    ],
-    [
-        "Ben",
-        "Bucc",
-        "Spac",
         "Engi"
     ],
     [
@@ -11636,6 +11270,90 @@
     [
         "Ben",
         "Sub",
+        "Ninja",
+        "Druid"
+    ],
+    [
+        "Ben",
+        "Sub",
+        "Ninja",
+        "Spac"
+    ],
+    [
+        "Ben",
+        "Sub",
+        "Ninja",
+        "Village"
+    ],
+    [
+        "Ben",
+        "Sub",
+        "Ninja",
+        "Engi"
+    ],
+    [
+        "Ben",
+        "Sub",
+        "Alch",
+        "Druid"
+    ],
+    [
+        "Ben",
+        "Sub",
+        "Alch",
+        "Spac"
+    ],
+    [
+        "Ben",
+        "Sub",
+        "Alch",
+        "Village"
+    ],
+    [
+        "Ben",
+        "Sub",
+        "Alch",
+        "Engi"
+    ],
+    [
+        "Ben",
+        "Sub",
+        "Druid",
+        "Spac"
+    ],
+    [
+        "Ben",
+        "Sub",
+        "Druid",
+        "Village"
+    ],
+    [
+        "Ben",
+        "Sub",
+        "Druid",
+        "Engi"
+    ],
+    [
+        "Ben",
+        "Sub",
+        "Spac",
+        "Village"
+    ],
+    [
+        "Ben",
+        "Sub",
+        "Spac",
+        "Engi"
+    ],
+    [
+        "Ben",
+        "Bucc",
+        "Ninja",
+        "Alch"
+    ],
+    [
+        "Ben",
+        "Bucc",
         "Alch",
         "Engi"
     ],
@@ -11931,12 +11649,6 @@
         "Ezili",
         "Dart",
         "Ice",
-        "Bucc"
-    ],
-    [
-        "Ezili",
-        "Dart",
-        "Ice",
         "Ninja"
     ],
     [
@@ -11985,12 +11697,6 @@
         "Ezili",
         "Dart",
         "Glue",
-        "Village"
-    ],
-    [
-        "Ezili",
-        "Dart",
-        "Glue",
         "Engi"
     ],
     [
@@ -12015,18 +11721,12 @@
         "Ezili",
         "Dart",
         "Sniper",
-        "Village"
-    ],
-    [
-        "Ezili",
-        "Dart",
-        "Sniper",
         "Engi"
     ],
     [
         "Ezili",
         "Dart",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
@@ -12272,13 +11972,13 @@
     [
         "Ezili",
         "Boomer",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Ezili",
         "Boomer",
-        "Bucc",
+        "Sub",
         "Village"
     ],
     [
@@ -12339,7 +12039,7 @@
         "Ezili",
         "Bomb",
         "Tack",
-        "Sub"
+        "Bucc"
     ],
     [
         "Ezili",
@@ -12393,13 +12093,13 @@
         "Ezili",
         "Bomb",
         "Ice",
-        "Bucc"
+        "Sub"
     ],
     [
         "Ezili",
         "Bomb",
         "Ice",
-        "Sub"
+        "Bucc"
     ],
     [
         "Ezili",
@@ -12459,13 +12159,13 @@
         "Ezili",
         "Bomb",
         "Glue",
-        "Bucc"
+        "Sub"
     ],
     [
         "Ezili",
         "Bomb",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Ezili",
@@ -12507,18 +12207,18 @@
         "Ezili",
         "Bomb",
         "Sniper",
-        "Bucc"
-    ],
-    [
-        "Ezili",
-        "Bomb",
-        "Sniper",
         "Sub"
     ],
     [
         "Ezili",
         "Bomb",
         "Sniper",
+        "Bucc"
+    ],
+    [
+        "Ezili",
+        "Bomb",
+        "Sniper",
         "Ninja"
     ],
     [
@@ -12542,38 +12242,32 @@
     [
         "Ezili",
         "Bomb",
-        "Bucc",
+        "Sub",
         "Dartling"
     ],
     [
         "Ezili",
         "Bomb",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Ezili",
         "Bomb",
-        "Bucc",
+        "Sub",
         "Alch"
     ],
     [
         "Ezili",
         "Bomb",
-        "Bucc",
+        "Sub",
         "Druid"
     ],
     [
         "Ezili",
         "Bomb",
-        "Bucc",
+        "Sub",
         "Engi"
-    ],
-    [
-        "Ezili",
-        "Bomb",
-        "Heli",
-        "Dartling"
     ],
     [
         "Ezili",
@@ -12622,18 +12316,6 @@
         "Bomb",
         "Dartling",
         "Alch"
-    ],
-    [
-        "Ezili",
-        "Bomb",
-        "Dartling",
-        "Spac"
-    ],
-    [
-        "Ezili",
-        "Bomb",
-        "Dartling",
-        "Engi"
     ],
     [
         "Ezili",
@@ -12711,13 +12393,13 @@
         "Ezili",
         "Tack",
         "Ice",
-        "Bucc"
+        "Sub"
     ],
     [
         "Ezili",
         "Tack",
         "Ice",
-        "Sub"
+        "Bucc"
     ],
     [
         "Ezili",
@@ -12759,13 +12441,13 @@
         "Ezili",
         "Tack",
         "Glue",
-        "Bucc"
+        "Sub"
     ],
     [
         "Ezili",
         "Tack",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Ezili",
@@ -12807,7 +12489,7 @@
         "Ezili",
         "Tack",
         "Sniper",
-        "Sub"
+        "Bucc"
     ],
     [
         "Ezili",
@@ -12842,25 +12524,25 @@
     [
         "Ezili",
         "Tack",
-        "Bucc",
+        "Sub",
         "Dartling"
     ],
     [
         "Ezili",
         "Tack",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Ezili",
         "Tack",
-        "Bucc",
+        "Sub",
         "Druid"
     ],
     [
         "Ezili",
         "Tack",
-        "Bucc",
+        "Sub",
         "Engi"
     ],
     [
@@ -12933,13 +12615,13 @@
         "Ezili",
         "Ice",
         "Glue",
-        "Bucc"
+        "Sub"
     ],
     [
         "Ezili",
         "Ice",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Ezili",
@@ -12987,238 +12669,232 @@
         "Ezili",
         "Ice",
         "Sniper",
-        "Bucc"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Sniper",
         "Sub"
     ],
     [
         "Ezili",
         "Ice",
         "Sniper",
-        "Ninja"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Sniper",
-        "Alch"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Sniper",
-        "Druid"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Sniper",
-        "Spac"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Sniper",
-        "Village"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Sniper",
-        "Engi"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Bucc",
-        "Dartling"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Bucc",
-        "Ninja"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Bucc",
-        "Alch"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Bucc",
-        "Druid"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Bucc",
-        "Spac"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Bucc",
-        "Village"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Bucc",
-        "Engi"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Sub",
-        "Ninja"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Mortar",
-        "Ninja"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Mortar",
-        "Alch"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Mortar",
-        "Druid"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Mortar",
-        "Village"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Mortar",
-        "Engi"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Dartling",
-        "Ninja"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Dartling",
-        "Alch"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Dartling",
-        "Engi"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Ninja",
-        "Alch"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Ninja",
-        "Druid"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Ninja",
-        "Spac"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Ninja",
-        "Village"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Ninja",
-        "Engi"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Alch",
-        "Druid"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Alch",
-        "Spac"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Alch",
-        "Village"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Alch",
-        "Engi"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Druid",
-        "Spac"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Druid",
-        "Village"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Druid",
-        "Engi"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Spac",
-        "Village"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Spac",
-        "Engi"
-    ],
-    [
-        "Ezili",
-        "Glue",
-        "Sniper",
         "Bucc"
     ],
     [
         "Ezili",
+        "Ice",
+        "Sniper",
+        "Ninja"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Sniper",
+        "Alch"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Sniper",
+        "Druid"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Sniper",
+        "Spac"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Sniper",
+        "Village"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Sniper",
+        "Engi"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Sub",
+        "Dartling"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Sub",
+        "Ninja"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Sub",
+        "Alch"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Sub",
+        "Druid"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Sub",
+        "Spac"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Sub",
+        "Village"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Sub",
+        "Engi"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Bucc",
+        "Ninja"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Mortar",
+        "Ninja"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Mortar",
+        "Alch"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Mortar",
+        "Druid"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Mortar",
+        "Village"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Mortar",
+        "Engi"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Dartling",
+        "Ninja"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Dartling",
+        "Alch"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Dartling",
+        "Engi"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Ninja",
+        "Alch"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Ninja",
+        "Druid"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Ninja",
+        "Spac"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Ninja",
+        "Village"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Ninja",
+        "Engi"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Alch",
+        "Druid"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Alch",
+        "Spac"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Alch",
+        "Village"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Alch",
+        "Engi"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Druid",
+        "Spac"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Druid",
+        "Village"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Druid",
+        "Engi"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Spac",
+        "Village"
+    ],
+    [
+        "Ezili",
+        "Ice",
+        "Spac",
+        "Engi"
+    ],
+    [
+        "Ezili",
         "Glue",
         "Sniper",
         "Ninja"
@@ -13250,26 +12926,20 @@
     [
         "Ezili",
         "Glue",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Ezili",
         "Glue",
-        "Bucc",
+        "Sub",
         "Alch"
     ],
     [
         "Ezili",
         "Glue",
-        "Bucc",
+        "Sub",
         "Druid"
-    ],
-    [
-        "Ezili",
-        "Glue",
-        "Bucc",
-        "Engi"
     ],
     [
         "Ezili",
@@ -13280,8 +12950,8 @@
     [
         "Ezili",
         "Glue",
-        "Heli",
-        "Dartling"
+        "Bucc",
+        "Engi"
     ],
     [
         "Ezili",
@@ -13370,43 +13040,43 @@
     [
         "Ezili",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Dartling"
     ],
     [
         "Ezili",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Ezili",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Alch"
     ],
     [
         "Ezili",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Village"
     ],
     [
         "Ezili",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Engi"
     ],
     [
         "Ezili",
         "Sniper",
-        "Sub",
+        "Bucc",
         "Ninja"
     ],
     [
         "Ezili",
         "Sniper",
-        "Sub",
+        "Bucc",
         "Engi"
     ],
     [
@@ -13507,115 +13177,115 @@
     ],
     [
         "Ezili",
-        "Bucc",
+        "Sub",
         "Mortar",
         "Dartling"
     ],
     [
         "Ezili",
-        "Bucc",
+        "Sub",
         "Mortar",
         "Ninja"
     ],
     [
         "Ezili",
-        "Bucc",
+        "Sub",
         "Mortar",
         "Druid"
     ],
     [
         "Ezili",
-        "Bucc",
+        "Sub",
         "Dartling",
         "Ninja"
     ],
     [
         "Ezili",
-        "Bucc",
+        "Sub",
         "Dartling",
         "Engi"
     ],
     [
         "Ezili",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Alch"
     ],
     [
         "Ezili",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Druid"
     ],
     [
         "Ezili",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Spac"
     ],
     [
         "Ezili",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Village"
     ],
     [
         "Ezili",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Engi"
     ],
     [
         "Ezili",
-        "Bucc",
+        "Sub",
         "Alch",
         "Druid"
     ],
     [
         "Ezili",
-        "Bucc",
+        "Sub",
         "Alch",
         "Spac"
     ],
     [
         "Ezili",
-        "Bucc",
+        "Sub",
         "Alch",
         "Village"
     ],
     [
         "Ezili",
-        "Bucc",
+        "Sub",
         "Alch",
         "Engi"
     ],
     [
         "Ezili",
-        "Bucc",
+        "Sub",
         "Druid",
         "Spac"
     ],
     [
         "Ezili",
-        "Bucc",
+        "Sub",
         "Druid",
         "Village"
     ],
     [
         "Ezili",
-        "Bucc",
+        "Sub",
         "Druid",
         "Engi"
     ],
     [
         "Ezili",
-        "Bucc",
+        "Sub",
         "Spac",
         "Village"
     ],
     [
         "Ezili",
-        "Bucc",
+        "Sub",
         "Spac",
         "Engi"
     ],
@@ -13827,7 +13497,7 @@
         "Pat",
         "Dart",
         "Bomb",
-        "Sub"
+        "Bucc"
     ],
     [
         "Pat",
@@ -13869,7 +13539,7 @@
         "Pat",
         "Dart",
         "Tack",
-        "Sub"
+        "Bucc"
     ],
     [
         "Pat",
@@ -13905,12 +13575,6 @@
         "Pat",
         "Dart",
         "Ice",
-        "Bucc"
-    ],
-    [
-        "Pat",
-        "Dart",
-        "Ice",
         "Ninja"
     ],
     [
@@ -13941,7 +13605,7 @@
         "Pat",
         "Dart",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Pat",
@@ -13960,12 +13624,6 @@
         "Dart",
         "Glue",
         "Druid"
-    ],
-    [
-        "Pat",
-        "Dart",
-        "Glue",
-        "Village"
     ],
     [
         "Pat",
@@ -13995,24 +13653,18 @@
         "Pat",
         "Dart",
         "Sniper",
-        "Village"
-    ],
-    [
-        "Pat",
-        "Dart",
-        "Sniper",
         "Engi"
-    ],
-    [
-        "Pat",
-        "Dart",
-        "Bucc",
-        "Ninja"
     ],
     [
         "Pat",
         "Dart",
         "Sub",
+        "Ninja"
+    ],
+    [
+        "Pat",
+        "Dart",
+        "Bucc",
         "Ninja"
     ],
     [
@@ -14049,12 +13701,6 @@
         "Pat",
         "Dart",
         "Alch",
-        "Village"
-    ],
-    [
-        "Pat",
-        "Dart",
-        "Alch",
         "Engi"
     ],
     [
@@ -14079,7 +13725,7 @@
         "Pat",
         "Boomer",
         "Bomb",
-        "Sub"
+        "Bucc"
     ],
     [
         "Pat",
@@ -14109,7 +13755,7 @@
         "Pat",
         "Boomer",
         "Tack",
-        "Sub"
+        "Bucc"
     ],
     [
         "Pat",
@@ -14139,7 +13785,7 @@
         "Pat",
         "Boomer",
         "Ice",
-        "Sub"
+        "Bucc"
     ],
     [
         "Pat",
@@ -14163,13 +13809,7 @@
         "Pat",
         "Boomer",
         "Glue",
-        "Sub"
-    ],
-    [
-        "Pat",
-        "Boomer",
-        "Glue",
-        "Heli"
+        "Bucc"
     ],
     [
         "Pat",
@@ -14210,13 +13850,13 @@
     [
         "Pat",
         "Boomer",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Pat",
         "Boomer",
-        "Bucc",
+        "Sub",
         "Village"
     ],
     [
@@ -14265,7 +13905,7 @@
         "Pat",
         "Bomb",
         "Tack",
-        "Sub"
+        "Bucc"
     ],
     [
         "Pat",
@@ -14307,13 +13947,13 @@
         "Pat",
         "Bomb",
         "Ice",
-        "Bucc"
+        "Sub"
     ],
     [
         "Pat",
         "Bomb",
         "Ice",
-        "Sub"
+        "Bucc"
     ],
     [
         "Pat",
@@ -14361,13 +14001,13 @@
         "Pat",
         "Bomb",
         "Glue",
-        "Bucc"
+        "Sub"
     ],
     [
         "Pat",
         "Bomb",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Pat",
@@ -14397,13 +14037,13 @@
         "Pat",
         "Bomb",
         "Sniper",
-        "Bucc"
+        "Sub"
     ],
     [
         "Pat",
         "Bomb",
         "Sniper",
-        "Sub"
+        "Bucc"
     ],
     [
         "Pat",
@@ -14438,37 +14078,37 @@
     [
         "Pat",
         "Bomb",
-        "Bucc",
+        "Sub",
         "Dartling"
     ],
     [
         "Pat",
         "Bomb",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Pat",
         "Bomb",
-        "Bucc",
+        "Sub",
         "Alch"
     ],
     [
         "Pat",
         "Bomb",
-        "Bucc",
+        "Sub",
         "Druid"
     ],
     [
         "Pat",
         "Bomb",
-        "Bucc",
+        "Sub",
         "Engi"
     ],
     [
         "Pat",
         "Bomb",
-        "Sub",
+        "Bucc",
         "Alch"
     ],
     [
@@ -14506,12 +14146,6 @@
         "Bomb",
         "Dartling",
         "Alch"
-    ],
-    [
-        "Pat",
-        "Bomb",
-        "Dartling",
-        "Engi"
     ],
     [
         "Pat",
@@ -14559,7 +14193,7 @@
         "Pat",
         "Tack",
         "Ice",
-        "Sub"
+        "Bucc"
     ],
     [
         "Pat",
@@ -14589,7 +14223,7 @@
         "Pat",
         "Tack",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Pat",
@@ -14625,7 +14259,7 @@
         "Pat",
         "Tack",
         "Sniper",
-        "Sub"
+        "Bucc"
     ],
     [
         "Pat",
@@ -14660,25 +14294,25 @@
     [
         "Pat",
         "Tack",
-        "Bucc",
+        "Sub",
         "Dartling"
     ],
     [
         "Pat",
         "Tack",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Pat",
         "Tack",
-        "Bucc",
+        "Sub",
         "Druid"
     ],
     [
         "Pat",
         "Tack",
-        "Sub",
+        "Bucc",
         "Alch"
     ],
     [
@@ -14757,13 +14391,13 @@
         "Pat",
         "Ice",
         "Glue",
-        "Bucc"
+        "Sub"
     ],
     [
         "Pat",
         "Ice",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Pat",
@@ -14793,13 +14427,13 @@
         "Pat",
         "Ice",
         "Sniper",
-        "Bucc"
+        "Sub"
     ],
     [
         "Pat",
         "Ice",
         "Sniper",
-        "Sub"
+        "Bucc"
     ],
     [
         "Pat",
@@ -14840,61 +14474,61 @@
     [
         "Pat",
         "Ice",
-        "Bucc",
+        "Sub",
         "Mortar"
     ],
     [
         "Pat",
         "Ice",
-        "Bucc",
+        "Sub",
         "Dartling"
     ],
     [
         "Pat",
         "Ice",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Pat",
         "Ice",
-        "Bucc",
+        "Sub",
         "Alch"
     ],
     [
         "Pat",
         "Ice",
-        "Bucc",
+        "Sub",
         "Druid"
     ],
     [
         "Pat",
         "Ice",
-        "Bucc",
+        "Sub",
         "Spac"
     ],
     [
         "Pat",
         "Ice",
-        "Bucc",
+        "Sub",
         "Village"
     ],
     [
         "Pat",
         "Ice",
-        "Bucc",
+        "Sub",
         "Engi"
     ],
     [
         "Pat",
         "Ice",
-        "Sub",
+        "Bucc",
         "Ninja"
     ],
     [
         "Pat",
         "Ice",
-        "Sub",
+        "Bucc",
         "Alch"
     ],
     [
@@ -14932,12 +14566,6 @@
         "Ice",
         "Dartling",
         "Alch"
-    ],
-    [
-        "Pat",
-        "Ice",
-        "Dartling",
-        "Village"
     ],
     [
         "Pat",
@@ -15015,12 +14643,6 @@
         "Pat",
         "Glue",
         "Sniper",
-        "Bucc"
-    ],
-    [
-        "Pat",
-        "Glue",
-        "Sniper",
         "Ninja"
     ],
     [
@@ -15050,31 +14672,31 @@
     [
         "Pat",
         "Glue",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Pat",
         "Glue",
-        "Bucc",
+        "Sub",
         "Alch"
     ],
     [
         "Pat",
         "Glue",
-        "Bucc",
+        "Sub",
         "Druid"
     ],
     [
         "Pat",
         "Glue",
-        "Bucc",
+        "Sub",
         "Engi"
     ],
     [
         "Pat",
         "Glue",
-        "Sub",
+        "Bucc",
         "Alch"
     ],
     [
@@ -15158,37 +14780,37 @@
     [
         "Pat",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Dartling"
     ],
     [
         "Pat",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Pat",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Alch"
     ],
     [
         "Pat",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Village"
     ],
     [
         "Pat",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Engi"
     ],
     [
         "Pat",
         "Sniper",
-        "Sub",
+        "Bucc",
         "Ninja"
     ],
     [
@@ -15271,97 +14893,97 @@
     ],
     [
         "Pat",
-        "Bucc",
+        "Sub",
         "Mortar",
         "Dartling"
     ],
     [
         "Pat",
-        "Bucc",
+        "Sub",
         "Mortar",
         "Druid"
     ],
     [
         "Pat",
-        "Bucc",
+        "Sub",
         "Dartling",
         "Ninja"
     ],
     [
         "Pat",
-        "Bucc",
+        "Sub",
         "Dartling",
         "Engi"
     ],
     [
         "Pat",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Alch"
     ],
     [
         "Pat",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Druid"
     ],
     [
         "Pat",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Spac"
     ],
     [
         "Pat",
-        "Bucc",
+        "Sub",
         "Ninja",
-        "Engi"
-    ],
-    [
-        "Pat",
-        "Bucc",
-        "Alch",
-        "Spac"
-    ],
-    [
-        "Pat",
-        "Bucc",
-        "Alch",
-        "Village"
-    ],
-    [
-        "Pat",
-        "Bucc",
-        "Alch",
-        "Engi"
-    ],
-    [
-        "Pat",
-        "Bucc",
-        "Druid",
-        "Spac"
-    ],
-    [
-        "Pat",
-        "Bucc",
-        "Druid",
-        "Village"
-    ],
-    [
-        "Pat",
-        "Bucc",
-        "Druid",
-        "Engi"
-    ],
-    [
-        "Pat",
-        "Bucc",
-        "Spac",
         "Engi"
     ],
     [
         "Pat",
         "Sub",
+        "Alch",
+        "Spac"
+    ],
+    [
+        "Pat",
+        "Sub",
+        "Alch",
+        "Village"
+    ],
+    [
+        "Pat",
+        "Sub",
+        "Alch",
+        "Engi"
+    ],
+    [
+        "Pat",
+        "Sub",
+        "Druid",
+        "Spac"
+    ],
+    [
+        "Pat",
+        "Sub",
+        "Druid",
+        "Village"
+    ],
+    [
+        "Pat",
+        "Sub",
+        "Druid",
+        "Engi"
+    ],
+    [
+        "Pat",
+        "Sub",
+        "Spac",
+        "Engi"
+    ],
+    [
+        "Pat",
+        "Bucc",
         "Ninja",
         "Alch"
     ],
@@ -15537,7 +15159,7 @@
         "Adora",
         "Dart",
         "Bomb",
-        "Sub"
+        "Bucc"
     ],
     [
         "Adora",
@@ -15573,7 +15195,7 @@
         "Adora",
         "Dart",
         "Tack",
-        "Sub"
+        "Bucc"
     ],
     [
         "Adora",
@@ -15603,7 +15225,7 @@
         "Adora",
         "Dart",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Adora",
@@ -15644,7 +15266,7 @@
     [
         "Adora",
         "Dart",
-        "Sub",
+        "Bucc",
         "Ninja"
     ],
     [
@@ -15675,7 +15297,7 @@
         "Adora",
         "Boomer",
         "Bomb",
-        "Sub"
+        "Bucc"
     ],
     [
         "Adora",
@@ -15699,7 +15321,7 @@
         "Adora",
         "Boomer",
         "Tack",
-        "Sub"
+        "Bucc"
     ],
     [
         "Adora",
@@ -15735,7 +15357,7 @@
         "Adora",
         "Boomer",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Adora",
@@ -15795,7 +15417,7 @@
         "Adora",
         "Bomb",
         "Tack",
-        "Sub"
+        "Bucc"
     ],
     [
         "Adora",
@@ -15861,7 +15483,7 @@
         "Adora",
         "Bomb",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Adora",
@@ -15891,7 +15513,7 @@
         "Adora",
         "Bomb",
         "Sniper",
-        "Sub"
+        "Bucc"
     ],
     [
         "Adora",
@@ -15914,7 +15536,7 @@
     [
         "Adora",
         "Bomb",
-        "Sub",
+        "Bucc",
         "Alch"
     ],
     [
@@ -15928,12 +15550,6 @@
         "Bomb",
         "Dartling",
         "Alch"
-    ],
-    [
-        "Adora",
-        "Bomb",
-        "Dartling",
-        "Engi"
     ],
     [
         "Adora",
@@ -15999,7 +15615,7 @@
         "Adora",
         "Tack",
         "Glue",
-        "Sub"
+        "Bucc"
     ],
     [
         "Adora",
@@ -16029,7 +15645,7 @@
         "Adora",
         "Tack",
         "Sniper",
-        "Sub"
+        "Bucc"
     ],
     [
         "Adora",
@@ -16058,7 +15674,7 @@
     [
         "Adora",
         "Tack",
-        "Sub",
+        "Bucc",
         "Alch"
     ],
     [
@@ -16167,12 +15783,6 @@
         "Adora",
         "Ice",
         "Dartling",
-        "Village"
-    ],
-    [
-        "Adora",
-        "Ice",
-        "Dartling",
         "Engi"
     ],
     [
@@ -16226,7 +15836,7 @@
     [
         "Adora",
         "Glue",
-        "Sub",
+        "Bucc",
         "Alch"
     ],
     [
@@ -16274,7 +15884,7 @@
     [
         "Adora",
         "Sniper",
-        "Sub",
+        "Bucc",
         "Ninja"
     ],
     [
@@ -16303,7 +15913,7 @@
     ],
     [
         "Adora",
-        "Sub",
+        "Bucc",
         "Ninja",
         "Alch"
     ],
@@ -16347,12 +15957,6 @@
         "Brick",
         "Dart",
         "Ice",
-        "Bucc"
-    ],
-    [
-        "Brick",
-        "Dart",
-        "Ice",
         "Ninja"
     ],
     [
@@ -16395,18 +15999,12 @@
         "Brick",
         "Dart",
         "Sniper",
-        "Village"
-    ],
-    [
-        "Brick",
-        "Dart",
-        "Sniper",
         "Engi"
     ],
     [
         "Brick",
         "Dart",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
@@ -16449,12 +16047,6 @@
         "Brick",
         "Dart",
         "Alch",
-        "Village"
-    ],
-    [
-        "Brick",
-        "Dart",
-        "Alch",
         "Engi"
     ],
     [
@@ -16515,7 +16107,7 @@
         "Brick",
         "Boomer",
         "Ice",
-        "Bucc"
+        "Sub"
     ],
     [
         "Brick",
@@ -16574,7 +16166,7 @@
     [
         "Brick",
         "Boomer",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
@@ -16617,7 +16209,7 @@
         "Brick",
         "Bomb",
         "Tack",
-        "Bucc"
+        "Sub"
     ],
     [
         "Brick",
@@ -16653,7 +16245,7 @@
         "Brick",
         "Bomb",
         "Ice",
-        "Bucc"
+        "Sub"
     ],
     [
         "Brick",
@@ -16701,7 +16293,7 @@
         "Brick",
         "Bomb",
         "Glue",
-        "Bucc"
+        "Sub"
     ],
     [
         "Brick",
@@ -16725,7 +16317,7 @@
         "Brick",
         "Bomb",
         "Sniper",
-        "Bucc"
+        "Sub"
     ],
     [
         "Brick",
@@ -16760,31 +16352,31 @@
     [
         "Brick",
         "Bomb",
-        "Bucc",
+        "Sub",
         "Dartling"
     ],
     [
         "Brick",
         "Bomb",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Brick",
         "Bomb",
-        "Bucc",
+        "Sub",
         "Alch"
     ],
     [
         "Brick",
         "Bomb",
-        "Bucc",
+        "Sub",
         "Druid"
     ],
     [
         "Brick",
         "Bomb",
-        "Bucc",
+        "Sub",
         "Engi"
     ],
     [
@@ -16816,12 +16408,6 @@
         "Bomb",
         "Dartling",
         "Alch"
-    ],
-    [
-        "Brick",
-        "Bomb",
-        "Dartling",
-        "Engi"
     ],
     [
         "Brick",
@@ -16875,7 +16461,7 @@
         "Brick",
         "Tack",
         "Ice",
-        "Bucc"
+        "Sub"
     ],
     [
         "Brick",
@@ -16905,7 +16491,7 @@
         "Brick",
         "Tack",
         "Glue",
-        "Bucc"
+        "Sub"
     ],
     [
         "Brick",
@@ -16964,25 +16550,25 @@
     [
         "Brick",
         "Tack",
-        "Bucc",
+        "Sub",
         "Dartling"
     ],
     [
         "Brick",
         "Tack",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Brick",
         "Tack",
-        "Bucc",
+        "Sub",
         "Druid"
     ],
     [
         "Brick",
         "Tack",
-        "Bucc",
+        "Sub",
         "Engi"
     ],
     [
@@ -17055,7 +16641,7 @@
         "Brick",
         "Ice",
         "Glue",
-        "Bucc"
+        "Sub"
     ],
     [
         "Brick",
@@ -17085,18 +16671,18 @@
         "Brick",
         "Ice",
         "Sniper",
-        "Bucc"
-    ],
-    [
-        "Brick",
-        "Ice",
-        "Sniper",
         "Sub"
     ],
     [
         "Brick",
         "Ice",
         "Sniper",
+        "Bucc"
+    ],
+    [
+        "Brick",
+        "Ice",
+        "Sniper",
         "Ninja"
     ],
     [
@@ -17132,44 +16718,8 @@
     [
         "Brick",
         "Ice",
-        "Bucc",
+        "Sub",
         "Dartling"
-    ],
-    [
-        "Brick",
-        "Ice",
-        "Bucc",
-        "Ninja"
-    ],
-    [
-        "Brick",
-        "Ice",
-        "Bucc",
-        "Alch"
-    ],
-    [
-        "Brick",
-        "Ice",
-        "Bucc",
-        "Druid"
-    ],
-    [
-        "Brick",
-        "Ice",
-        "Bucc",
-        "Spac"
-    ],
-    [
-        "Brick",
-        "Ice",
-        "Bucc",
-        "Village"
-    ],
-    [
-        "Brick",
-        "Ice",
-        "Bucc",
-        "Engi"
     ],
     [
         "Brick",
@@ -17180,6 +16730,36 @@
     [
         "Brick",
         "Ice",
+        "Sub",
+        "Alch"
+    ],
+    [
+        "Brick",
+        "Ice",
+        "Sub",
+        "Druid"
+    ],
+    [
+        "Brick",
+        "Ice",
+        "Sub",
+        "Village"
+    ],
+    [
+        "Brick",
+        "Ice",
+        "Sub",
+        "Engi"
+    ],
+    [
+        "Brick",
+        "Ice",
+        "Bucc",
+        "Ninja"
+    ],
+    [
+        "Brick",
+        "Ice",
         "Mortar",
         "Ninja"
     ],
@@ -17212,12 +16792,6 @@
         "Ice",
         "Dartling",
         "Alch"
-    ],
-    [
-        "Brick",
-        "Ice",
-        "Dartling",
-        "Village"
     ],
     [
         "Brick",
@@ -17307,12 +16881,6 @@
         "Brick",
         "Glue",
         "Sniper",
-        "Bucc"
-    ],
-    [
-        "Brick",
-        "Glue",
-        "Sniper",
         "Ninja"
     ],
     [
@@ -17342,25 +16910,25 @@
     [
         "Brick",
         "Glue",
-        "Bucc",
+        "Sub",
         "Ninja"
     ],
     [
         "Brick",
         "Glue",
-        "Bucc",
+        "Sub",
         "Alch"
     ],
     [
         "Brick",
         "Glue",
-        "Bucc",
+        "Sub",
         "Druid"
     ],
     [
         "Brick",
         "Glue",
-        "Bucc",
+        "Sub",
         "Engi"
     ],
     [
@@ -17444,32 +17012,8 @@
     [
         "Brick",
         "Sniper",
-        "Bucc",
+        "Sub",
         "Dartling"
-    ],
-    [
-        "Brick",
-        "Sniper",
-        "Bucc",
-        "Ninja"
-    ],
-    [
-        "Brick",
-        "Sniper",
-        "Bucc",
-        "Alch"
-    ],
-    [
-        "Brick",
-        "Sniper",
-        "Bucc",
-        "Village"
-    ],
-    [
-        "Brick",
-        "Sniper",
-        "Bucc",
-        "Engi"
     ],
     [
         "Brick",
@@ -17480,6 +17024,30 @@
     [
         "Brick",
         "Sniper",
+        "Sub",
+        "Alch"
+    ],
+    [
+        "Brick",
+        "Sniper",
+        "Sub",
+        "Village"
+    ],
+    [
+        "Brick",
+        "Sniper",
+        "Sub",
+        "Engi"
+    ],
+    [
+        "Brick",
+        "Sniper",
+        "Bucc",
+        "Ninja"
+    ],
+    [
+        "Brick",
+        "Sniper",
         "Dartling",
         "Ninja"
     ],
@@ -17563,92 +17131,62 @@
     ],
     [
         "Brick",
-        "Bucc",
+        "Sub",
         "Dartling",
         "Ninja"
     ],
     [
         "Brick",
-        "Bucc",
+        "Sub",
         "Dartling",
         "Engi"
     ],
     [
         "Brick",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Alch"
     ],
     [
         "Brick",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Druid"
     ],
     [
         "Brick",
-        "Bucc",
-        "Ninja",
-        "Spac"
-    ],
-    [
-        "Brick",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Village"
     ],
     [
         "Brick",
-        "Bucc",
+        "Sub",
         "Ninja",
         "Engi"
     ],
     [
         "Brick",
-        "Bucc",
+        "Sub",
         "Alch",
         "Druid"
     ],
     [
         "Brick",
-        "Bucc",
-        "Alch",
-        "Spac"
-    ],
-    [
-        "Brick",
-        "Bucc",
+        "Sub",
         "Alch",
         "Engi"
     ],
     [
         "Brick",
-        "Bucc",
-        "Druid",
-        "Spac"
-    ],
-    [
-        "Brick",
-        "Bucc",
+        "Sub",
         "Druid",
         "Village"
     ],
     [
         "Brick",
-        "Bucc",
+        "Sub",
         "Druid",
-        "Engi"
-    ],
-    [
-        "Brick",
-        "Bucc",
-        "Spac",
-        "Village"
-    ],
-    [
-        "Brick",
-        "Bucc",
-        "Spac",
         "Engi"
     ],
     [
@@ -17811,12 +17349,6 @@
         "Etienne",
         "Bomb",
         "Ice",
-        "Dartling"
-    ],
-    [
-        "Etienne",
-        "Bomb",
-        "Ice",
         "Village"
     ],
     [
@@ -17847,12 +17379,6 @@
         "Etienne",
         "Ice",
         "Glue",
-        "Dartling"
-    ],
-    [
-        "Etienne",
-        "Ice",
-        "Glue",
         "Village"
     ],
     [
@@ -17866,24 +17392,6 @@
         "Ice",
         "Sniper",
         "Village"
-    ],
-    [
-        "Etienne",
-        "Ice",
-        "Dartling",
-        "Ninja"
-    ],
-    [
-        "Etienne",
-        "Ice",
-        "Dartling",
-        "Village"
-    ],
-    [
-        "Etienne",
-        "Ice",
-        "Dartling",
-        "Engi"
     ],
     [
         "Etienne",
