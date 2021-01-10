@@ -4143,12 +4143,6 @@
         "Quincy",
         "Sniper",
         "Mortar",
-        "Dartling"
-    ],
-    [
-        "Quincy",
-        "Sniper",
-        "Mortar",
         "Druid"
     ],
     [
@@ -11133,12 +11127,6 @@
         "Ben",
         "Sniper",
         "Mortar",
-        "Dartling"
-    ],
-    [
-        "Ben",
-        "Sniper",
-        "Mortar",
         "Druid"
     ],
     [
@@ -13083,12 +13071,6 @@
         "Ezili",
         "Sniper",
         "Mortar",
-        "Dartling"
-    ],
-    [
-        "Ezili",
-        "Sniper",
-        "Mortar",
         "Druid"
     ],
     [
@@ -17360,12 +17342,6 @@
     [
         "Etienne",
         "Bomb",
-        "Dartling",
-        "Alch"
-    ],
-    [
-        "Etienne",
-        "Bomb",
         "Alch",
         "Druid"
     ],
@@ -17408,32 +17384,8 @@
     [
         "Etienne",
         "Glue",
-        "Dartling",
-        "Alch"
-    ],
-    [
-        "Etienne",
-        "Glue",
         "Alch",
         "Village"
-    ],
-    [
-        "Etienne",
-        "Sniper",
-        "Mortar",
-        "Dartling"
-    ],
-    [
-        "Etienne",
-        "Sniper",
-        "Dartling",
-        "Ninja"
-    ],
-    [
-        "Etienne",
-        "Sniper",
-        "Dartling",
-        "Alch"
     ],
     [
         "Etienne",
@@ -17480,12 +17432,6 @@
     [
         "Etienne",
         "Mortar",
-        "Dartling",
-        "Ninja"
-    ],
-    [
-        "Etienne",
-        "Mortar",
         "Ninja",
         "Village"
     ],
@@ -17494,18 +17440,6 @@
         "Mortar",
         "Alch",
         "Village"
-    ],
-    [
-        "Etienne",
-        "Dartling",
-        "Ninja",
-        "Engi"
-    ],
-    [
-        "Etienne",
-        "Dartling",
-        "Alch",
-        "Engi"
     ],
     [
         "Etienne",

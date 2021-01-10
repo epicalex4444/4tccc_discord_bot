@@ -21,7 +21,7 @@ towersNK = ['DartMonkey', 'BoomerangMonkey', 'BombShooter', 'TackShooter', 'IceM
 file = open(towerAliasAddress)
 towerAliases = json.load(file) #used for find4tc function so people can input many different names
 file.close()
- 
+
 #all elements of a are in b, for lists/tuples, if a is empty it return true
 def is_subset(a, b):
     for aElement in a:
@@ -52,11 +52,10 @@ def tower_print(towers):
 
 #changes any valid tower in towers to be it's default name
 def tower_alias(towers):
-    towers.lower()
-    defaultNames = towers4tc + hereos4tc
+    defaultNames = hereos4tc + towers4tc
     for item in range(len(towers)):
         for tower in range(len(towerAliases)):
-            if towers[item] in towerAliases[tower]:
+            if towers[item].lower() in towerAliases[tower]:
                 towers[item] = defaultNames[tower]
     return towers
 
@@ -85,14 +84,14 @@ def find4tc(towers):
     matches = 0
     for combo in remaningCombos:
         if is_subset(towers, combo):
-            displayStr += tower_print(combo) + '\n' 
+            displayStr += tower_print(combo) + '\n'
             matches += 1
 
     if matches == 1:
         return '```1 combo found\n{0}```'.format(displayStr[:-1])
     else:
         return '```{0} combos found\n{1}'.format(matches, displayStr)[:-1] + '```'
-    
+
 #returns leaderboard formatted for easy reading
 #if name is provided returns score, if amount is provided it returns a shortened version of the leaderboard
 def get_leaderboard(name=None, amount=None):
@@ -117,7 +116,7 @@ def get_leaderboard(name=None, amount=None):
                 break
             displayStr += '{0}: {1}\n'.format(space_fill(str(score[1]), 4, False), score[0])
             amount -= 1
-            
+
     return '```{0}```'.format(displayStr[:-1])
 
 #returns all the submission formatted for easy reading, if a name is provided if returns ony submissions by that person
@@ -140,7 +139,7 @@ def get_submissions(name=None):
             return "{0} doesn't exist".format(name)
 
         displayStr = "{0}'s submissions:\n{1}".format(name, displayStr)
-    
+
     return '```' + displayStr[:-1] + '```'
 
 #change name in submissions and leaderboard
@@ -152,7 +151,7 @@ def change_name(old, new):
     for score in leaderboard:
         if score[0] == new:
             raise Exception('Cannot set alias to another persons name')
-        
+
     for score in leaderboard:
         if score[0] == old:
             score[0] = new
@@ -172,7 +171,7 @@ def change_name(old, new):
     file = open(submittedAddress, 'w')
     json.dump(submittedCombos, file, indent=4)
     file.close()
-    
+
 #adds new alias or changes an existing alias
 def set_alias(discordId, name):
     file = open(aliasAddress)
@@ -190,14 +189,14 @@ def set_alias(discordId, name):
         except Exception as e:
             return str(e)
         displayStr = '{0} changed to {1}'.format(alias, name)
-    
+
     aliases[discordId] = name
 
     file = open(aliasAddress, 'w')
     json.dump(aliases, file, indent=4)
     file.close()
     return displayStr
-    
+
 #returns name from discord id
 def get_alias(discordId):
     discordId = str(discordId)
@@ -250,7 +249,7 @@ def get_version(cD):
 #checks if the settings of the challenge match a valid 4tc challenge, cD = challengeData
 def valid_settings(cD, version):
     errorStr = ''
-    
+
     if cD['difficulty'] != 'Hard':
         errorStr += 'Not hard difficulty\n'
     if cD['mode'] != 'Clicks':
@@ -265,7 +264,7 @@ def valid_settings(cD, version):
         errorStr += "Ends before round 100\n"
     if cD['towers'][0]['max'] != 0:
         errorStr += "Selected hero can't be a tower\n"
-    
+
     towerCount = 0
     towerMaxNot1 = False
     for tower in cD['towers']:
@@ -313,7 +312,7 @@ def get_towers(challengeData):
         for x in range(len(namesNK)):
             if towers[i] == namesNK[x]:
                 towers[i] = names4tc[x]
-    
+
     return towers
 
 #removes combos from remaining combos
@@ -342,7 +341,7 @@ def update_leaderboard(name, combos):
     file = open(lbAddress)
     leaderboard = json.load(file)
     file.close()
-    
+
     nameNotExist = True
     for score in leaderboard:
         if score[0] == name:
@@ -377,14 +376,14 @@ def submit4tc(code, name=None, discordId=None):
             name = get_alias(discordId)
         except Exception as e:
             return str(e)
-    
+
     code = code.upper()
 
     #parses out invalid codes that are not 7 chars long and/or contain non letters
     #this is for efficiency reasons since requesting is very slow
     if len(code) != 7 or not code.isalpha():
         return 'Invalid Code'
-    
+
     try:
         challengeData = get_challenge_data(code)
         version = get_version(challengeData)

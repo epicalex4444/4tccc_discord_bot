@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands #discord.ext seems to be a different thing entirely from discord
 from commands_backend import set_alias, find4tc, get_submissions, get_leaderboard, submit4tc, create_hastebin_link
 
-token = 'no'
+token = 'NzkwNTI2MTkwNzQ5NzQ1MTky.X-B44w.RWqw3WU57N9bRW1Y63Y_X-x6gfw'
 ownerId = 482762949958696980
 
 bot = commands.Bot(command_prefix='!', intents=discord.Intents(messages=True), owner_id=ownerId, help_command=None)
