@@ -103,7 +103,7 @@ def get_leaderboard(name=None, amount=None):
         for score in leaderboard:
             if score[0] == name:
                 return "{0}'s score is {1}".format(name, score[1])
-        return "{0} hasn't submitted yet"
+        return "{0} hasn't submitted yet".format(name)
 
     displayStr = ''
     if amount == None or int(amount) >= len(leaderboard):
