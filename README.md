@@ -36,7 +36,7 @@ searching with no towers shows all of the remaining combos
 __alias command:__  
 usage: !alias name  
 this command is used so you can omit name in the submit function  
-names are stored per discord user, you can only have 1 copy of each name, so if you want to submit with an alt you will need to put your name in
+names are stored per discord user, you can only have 1 copy of each name, so if you want to submit with an alt you will need to put your name in  
 players are able to change thier name using this command if the name they are submitting to doesn't exist or they have not submitted under thier current alias
 
 __leaderboard command:__  
