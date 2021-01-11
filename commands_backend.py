@@ -148,9 +148,17 @@ def change_name(old, new):
     leaderboard = json.load(file)
     file.close()
 
+    submittedNew = False
+    submittedOld = False
+
     for score in leaderboard:
         if score[0] == new:
-            raise Exception('Cannot set alias to another persons name')
+            submittedNew = True
+        if score[0] == old:
+            submittedOld = True
+
+    if submittedNew and submittedOld:
+        raise Exception('cannot change name since the name you are changing to exists and you have submitted under your current alias, this is to prevent combo theft')
 
     for score in leaderboard:
         if score[0] == old:
@@ -183,7 +191,7 @@ def set_alias(discordId, name):
         displayStr = '{0} has been added as your alias'.format(name)
     else:
         if alias == name:
-            return 'Name already added as alias'
+            return 'Name already added as your alias'
         try:
             change_name(alias, name)
         except Exception as e:
