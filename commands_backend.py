@@ -126,20 +126,30 @@ def get_submissions(name=None):
     submittedCombos = json.load(file)
     file.close()
 
-    displayStr = ''
+    displayStr = 'Code    |Tower1  |Tower2  |Tower3  |Tower4  '
     if name == None:
+        displayStr += '|Name\n'
         for submission in submittedCombos:
-            displayStr += tower_print(submission[2]) + '\n'
+            for _ in range(4 - len(submission[2])):
+                submission[2].append('')
+            temp = [submission[1]] + submission[2] + [submission[0]]
+            displayStr += tower_print(temp) + '\n'
     else:
+        displayStr += '\n'
+        nameNotExist = True
         for submission in submittedCombos:
             if submission[0] == name:
-                displayStr += tower_print(submission[2]) + '\n'
+                nameNotExist = False
+                for _ in range(4 - len(submission[2])):
+                    submission[2].append('')
+                temp = [submission[1]] + submission[2]
+                displayStr += tower_print(temp) + '\n'
 
-        if displayStr == '':
+        if nameNotExist:
             return "{0} doesn't exist".format(name)
 
         displayStr = "{0}'s submissions:\n{1}".format(name, displayStr)
-
+    
     return '```' + displayStr[:-1] + '```'
 
 #change name in submissions and leaderboard
