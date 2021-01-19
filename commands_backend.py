@@ -72,7 +72,12 @@ def find4tc(towers):
 
     invalidTowers = validate_towers(towers)
     if invalidTowers != []:
-        return 'Invalid Towers: {0}'.format(', '.join(invalidTowers))
+        return ['Invalid Towers: {0}'.format(', '.join(invalidTowers)), None, None]
+
+    if towers == []:
+        header = 'All Remaining Combos'
+    else:
+        header = '{0} Combos'.format(', '.join(towers))
 
     file = open(remainingAddress)
     remaningCombos = json.load(file)
@@ -86,9 +91,11 @@ def find4tc(towers):
             matches += 1
 
     if matches == 1:
-        return '```1 combo found\n{0}```'.format(displayStr[:-1])
+        return ['1 combo found', '```{0}```'.format(displayStr[:-1]), header]
+    elif matches == 0:
+        return ['0 combos found', None, None]
     else:
-        return '```{0} combos found\n{1}'.format(matches, displayStr)[:-1] + '```'
+        return ['{0} combos found'.format(matches), '```{0}```'.format(displayStr[:-1]), header]
 
 #returns leaderboard formatted for easy reading
 #if name is provided returns score, if amount is provided it returns a shortened version of the leaderboard
@@ -100,14 +107,17 @@ def get_leaderboard(name=None, amount=None):
     if name != None:
         for score in leaderboard:
             if score[0] == name:
-                return "{0}'s score is {1}".format(name, score[1])
-        return "{0} hasn't submitted yet".format(name)
+                return ["{0}'s score is {1}".format(name, score[1]), None, None]
+        return ["{0} hasn't submitted yet".format(name), None, None]
 
     displayStr = ''
+    header = ''
     if amount == None or int(amount) >= len(leaderboard):
+        header = 'Full Leaderboard'
         for score in leaderboard:
             displayStr += '{0}: {1}\n'.format(space_fill(str(score[1]), 4, False), score[0])
     else:
+        header = 'Top {0} Leaderboard'.format(amount)
         amount = int(amount)
         for score in leaderboard:
             if amount == 0:
@@ -115,7 +125,7 @@ def get_leaderboard(name=None, amount=None):
             displayStr += '{0}: {1}\n'.format(space_fill(str(score[1]), 4, False), score[0])
             amount -= 1
 
-    return '```{0}```'.format(displayStr[:-1])
+    return [None, '```{0}```'.format(displayStr[:-1]), header]
 
 #returns all the submission formatted for easy reading, if a name is provided if returns ony submissions by that person
 #if towers is provided it returns who completed the combo, must have 4 towers
@@ -125,7 +135,9 @@ def get_submissions(name=None):
     file.close()
 
     displayStr = 'Code    |Tower1  |Tower2  |Tower3  |Tower4  '
+    header = ''
     if name == None:
+        header = 'All Submissions'
         displayStr += '|Name\n'
         for submission in submittedCombos:
             for _ in range(4 - len(submission[2])):
@@ -133,6 +145,7 @@ def get_submissions(name=None):
             temp = [submission[1]] + submission[2] + [submission[0]]
             displayStr += tower_print(temp) + '\n'
     else:
+        header = "{0}'s submissions".format(name)
         displayStr += '\n'
         nameNotExist = True
         for submission in submittedCombos:
@@ -144,11 +157,9 @@ def get_submissions(name=None):
                 displayStr += tower_print(temp) + '\n'
 
         if nameNotExist:
-            return "{0} doesn't exist".format(name)
-
-        displayStr = "{0}'s submissions:\n{1}".format(name, displayStr)
+            return ["{0} doesn't exist".format(name), None, None]
     
-    return '```' + displayStr[:-1] + '```'
+    return [None, '```{0}```'.format(displayStr[:-1]), header]
 
 #change name in submissions and leaderboard
 def change_name(old, new):

@@ -12,15 +12,25 @@ ownerId = 482762949958696980
 
 bot = commands.Bot(command_prefix='a!', intents=discord.Intents(messages=True), owner_id=ownerId, help_command=None)
 
-#sends the message or if it is too long it creates a hastebin link
-async def send(ctx, message, header='No Header'):
-    if len(message) > 2000:
-        if message.startswith('```'):
-            message = message[3:-3]
-        await ctx.send('Message too long to send, creating a hastebin link for the message instead')
-        await ctx.send(create_webpage(header, message))
+#response = [immediate, message, header]
+#immediate is always sent as a discord message, message is sent as a discord message if it is
+#short enough else it is the body of the webpage, header is the header off the webpage if it exists
+async def send(ctx, response):
+    #some messages don't need to send anything immediately
+    if response[0] != None:
+        await ctx.send(response[0])
+
+    #used for messages that guaranteed won't exceed 2000 chars
+    if response[1] == None:
+        return
+
+    if len(response[1]) > 2000:
+        if response[1].startswith('```') and response[1].endswith('```'):
+            response[1] = response[1][3:-3]
+        await ctx.send('Message too long to send, creating a webpage link for the message instead')
+        await ctx.send(create_webpage(response[2], response[1]))
     else:
-        await ctx.send(message)
+        await ctx.send(response[1])
 
 #logs to the console when the bot is on
 @bot.event
@@ -94,9 +104,9 @@ async def leaderboard(ctx, *, arg):
     elif arg[1:].isdigit():
         response = get_leaderboard(amount=arg[1:])
     elif arg[1] != '"' or arg[-1] != '"':
-        response = 'Name must start and end with double quotes'
+        response = ['Name must start and end with double quotes', None, None]
     elif arg == ' ""':
-        response = 'Name cannot be nothing'
+        response = ['Name cannot be nothing', None, None]
     else:
         response = get_leaderboard(name=arg[2:-1])
 
