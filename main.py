@@ -1,25 +1,28 @@
 import discord
 from discord.ext import commands #discord.ext seems to be a different thing entirely from discord
-from commands_backend import set_alias, find4tc, get_submissions, get_leaderboard, submit4tc, create_hastebin_link
+from commands_backend import set_alias, find4tc, get_submissions, get_leaderboard, submit4tc
+from webpage_server import create_webpage, start_webserver, webpage_handler
 
-token = 'NzkwNTI2MTkwNzQ5NzQ1MTky.X-B44w.RWqw3WU57N9bRW1Y63Y_X-x6gfw'
+token = 'NzQ1OTYwODExNjM3Mzc1MDU3.Xz5YJA.BA3F8suYVTiQrJY55MPI2i3aYos'
 ownerId = 482762949958696980
 
-bot = commands.Bot(command_prefix='!', intents=discord.Intents(messages=True), owner_id=ownerId, help_command=None)
+bot = commands.Bot(command_prefix='a!', intents=discord.Intents(messages=True), owner_id=ownerId, help_command=None)
 
 #sends the message or if it is too long it creates a hastebin link
-async def send(ctx, message):
+async def send(ctx, message, header='No Header'):
     if len(message) > 2000:
         if message.startswith('```'):
             message = message[3:-3]
         await ctx.send('Message too long to send, creating a hastebin link for the message instead')
-        await ctx.send(create_hastebin_link(message))
+        await ctx.send(create_webpage(header, message))
     else:
         await ctx.send(message)
 
 #logs to the console when the bot is on
 @bot.event
 async def on_ready():
+    await start_webserver()
+    webpage_handler() #because there is no await there is a thread constantly deleting expired webpages
     await bot.change_presence(status=discord.Status.online, activity=discord.Game("!help"))
     print('{0} ready'.format(bot.user))
 

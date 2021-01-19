@@ -2,7 +2,6 @@ import json
 import requests
 import base64
 import zlib
-from simplejson.errors import JSONDecodeError
 
 aliasAddress = './aliases.json'
 lbAddress = './leaderboard.json'
@@ -10,7 +9,6 @@ remainingAddress = './remaining_combos.json'
 submittedAddress = './submitted_combos.json'
 towerAliasAddress = './tower_aliases.json'
 
-hastebinUrl = 'https://hastebin.com/'
 challengeDataUrl = 'https://static-api.nkstatic.com/appdocs/11/es/challenges/'
 
 hereos4tc = ['Quincy', 'Gwen', 'Striker', 'Obyn', 'Church', 'Ben', 'Ezili', 'Pat', 'Adora', 'Brickell', 'Etienne']
@@ -413,12 +411,3 @@ def submit4tc(code, name=None, discordId=None):
         return '```Submission:\nName: {0}\nCode: {1}\nTowers: {2}\nCombos removed: {3}```'.format(name, code, ', '.join(towers), combosRemoved)
     except Exception as e:
         return str(e)
-
-#creates a hastebin page conataining message and returns the url to it
-def create_hastebin_link(message):
-    try:
-        response = requests.post(hastebinUrl + 'documents', message.encode('utf-8'), timeout=10)
-        response.raise_for_status()
-        return hastebinUrl + response.json()['key']
-    except (requests.exceptions.RequestException, JSONDecodeError, KeyError):
-        return "Couldn't create hastebin link, I am working on fixing this issue"
