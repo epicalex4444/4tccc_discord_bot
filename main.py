@@ -10,7 +10,7 @@ file.close()
 
 ownerId = 482762949958696980
 
-bot = commands.Bot(command_prefix='a!', intents=discord.Intents(messages=True), owner_id=ownerId, help_command=None)
+bot = commands.Bot(command_prefix='!', intents=discord.Intents(messages=True), owner_id=ownerId, help_command=None)
 
 #response = [immediate, message, header]
 #immediate is always sent as a discord message, message is sent as a discord message if it is
