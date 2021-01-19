@@ -3,11 +3,11 @@ import requests
 import base64
 import zlib
 
-aliasAddress = './aliases.json'
-lbAddress = './leaderboard.json'
-remainingAddress = './remaining_combos.json'
-submittedAddress = './submitted_combos.json'
-towerAliasAddress = './tower_aliases.json'
+aliasAddress = './jsons/aliases.json'
+lbAddress = './jsons/leaderboard.json'
+remainingAddress = './jsons/remaining_combos.json'
+submittedAddress = './jsons/submitted_combos.json'
+towerAliasAddress = './jsons/tower_aliases.json'
 
 challengeDataUrl = 'https://static-api.nkstatic.com/appdocs/11/es/challenges/'
 
