@@ -3,7 +3,11 @@ from discord.ext import commands #discord.ext seems to be a different thing enti
 from commands_backend import set_alias, find4tc, get_submissions, get_leaderboard, submit4tc
 from webpage_server import create_webpage, start_webserver, webpage_handler
 
-token = 'NzQ1OTYwODExNjM3Mzc1MDU3.Xz5YJA.BA3F8suYVTiQrJY55MPI2i3aYos'
+#token is stored in a blank file as plain text so we don't accidentely upload it to github
+file = open('./token')
+token = file.read()
+file.close()
+
 ownerId = 482762949958696980
 
 bot = commands.Bot(command_prefix='a!', intents=discord.Intents(messages=True), owner_id=ownerId, help_command=None)
