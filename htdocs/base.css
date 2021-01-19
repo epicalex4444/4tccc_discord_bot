@@ -1,0 +1,54 @@
+:root {
+    --lineHeight: 14px;
+    --border: thin solid black;
+    --padding: 5px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #252527;
+}
+
+header {
+    border-bottom: none;
+    height: auto;
+    font-size: 50px;
+    text-decoration: bold;
+    text-align: center;
+    white-space: break-spaces;
+    word-wrap: break-word;
+}
+
+numbers {
+    position: absolute;
+    padding: var(--padding);
+    border: var(--border);
+    border-right: none;
+    font-family: monospace;
+    text-align: right;
+    white-space: break-spaces;
+    line-height: var(--lineHeight);
+}
+
+main {
+    position: absolute;
+    padding: var(--padding);
+    border: var(--border);
+    font-family: monospace;
+    white-space: break-spaces;
+    word-break: break-word;
+    line-height: var(--lineHeight);
+}
+
+side {
+    position: absolute;
+    right: 0;
+    padding: var(--padding);
+    border: var(--border);
+    border-left: none;
+    width: 232px;
+}
