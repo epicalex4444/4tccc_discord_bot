@@ -96,8 +96,3 @@ async def webpage_handler():
 async def start_webserver():
     start_apache_process()
     init_existing_files()
-
-if __name__ == "__main__":
-    from commands_backend import get_submissions
-    response = get_submissions()
-    create_webpage(response[2],response[1][3:-3])
