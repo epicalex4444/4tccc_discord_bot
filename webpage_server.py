@@ -1,10 +1,12 @@
+#known bugs
+#webpage automated deletion doesn't seem to work
+#takes a while to update things once a webpage is deleted
+
 import random
 import os
 import time
 import sys
 import subprocess
-
-#start_webpage and delete_next_webpage should use threading/coroutines instead of janky waiting
 
 webpageDir = 'C:/Apache24/htdocs/'
 httpdExeDir = 'C:/Apache24/bin/httpd.exe'
@@ -32,7 +34,7 @@ def create_webpage(header, body):
 
     timeCreated = time.time()
     metaTag = '<meta name="timeCreated" content="{0}">\n'.format(timeCreated)
-    htmlText = templateHTML[:173] + metaTag + templateHTML[173:373] + header + templateHTML[373:417] + body + templateHTML[417:]
+    htmlText = templateHTML[:155] + metaTag + templateHTML[155:227] + header + templateHTML[227:274] + body + templateHTML[274:]
 
     file = open(webpageDir + fileName, 'x')
     file.write(htmlText)
@@ -55,6 +57,7 @@ def init_existing_files():
             else:
                 webpages[address[:4]] = os.path.getctime(path)
 
+#returns whether the process is running or not
 def process_running(processName):
     call = 'TASKLIST', '/FI', 'imagename eq %s' % processName
     output = subprocess.check_output(call).decode()
@@ -62,14 +65,14 @@ def process_running(processName):
     return last_line.lower().startswith(processName.lower())
 
 #starts apache if it isn't running
-def start_apache():
+def start_apache_process():
     #couldn't start apache2.4 service because of permission errors, so I reverted to directely running the httpd.exe
 
     if not process_running('httpd.exe'):
         subprocess.Popen(httpdExeDir)
 
 #finds the webpage that is to be deleted next and waits until deleting it
-#if there are no webpages it waits an hour, to prevent an extremely inefficient busy waiting loop, still unoptimal though
+#if there are no webpages it waits the webpage uptime, to prevent an extremely inefficient busy waiting loop, still unoptimal though
 async def webpage_handler():
     while True:
         minTime = float('inf')
@@ -86,10 +89,15 @@ async def webpage_handler():
             os.remove(webpageDir + minKey + '.html')
             del webpages[minKey]
         else:
-            #this is still busy waiting but it is much more efficent then not having this wait
-            time.sleep(3600)
+            #this is still busy waiting but it is much more efficent then not having this sleep
+            time.sleep(webpageUptime)
 
 #hanldes file removing after thier time is up
 async def start_webserver():
-    start_apache()
+    start_apache_process()
     init_existing_files()
+
+if __name__ == "__main__":
+    from commands_backend import get_submissions
+    response = get_submissions()
+    create_webpage(response[2],response[1][3:-3])
