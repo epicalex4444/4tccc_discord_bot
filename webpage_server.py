@@ -62,26 +62,23 @@ def start_apache_process():
         os.system('systemctl restart httpd')
     
 
-#finds the webpage that is to be deleted next and waits until deleting it
-#if there are no webpages it waits the webpage uptime, to prevent an extremely inefficient busy waiting loop, still unoptimal though
-async def webpage_handler():
-    while True:
-        minTime = float('inf')
-        minKey = ''
+#deletes webpages that have expired then returns the time until the next webpage is to be deleted, returns webpage uptime if there is no webpages
+def delete_next_webpage():
+    currTime = time.time()
+    webpageExpiries = []
 
-        for key in webpages:
-            if webpages[key] < minTime:
-                minTime = webpages[key]
-                minKey = key
-
-        if minKey != '':
-            timeToDelete = max(0, webpageUptime - (time.time() - webpages[minKey]))
-            time.sleep(timeToDelete)
-            os.remove(webpageDir + minKey + '.html')
-            del webpages[minKey]
+    for key in webpages:
+        timeToDelete = webpageUptime - (time.time() - webpages[key])
+        if timeToDelete <= 0:
+            os.remove(webpageDir + key + '.html')
+            del webpages[key]
         else:
-            #this is still busy waiting but it is much more efficent then not having this sleep
-            time.sleep(webpageUptime)
+            webpageExpiries.append(timeToDelete)
+
+    if len(webpageExpiries) == 0:
+        return(webpageUptime)
+    else:
+        return(min(webpageExpiries))
 
 #hanldes file removing after thier time is up
 async def start_webserver():

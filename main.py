@@ -1,8 +1,7 @@
 import discord
-import asyncio
-from discord.ext import commands #discord.ext seems to be a different thing entirely from discord
+from discord.ext import commands, tasks #discord.ext seems to be a different thing entirely from discord
 from commands_backend import set_alias, find4tc, get_submissions, get_leaderboard, submit4tc
-from webpage_server import create_webpage, start_webserver, webpage_handler
+from webpage_server import create_webpage, start_webserver, delete_next_webpage
 
 #token is stored in a blank file as plain text so we don't accidentely upload it to github
 file = open('./token')
@@ -33,11 +32,23 @@ async def send(ctx, response):
     else:
         await ctx.send(response[1])
 
+class webpage_handler(commands.Cog):
+    def __init__(self):
+        self.webpage_deleter.start()
+
+    def cog_unload(self):
+        self.webpage_deleter.cancel()
+
+    @tasks.loop(seconds = 10)
+    async def webpage_deleter(self):
+        waitTime = delete_next_webpage()
+        self.webpage_deleter.change_interval(seconds=waitTime)
+
 #logs to the console when the bot is on
 @bot.event
 async def on_ready():
     await start_webserver()
-    asyncio.create_task(webpage_handler()) #run in the background on a seperate thread
+    webpage_handler()
     await bot.change_presence(status=discord.Status.online, activity=discord.Game("!help"))
     print('{0} ready'.format(bot.user))
 
