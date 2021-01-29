@@ -66,14 +66,18 @@ def start_apache_process():
 def delete_next_webpage():
     currTime = time.time()
     webpageExpiries = []
+    webpagesToDelete = []
 
     for key in webpages:
         timeToDelete = webpageUptime - (time.time() - webpages[key])
         if timeToDelete <= 0:
             os.remove(webpageDir + key + '.html')
-            del webpages[key]
+            webpagesToDelete.append(key)
         else:
             webpageExpiries.append(timeToDelete)
+
+    for key in webpagesToDelete:
+        del webpages[key]
 
     if len(webpageExpiries) == 0:
         return(webpageUptime)
