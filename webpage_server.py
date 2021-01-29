@@ -6,10 +6,8 @@ import random
 import os
 import time
 import sys
-import subprocess
 
-webpageDir = 'C:/Apache24/htdocs/'
-httpdExeDir = 'C:/Apache24/bin/httpd.exe'
+webpageDir = '/srv/http/'
 webpageURL = 'http://4TCCC.mooo.com/'
 webpageUptime = 3600 #seconds
 webpages = dict()
@@ -57,19 +55,12 @@ def init_existing_files():
             else:
                 webpages[address[:4]] = os.path.getctime(path)
 
-#returns whether the process is running or not
-def process_running(processName):
-    call = 'TASKLIST', '/FI', 'imagename eq %s' % processName
-    output = subprocess.check_output(call).decode()
-    last_line = output.strip().split('\r\n')[-1]
-    return last_line.lower().startswith(processName.lower())
-
 #starts apache if it isn't running
 def start_apache_process():
-    #couldn't start apache2.4 service because of permission errors, so I reverted to directely running the httpd.exe
-
-    if not process_running('httpd.exe'):
-        subprocess.Popen(httpdExeDir)
+    apacheRunning = os.system('systemctl status httpd &> /dev/null')
+    if not apacheRunning == 0:
+        os.system('systemctl restart httpd')
+    
 
 #finds the webpage that is to be deleted next and waits until deleting it
 #if there are no webpages it waits the webpage uptime, to prevent an extremely inefficient busy waiting loop, still unoptimal though

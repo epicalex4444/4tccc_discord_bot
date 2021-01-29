@@ -36,7 +36,7 @@ async def send(ctx, response):
 @bot.event
 async def on_ready():
     await start_webserver()
-    webpage_handler() #because there is no await there is a thread constantly deleting expired webpages
+    asyncio.run(webpage_handler()) #run in the background on a seperate thread
     await bot.change_presence(status=discord.Status.online, activity=discord.Game("!help"))
     print('{0} ready'.format(bot.user))
 
