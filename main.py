@@ -1,4 +1,5 @@
 import discord
+import asyncio
 from discord.ext import commands #discord.ext seems to be a different thing entirely from discord
 from commands_backend import set_alias, find4tc, get_submissions, get_leaderboard, submit4tc
 from webpage_server import create_webpage, start_webserver, webpage_handler
@@ -36,7 +37,7 @@ async def send(ctx, response):
 @bot.event
 async def on_ready():
     await start_webserver()
-    asyncio.run(webpage_handler()) #run in the background on a seperate thread
+    asyncio.create_task(webpage_handler()) #run in the background on a seperate thread
     await bot.change_presence(status=discord.Status.online, activity=discord.Game("!help"))
     print('{0} ready'.format(bot.user))
 
