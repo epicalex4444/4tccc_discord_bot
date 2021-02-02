@@ -32,6 +32,13 @@ async def send(ctx, response):
     else:
         await ctx.send(response[1])
 
+#disables command not foun error in order to stop printing to the console
+@bot.event
+async def on_command_error(ctx, error):
+    if isinstance(error, commands.CommandNotFound):
+        return
+    raise error
+
 class webpage_handler(commands.Cog):
     def __init__(self):
         self.webpage_deleter.start()
