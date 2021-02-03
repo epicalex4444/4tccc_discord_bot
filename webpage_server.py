@@ -8,8 +8,8 @@ import time
 import sys
 
 webpageDir = '/srv/http/'
-webpageURL = 'http://4TCCC.mooo.com/'
-webpageUptime = 3600 #seconds
+webpageURL = 'http://4tccc.mooo.com/'
+webpageUptime = 86400 #seconds
 webpages = dict()
 
 file = open('./template.html')
@@ -30,15 +30,16 @@ def create_webpage(header, body):
     key = key_generator()
     fileName = key + '.html'
 
-    timeCreated = time.time()
+    file = open(webpageDir + fileName, 'x')
+    
+    timeCreated = os.path.getctime(webpageDir + fileName)
     metaTag = '<meta name="timeCreated" content="{0}">\n'.format(timeCreated)
     htmlText = templateHTML[:155] + metaTag + templateHTML[155:227] + header + templateHTML[227:274] + body + templateHTML[274:]
 
-    file = open(webpageDir + fileName, 'x')
     file.write(htmlText)
     file.close()
 
-    webpages[key] = os.path.getctime(webpageDir + fileName)
+    webpages[key] = timeCreated
     
     return webpageURL + fileName
 
@@ -66,17 +67,17 @@ def start_apache_process():
 def delete_next_webpage():
     currTime = time.time()
     webpageExpiries = []
-    webpagesToDelete = []
+    webpageToDelete = []
 
     for key in webpages:
         timeToDelete = webpageUptime - (time.time() - webpages[key])
         if timeToDelete <= 0:
             os.remove(webpageDir + key + '.html')
-            webpagesToDelete.append(key)
+            webpageToDelete.append(key)
         else:
             webpageExpiries.append(timeToDelete)
 
-    for key in webpagesToDelete:
+    for key in webpageToDelete:
         del webpages[key]
 
     if len(webpageExpiries) == 0:
