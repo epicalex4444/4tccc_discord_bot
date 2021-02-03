@@ -1383,12 +1383,6 @@
         "Tack",
         "Ice",
         "Alch",
-        "Village"
-    ],
-    [
-        "Tack",
-        "Ice",
-        "Alch",
         "Engineer"
     ],
     [
@@ -5350,12 +5344,6 @@
         "Tack",
         "Ninja",
         "Engineer"
-    ],
-    [
-        "Striker",
-        "Tack",
-        "Alch",
-        "Village"
     ],
     [
         "Striker",
@@ -8109,12 +8097,6 @@
         "Ben",
         "Tack",
         "Alch",
-        "Village"
-    ],
-    [
-        "Ben",
-        "Tack",
-        "Alch",
         "Engineer"
     ],
     [
@@ -8750,12 +8732,6 @@
     [
         "Ezili",
         "Dart",
-        "Boomer",
-        "Druid"
-    ],
-    [
-        "Ezili",
-        "Dart",
         "Bomb",
         "Tack"
     ],
@@ -8792,12 +8768,6 @@
     [
         "Ezili",
         "Dart",
-        "Bomb",
-        "Druid"
-    ],
-    [
-        "Ezili",
-        "Dart",
         "Tack",
         "Ice"
     ],
@@ -8828,12 +8798,6 @@
     [
         "Ezili",
         "Dart",
-        "Tack",
-        "Druid"
-    ],
-    [
-        "Ezili",
-        "Dart",
         "Ice",
         "Glue"
     ],
@@ -8859,12 +8823,6 @@
         "Ezili",
         "Dart",
         "Ice",
-        "Druid"
-    ],
-    [
-        "Ezili",
-        "Dart",
-        "Ice",
         "Engineer"
     ],
     [
@@ -8889,12 +8847,6 @@
         "Ezili",
         "Dart",
         "Glue",
-        "Druid"
-    ],
-    [
-        "Ezili",
-        "Dart",
-        "Glue",
         "Engineer"
     ],
     [
@@ -8908,12 +8860,6 @@
         "Dart",
         "Sniper",
         "Alch"
-    ],
-    [
-        "Ezili",
-        "Dart",
-        "Sniper",
-        "Druid"
     ],
     [
         "Ezili",
@@ -8937,12 +8883,6 @@
         "Ezili",
         "Dart",
         "Ninja",
-        "Druid"
-    ],
-    [
-        "Ezili",
-        "Dart",
-        "Ninja",
         "Spac"
     ],
     [
@@ -8961,24 +8901,6 @@
         "Ezili",
         "Dart",
         "Alch",
-        "Druid"
-    ],
-    [
-        "Ezili",
-        "Dart",
-        "Alch",
-        "Engineer"
-    ],
-    [
-        "Ezili",
-        "Dart",
-        "Druid",
-        "Village"
-    ],
-    [
-        "Ezili",
-        "Dart",
-        "Druid",
         "Engineer"
     ],
     [
@@ -12009,12 +11931,6 @@
         "Brickell",
         "Dart",
         "Ice",
-        "Druid"
-    ],
-    [
-        "Brickell",
-        "Dart",
-        "Ice",
         "Engineer"
     ],
     [
@@ -12033,12 +11949,6 @@
         "Brickell",
         "Dart",
         "Sniper",
-        "Druid"
-    ],
-    [
-        "Brickell",
-        "Dart",
-        "Sniper",
         "Engineer"
     ],
     [
@@ -12046,12 +11956,6 @@
         "Dart",
         "Sub",
         "Ninja"
-    ],
-    [
-        "Brickell",
-        "Dart",
-        "Ninja",
-        "Druid"
     ],
     [
         "Brickell",
@@ -12075,24 +11979,6 @@
         "Brickell",
         "Dart",
         "Alch",
-        "Druid"
-    ],
-    [
-        "Brickell",
-        "Dart",
-        "Alch",
-        "Engineer"
-    ],
-    [
-        "Brickell",
-        "Dart",
-        "Druid",
-        "Village"
-    ],
-    [
-        "Brickell",
-        "Dart",
-        "Druid",
         "Engineer"
     ],
     [
