@@ -501,19 +501,7 @@
         "Boomer",
         "Bomb",
         "Ice",
-        "Sniper"
-    ],
-    [
-        "Boomer",
-        "Bomb",
-        "Ice",
         "Ninja"
-    ],
-    [
-        "Boomer",
-        "Bomb",
-        "Ice",
-        "Engineer"
     ],
     [
         "Boomer",
@@ -595,27 +583,9 @@
     ],
     [
         "Boomer",
-        "Bomb",
-        "Druid",
-        "Engineer"
-    ],
-    [
-        "Boomer",
-        "Tack",
-        "Ice",
-        "Sniper"
-    ],
-    [
-        "Boomer",
         "Tack",
         "Ice",
         "Ninja"
-    ],
-    [
-        "Boomer",
-        "Tack",
-        "Ice",
-        "Engineer"
     ],
     [
         "Boomer",
@@ -697,18 +667,6 @@
     ],
     [
         "Boomer",
-        "Tack",
-        "Druid",
-        "Engineer"
-    ],
-    [
-        "Boomer",
-        "Ice",
-        "Glue",
-        "Sniper"
-    ],
-    [
-        "Boomer",
         "Ice",
         "Glue",
         "Ninja"
@@ -716,56 +674,8 @@
     [
         "Boomer",
         "Ice",
-        "Glue",
-        "Engineer"
-    ],
-    [
-        "Boomer",
-        "Ice",
-        "Sniper",
-        "Ninja"
-    ],
-    [
-        "Boomer",
-        "Ice",
-        "Sniper",
-        "Alch"
-    ],
-    [
-        "Boomer",
-        "Ice",
-        "Sniper",
-        "Druid"
-    ],
-    [
-        "Boomer",
-        "Ice",
-        "Sniper",
-        "Engineer"
-    ],
-    [
-        "Boomer",
-        "Ice",
         "Ninja",
         "Druid"
-    ],
-    [
-        "Boomer",
-        "Ice",
-        "Ninja",
-        "Engineer"
-    ],
-    [
-        "Boomer",
-        "Ice",
-        "Alch",
-        "Engineer"
-    ],
-    [
-        "Boomer",
-        "Ice",
-        "Druid",
-        "Engineer"
     ],
     [
         "Boomer",
@@ -817,12 +727,6 @@
     ],
     [
         "Boomer",
-        "Glue",
-        "Druid",
-        "Engineer"
-    ],
-    [
-        "Boomer",
         "Sniper",
         "Ninja",
         "Druid"
@@ -843,24 +747,6 @@
         "Boomer",
         "Sniper",
         "Alch",
-        "Engineer"
-    ],
-    [
-        "Boomer",
-        "Sniper",
-        "Druid",
-        "Engineer"
-    ],
-    [
-        "Boomer",
-        "Ninja",
-        "Druid",
-        "Engineer"
-    ],
-    [
-        "Boomer",
-        "Alch",
-        "Druid",
         "Engineer"
     ],
     [
@@ -1628,18 +1514,6 @@
     [
         "Ice",
         "Sniper",
-        "Sub",
-        "Engineer"
-    ],
-    [
-        "Ice",
-        "Sniper",
-        "Bucc",
-        "Ninja"
-    ],
-    [
-        "Ice",
-        "Sniper",
         "Ninja",
         "Druid"
     ],
@@ -1898,20 +1772,8 @@
     [
         "Sniper",
         "Sub",
-        "Ninja",
-        "Engineer"
-    ],
-    [
-        "Sniper",
-        "Sub",
         "Alch",
         "Village"
-    ],
-    [
-        "Sniper",
-        "Sub",
-        "Alch",
-        "Engineer"
     ],
     [
         "Sniper",
@@ -2186,12 +2048,6 @@
     [
         "Quincy",
         "Dart",
-        "Mortar",
-        "Ninja"
-    ],
-    [
-        "Quincy",
-        "Dart",
         "Ninja",
         "Druid"
     ],
@@ -2331,12 +2187,6 @@
         "Quincy",
         "Boomer",
         "Ice",
-        "Sniper"
-    ],
-    [
-        "Quincy",
-        "Boomer",
-        "Ice",
         "Ninja"
     ],
     [
@@ -2344,12 +2194,6 @@
         "Boomer",
         "Ice",
         "Druid"
-    ],
-    [
-        "Quincy",
-        "Boomer",
-        "Ice",
-        "Engineer"
     ],
     [
         "Quincy",
@@ -2427,12 +2271,6 @@
         "Quincy",
         "Boomer",
         "Ninja",
-        "Engineer"
-    ],
-    [
-        "Quincy",
-        "Boomer",
-        "Druid",
         "Engineer"
     ],
     [
@@ -2835,12 +2673,6 @@
         "Quincy",
         "Ice",
         "Sniper",
-        "Bucc"
-    ],
-    [
-        "Quincy",
-        "Ice",
-        "Sniper",
         "Ninja"
     ],
     [
@@ -2906,12 +2738,6 @@
     [
         "Quincy",
         "Ice",
-        "Heli",
-        "Druid"
-    ],
-    [
-        "Quincy",
-        "Ice",
         "Mortar",
         "Ninja"
     ],
@@ -3040,12 +2866,6 @@
         "Sniper",
         "Sub",
         "Village"
-    ],
-    [
-        "Quincy",
-        "Sniper",
-        "Sub",
-        "Engineer"
     ],
     [
         "Quincy",
@@ -3525,12 +3345,6 @@
         "Gwen",
         "Boomer",
         "Ice",
-        "Sniper"
-    ],
-    [
-        "Gwen",
-        "Boomer",
-        "Ice",
         "Ninja"
     ],
     [
@@ -3544,12 +3358,6 @@
         "Boomer",
         "Ice",
         "Druid"
-    ],
-    [
-        "Gwen",
-        "Boomer",
-        "Ice",
-        "Engineer"
     ],
     [
         "Gwen",
@@ -3627,12 +3435,6 @@
         "Gwen",
         "Boomer",
         "Alch",
-        "Engineer"
-    ],
-    [
-        "Gwen",
-        "Boomer",
-        "Druid",
         "Engineer"
     ],
     [
@@ -4131,12 +3933,6 @@
         "Gwen",
         "Ice",
         "Sniper",
-        "Bucc"
-    ],
-    [
-        "Gwen",
-        "Ice",
-        "Sniper",
         "Ninja"
     ],
     [
@@ -4396,12 +4192,6 @@
         "Sniper",
         "Sub",
         "Village"
-    ],
-    [
-        "Gwen",
-        "Sniper",
-        "Sub",
-        "Engineer"
     ],
     [
         "Gwen",
@@ -4881,19 +4671,7 @@
         "Striker",
         "Boomer",
         "Ice",
-        "Sniper"
-    ],
-    [
-        "Striker",
-        "Boomer",
-        "Ice",
         "Ninja"
-    ],
-    [
-        "Striker",
-        "Boomer",
-        "Ice",
-        "Engineer"
     ],
     [
         "Striker",
@@ -4981,12 +4759,6 @@
     ],
     [
         "Striker",
-        "Boomer",
-        "Druid",
-        "Engineer"
-    ],
-    [
-        "Striker",
         "Bomb",
         "Tack",
         "Sniper"
@@ -5002,12 +4774,6 @@
         "Bomb",
         "Tack",
         "Heli"
-    ],
-    [
-        "Striker",
-        "Bomb",
-        "Tack",
-        "Dartling"
     ],
     [
         "Striker",
@@ -5398,12 +5164,6 @@
         "Ice",
         "Sniper",
         "Sub"
-    ],
-    [
-        "Striker",
-        "Ice",
-        "Sniper",
-        "Bucc"
     ],
     [
         "Striker",
@@ -5708,12 +5468,6 @@
     [
         "Striker",
         "Sniper",
-        "Sub",
-        "Engineer"
-    ],
-    [
-        "Striker",
-        "Sniper",
         "Bucc",
         "Ninja"
     ],
@@ -6267,12 +6021,6 @@
         "Obyn",
         "Boomer",
         "Ice",
-        "Sniper"
-    ],
-    [
-        "Obyn",
-        "Boomer",
-        "Ice",
         "Ninja"
     ],
     [
@@ -6286,12 +6034,6 @@
         "Boomer",
         "Ice",
         "Druid"
-    ],
-    [
-        "Obyn",
-        "Boomer",
-        "Ice",
-        "Engineer"
     ],
     [
         "Obyn",
@@ -6375,12 +6117,6 @@
         "Obyn",
         "Boomer",
         "Alch",
-        "Engineer"
-    ],
-    [
-        "Obyn",
-        "Boomer",
-        "Druid",
         "Engineer"
     ],
     [
@@ -7108,12 +6844,6 @@
         "Sniper",
         "Sub",
         "Village"
-    ],
-    [
-        "Obyn",
-        "Sniper",
-        "Sub",
-        "Engineer"
     ],
     [
         "Obyn",
@@ -7490,12 +7220,6 @@
     [
         "Ben",
         "Dart",
-        "Mortar",
-        "Ninja"
-    ],
-    [
-        "Ben",
-        "Dart",
         "Ninja",
         "Druid"
     ],
@@ -7605,19 +7329,7 @@
         "Ben",
         "Boomer",
         "Ice",
-        "Sniper"
-    ],
-    [
-        "Ben",
-        "Boomer",
-        "Ice",
         "Ninja"
-    ],
-    [
-        "Ben",
-        "Boomer",
-        "Ice",
-        "Engineer"
     ],
     [
         "Ben",
@@ -7705,12 +7417,6 @@
     ],
     [
         "Ben",
-        "Boomer",
-        "Druid",
-        "Engineer"
-    ],
-    [
-        "Ben",
         "Bomb",
         "Tack",
         "Sniper"
@@ -7732,12 +7438,6 @@
         "Bomb",
         "Tack",
         "Heli"
-    ],
-    [
-        "Ben",
-        "Bomb",
-        "Tack",
-        "Dartling"
     ],
     [
         "Ben",
@@ -8145,12 +7845,6 @@
         "Ben",
         "Ice",
         "Sniper",
-        "Bucc"
-    ],
-    [
-        "Ben",
-        "Ice",
-        "Sniper",
         "Ninja"
     ],
     [
@@ -8230,12 +7924,6 @@
         "Ice",
         "Bucc",
         "Alch"
-    ],
-    [
-        "Ben",
-        "Ice",
-        "Heli",
-        "Druid"
     ],
     [
         "Ben",
@@ -8446,12 +8134,6 @@
         "Sniper",
         "Sub",
         "Village"
-    ],
-    [
-        "Ben",
-        "Sniper",
-        "Sub",
-        "Engineer"
     ],
     [
         "Ben",
@@ -8546,12 +8228,6 @@
     [
         "Ben",
         "Sub",
-        "Dartling",
-        "Ninja"
-    ],
-    [
-        "Ben",
-        "Sub",
         "Ninja",
         "Druid"
     ],
@@ -8876,12 +8552,6 @@
     [
         "Ezili",
         "Dart",
-        "Mortar",
-        "Ninja"
-    ],
-    [
-        "Ezili",
-        "Dart",
         "Ninja",
         "Spac"
     ],
@@ -9003,12 +8673,6 @@
         "Ezili",
         "Boomer",
         "Ice",
-        "Sniper"
-    ],
-    [
-        "Ezili",
-        "Boomer",
-        "Ice",
         "Ninja"
     ],
     [
@@ -9022,12 +8686,6 @@
         "Boomer",
         "Ice",
         "Druid"
-    ],
-    [
-        "Ezili",
-        "Boomer",
-        "Ice",
-        "Engineer"
     ],
     [
         "Ezili",
@@ -9111,12 +8769,6 @@
         "Ezili",
         "Boomer",
         "Alch",
-        "Engineer"
-    ],
-    [
-        "Ezili",
-        "Boomer",
-        "Druid",
         "Engineer"
     ],
     [
@@ -9651,12 +9303,6 @@
         "Ezili",
         "Ice",
         "Sniper",
-        "Bucc"
-    ],
-    [
-        "Ezili",
-        "Ice",
-        "Sniper",
         "Ninja"
     ],
     [
@@ -9946,12 +9592,6 @@
         "Sniper",
         "Sub",
         "Village"
-    ],
-    [
-        "Ezili",
-        "Sniper",
-        "Sub",
-        "Engineer"
     ],
     [
         "Ezili",
@@ -10473,19 +10113,7 @@
         "Pat",
         "Boomer",
         "Ice",
-        "Sniper"
-    ],
-    [
-        "Pat",
-        "Boomer",
-        "Ice",
         "Ninja"
-    ],
-    [
-        "Pat",
-        "Boomer",
-        "Ice",
-        "Engineer"
     ],
     [
         "Pat",
@@ -10557,12 +10185,6 @@
         "Pat",
         "Boomer",
         "Alch",
-        "Engineer"
-    ],
-    [
-        "Pat",
-        "Boomer",
-        "Druid",
         "Engineer"
     ],
     [
@@ -11194,12 +10816,6 @@
         "Sniper",
         "Sub",
         "Village"
-    ],
-    [
-        "Pat",
-        "Sniper",
-        "Sub",
-        "Engineer"
     ],
     [
         "Pat",
@@ -11390,12 +11006,6 @@
     [
         "Adora",
         "Dart",
-        "Boomer",
-        "Druid"
-    ],
-    [
-        "Adora",
-        "Dart",
         "Bomb",
         "Tack"
     ],
@@ -11420,12 +11030,6 @@
     [
         "Adora",
         "Dart",
-        "Bomb",
-        "Druid"
-    ],
-    [
-        "Adora",
-        "Dart",
         "Tack",
         "Glue"
     ],
@@ -11444,12 +11048,6 @@
     [
         "Adora",
         "Dart",
-        "Tack",
-        "Druid"
-    ],
-    [
-        "Adora",
-        "Dart",
         "Glue",
         "Sniper"
     ],
@@ -11462,26 +11060,8 @@
     [
         "Adora",
         "Dart",
-        "Glue",
-        "Druid"
-    ],
-    [
-        "Adora",
-        "Dart",
         "Sniper",
         "Alch"
-    ],
-    [
-        "Adora",
-        "Dart",
-        "Sniper",
-        "Druid"
-    ],
-    [
-        "Adora",
-        "Dart",
-        "Alch",
-        "Druid"
     ],
     [
         "Adora",
@@ -11577,12 +11157,6 @@
         "Adora",
         "Bomb",
         "Tack",
-        "Dartling"
-    ],
-    [
-        "Adora",
-        "Bomb",
-        "Tack",
         "Ninja"
     ],
     [
@@ -11590,12 +11164,6 @@
         "Bomb",
         "Tack",
         "Engineer"
-    ],
-    [
-        "Adora",
-        "Bomb",
-        "Ice",
-        "Ninja"
     ],
     [
         "Adora",
@@ -11606,12 +11174,6 @@
     [
         "Adora",
         "Bomb",
-        "Ice",
-        "Engineer"
-    ],
-    [
-        "Adora",
-        "Bomb",
         "Glue",
         "Sniper"
     ],
@@ -11632,12 +11194,6 @@
         "Bomb",
         "Glue",
         "Ninja"
-    ],
-    [
-        "Adora",
-        "Bomb",
-        "Glue",
-        "Engineer"
     ],
     [
         "Adora",
@@ -11691,24 +11247,6 @@
         "Adora",
         "Bomb",
         "Alch",
-        "Engineer"
-    ],
-    [
-        "Adora",
-        "Bomb",
-        "Druid",
-        "Engineer"
-    ],
-    [
-        "Adora",
-        "Tack",
-        "Ice",
-        "Ninja"
-    ],
-    [
-        "Adora",
-        "Tack",
-        "Ice",
         "Engineer"
     ],
     [
@@ -11738,12 +11276,6 @@
     [
         "Adora",
         "Tack",
-        "Glue",
-        "Engineer"
-    ],
-    [
-        "Adora",
-        "Tack",
         "Sniper",
         "Bucc"
     ],
@@ -11797,48 +11329,6 @@
     ],
     [
         "Adora",
-        "Tack",
-        "Druid",
-        "Engineer"
-    ],
-    [
-        "Adora",
-        "Ice",
-        "Glue",
-        "Ninja"
-    ],
-    [
-        "Adora",
-        "Ice",
-        "Glue",
-        "Engineer"
-    ],
-    [
-        "Adora",
-        "Ice",
-        "Ninja",
-        "Druid"
-    ],
-    [
-        "Adora",
-        "Ice",
-        "Ninja",
-        "Engineer"
-    ],
-    [
-        "Adora",
-        "Ice",
-        "Alch",
-        "Engineer"
-    ],
-    [
-        "Adora",
-        "Ice",
-        "Druid",
-        "Engineer"
-    ],
-    [
-        "Adora",
         "Glue",
         "Sniper",
         "Ninja"
@@ -11875,18 +11365,6 @@
     ],
     [
         "Adora",
-        "Glue",
-        "Ninja",
-        "Engineer"
-    ],
-    [
-        "Adora",
-        "Glue",
-        "Druid",
-        "Engineer"
-    ],
-    [
-        "Adora",
         "Sniper",
         "Ninja",
         "Druid"
@@ -11896,18 +11374,6 @@
         "Sniper",
         "Alch",
         "Druid"
-    ],
-    [
-        "Adora",
-        "Ninja",
-        "Druid",
-        "Engineer"
-    ],
-    [
-        "Adora",
-        "Alch",
-        "Druid",
-        "Engineer"
     ],
     [
         "Brickell",
@@ -12021,19 +11487,7 @@
         "Brickell",
         "Boomer",
         "Ice",
-        "Sniper"
-    ],
-    [
-        "Brickell",
-        "Boomer",
-        "Ice",
         "Ninja"
-    ],
-    [
-        "Brickell",
-        "Boomer",
-        "Ice",
-        "Engineer"
     ],
     [
         "Brickell",
@@ -12099,12 +11553,6 @@
         "Brickell",
         "Boomer",
         "Alch",
-        "Engineer"
-    ],
-    [
-        "Brickell",
-        "Boomer",
-        "Druid",
         "Engineer"
     ],
     [
@@ -12700,12 +12148,6 @@
         "Sniper",
         "Sub",
         "Village"
-    ],
-    [
-        "Brickell",
-        "Sniper",
-        "Sub",
-        "Engineer"
     ],
     [
         "Brickell",
