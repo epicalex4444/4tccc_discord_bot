@@ -145,7 +145,7 @@ async def submit(ctx, *, arg):
         response = submit4tc(code, name=name)
     else:
         response = submit4tc(arg[1:], discordId=ctx.author.id)
-        
+
     await ctx.send(response)
 
 @bot.command(name='bot', help='!bot', description='shows bot invite link')

@@ -158,7 +158,7 @@ def get_submissions(name=None):
 
         if nameNotExist:
             return ["{0} doesn't exist".format(name), None, None]
-    
+
     return [None, '```{0}```'.format(displayStr[:-1]), header]
 
 #change name in submissions and leaderboard

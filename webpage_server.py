@@ -1,13 +1,9 @@
-#known bugs
-#webpage automated deletion doesn't seem to work
-#takes a while to update things once a webpage is deleted
-
 import random
 import os
 import time
 import sys
 
-webpageDir = '/srv/http/'
+webpageDir = '/var/www/html/'
 webpageURL = 'http://4tccc.mooo.com/'
 webpageUptime = 86400 #seconds
 webpages = dict()
@@ -17,7 +13,7 @@ templateHTML = file.read()
 file.close
 
 #generates random key with 4 upercase chars, makes sure the name doesn't exist
-def key_generator():  
+def key_generator():
     while True:
         key = ''
         for _ in range(4):
@@ -31,7 +27,7 @@ def create_webpage(header, body):
     fileName = key + '.html'
 
     file = open(webpageDir + fileName, 'x')
-    
+
     timeCreated = os.path.getctime(webpageDir + fileName)
     metaTag = '<meta name="timeCreated" content="{0}">\n'.format(timeCreated)
     htmlText = templateHTML[:155] + metaTag + templateHTML[155:227] + header + templateHTML[227:274] + body + templateHTML[274:]
@@ -40,7 +36,7 @@ def create_webpage(header, body):
     file.close()
 
     webpages[key] = timeCreated
-    
+
     return webpageURL + fileName
 
 #used on startup, deletes files that are too old and adds all other files to the webpage dict 
@@ -58,10 +54,9 @@ def init_existing_files():
 
 #starts apache if it isn't running
 def start_apache_process():
-    apacheRunning = os.system('systemctl status httpd &> /dev/null')
+    apacheRunning = os.system('systemctl status apache2 &> /dev/null')
     if not apacheRunning == 0:
-        os.system('systemctl restart httpd')
-    
+        os.system('systemctl restart apache2')
 
 #deletes webpages that have expired then returns the time until the next webpage is to be deleted, returns webpage uptime if there is no webpages
 def delete_next_webpage():
