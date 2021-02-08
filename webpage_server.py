@@ -4,7 +4,7 @@ import time
 import sys
 
 webpageDir = '/var/www/html/'
-webpageURL = 'http://4tccc.mooo.com/'
+webpageURL = 'https://4tccc.mooo.com/'
 webpageUptime = 86400 #seconds
 webpages = dict()
 
