@@ -52,12 +52,6 @@ def init_existing_files():
             else:
                 webpages[address[:4]] = os.path.getctime(path)
 
-#starts apache if it isn't running
-def start_apache_process():
-    apacheRunning = os.system('systemctl status apache2 &> /dev/null')
-    if not apacheRunning == 0:
-        os.system('systemctl restart apache2')
-
 #deletes webpages that have expired then returns the time until the next webpage is to be deleted, returns webpage uptime if there is no webpages
 def delete_next_webpage():
     currTime = time.time()
@@ -80,7 +74,3 @@ def delete_next_webpage():
     else:
         return(min(webpageExpiries))
 
-#hanldes file removing after thier time is up
-async def start_webserver():
-    start_apache_process()
-    init_existing_files()

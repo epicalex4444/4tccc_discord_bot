@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands, tasks #discord.ext seems to be a different thing entirely from discord
 from commands_backend import set_alias, find4tc, get_submissions, get_leaderboard, submit4tc
-from webpage_server import create_webpage, start_webserver, delete_next_webpage
+from webpage_server import create_webpage, init_existing_files, delete_next_webpage
 
 #token is stored in a blank file as plain text so we don't accidentely upload it to github
 file = open('./token')
@@ -54,7 +54,7 @@ class webpage_handler(commands.Cog):
 #logs to the console when the bot is on
 @bot.event
 async def on_ready():
-    await start_webserver()
+    init_existing_files()
     webpage_handler()
     await bot.change_presence(status=discord.Status.online, activity=discord.Game("!help"))
     print('{0} ready'.format(bot.user))
