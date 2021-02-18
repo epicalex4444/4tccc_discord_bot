@@ -1,7 +1,6 @@
 import discord
 from discord.ext import commands, tasks #discord.ext seems to be a different thing entirely from discord
-from commands_backend import set_alias, find4tc, get_submissions, get_leaderboard, submit4tc
-from webpage_server import create_webpage, init_existing_files, delete_next_webpage
+from commands_backend import set_name, find4tc, get_submissions, get_leaderboard, submit4tc, create_webpage
 
 #token is stored in a blank file as plain text so we don't accidentely upload it to github
 file = open('./token')
@@ -10,7 +9,7 @@ file.close()
 
 ownerId = 482762949958696980
 
-bot = commands.Bot(command_prefix='!', intents=discord.Intents(messages=True), owner_id=ownerId, help_command=None)
+bot = commands.Bot(command_prefix='!', intents=discord.Intents(messages=True), owner_id=ownerId, help_command=None, case_insensitive=True)
 
 #response = [immediate, message, header]
 #immediate is always sent as a discord message, message is sent as a discord message if it is
@@ -39,23 +38,9 @@ async def on_command_error(ctx, error):
         return
     raise error
 
-class webpage_handler(commands.Cog):
-    def __init__(self):
-        self.webpage_deleter.start()
-
-    def cog_unload(self):
-        self.webpage_deleter.cancel()
-
-    @tasks.loop(seconds = 10)
-    async def webpage_deleter(self):
-        waitTime = delete_next_webpage()
-        self.webpage_deleter.change_interval(seconds=waitTime)
-
 #logs to the console when the bot is on
 @bot.event
 async def on_ready():
-    init_existing_files()
-    webpage_handler()
     await bot.change_presence(status=discord.Status.online, activity=discord.Game("!help"))
     print('{0} ready'.format(bot.user))
 
@@ -87,13 +72,13 @@ async def help(ctx, arg=None):
 
     await ctx.send(helpMessage)
 
-#used to specify an alias so you don't have to use the name parameter in submit
-@bot.command(name='alias', help='!alias name', description="used to specify an alias so you don't have to use the name parameter in submit", rest_is_raw=True)
-async def alias(ctx, *, arg):
+#used to specify an name so you don't have to use the name parameter in submit
+@bot.command(name='name', help='!name name', description="used to specify an name so you don't have to use the name parameter in submit", rest_is_raw=True)
+async def name(ctx, *, arg):
     if arg == '':
-        response = 'You need to give a name to set as your alias'
+        response = 'You need to provide a name'
     else:
-        response = set_alias(str(ctx.author.id), arg[1:])
+        response = set_name(ctx.author.id, arg[1:])
 
     await ctx.send(response)
 
@@ -131,8 +116,8 @@ async def leaderboard(ctx, *, arg):
 
     await send(ctx, response)
 
-#used to submit a combo, name is required if you haven't specified your alias with !alias
-@bot.command(name='submit', help='!submit code *name', description="used to submit a combo, name is required if you haven't specified your alias with !alias", rest_is_raw=True)
+#used to submit a combo, name is required if you haven't specified your name with !name
+@bot.command(name='submit', help='!submit code *name', description="used to submit a combo, name is required if you haven't specified your name with !name", rest_is_raw=True)
 async def submit(ctx, *, arg):
     if arg == '':
         return await ctx.send('Code must be provided for a submission')

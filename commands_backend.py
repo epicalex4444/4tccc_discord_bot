@@ -2,23 +2,56 @@ import json
 import requests
 import base64
 import zlib
-
-aliasAddress = './jsons/aliases.json'
-lbAddress = './jsons/leaderboard.json'
-remainingAddress = './jsons/remaining_combos.json'
-submittedAddress = './jsons/submitted_combos.json'
-towerAliasAddress = './jsons/tower_aliases.json'
+import sqlite3
+import time
+import random
 
 challengeDataUrl = 'https://static-api.nkstatic.com/appdocs/11/es/challenges/'
+
+websiteUrl = 'https://4tccc.mooo.com/'
 
 hereos4tc = ['Quincy', 'Gwen', 'Striker', 'Obyn', 'Church', 'Ben', 'Ezili', 'Pat', 'Adora', 'Brickell', 'Etienne']
 towers4tc = ['Dart', 'Boomer', 'Bomb', 'Tack', 'Ice', 'Glue', 'Sniper', 'Sub', 'Bucc', 'Ace', 'Heli', 'Mortar', 'Dartling', 'Wizard', 'Super', 'Ninja', 'Alch', 'Druid', 'Spac', 'Village', 'Engineer']
 hereosNK = ['Quincy', 'Gwendolin', 'StrikerJones', 'ObynGreenfoot', 'CaptainChurchill', 'Benjamin', 'Ezili', 'PatFusty', 'Adora', 'AdmiralBrickell', 'Etienne']
 towersNK = ['DartMonkey', 'BoomerangMonkey', 'BombShooter', 'TackShooter', 'IceMonkey', 'GlueGunner', 'SniperMonkey', 'MonkeySub', 'MonkeyBuccaneer', 'MonkeyAce', 'HeliPilot', 'MortarMonkey', 'DartlingGunner', 'WizardMonkey', 'SuperMonkey', 'NinjaMonkey', 'Alchemist', 'Druid', 'SpikeFactory', 'MonkeyVillage', 'EngineerMonkey']
 
-file = open(towerAliasAddress)
-towerAliases = json.load(file) #used for find4tc function so people can input many different names
-file.close()
+towerAliases = [
+    ["quincy"],
+    ["gwen", "gwendolin"],
+    ["striker", "jones", "strikerJones"],
+    ["obyn", "obyngreenfoot"],
+    ["church", "churchill", "captainchurchill"],
+    ["ben", "benjamin"],
+    ["ezili"],
+    ["pat", "patfusty"],
+    ["adora"],
+    ["brick", "brickell", "admiralbrickell"],
+    ["etienne", "eti"],
+    ["dart", "dartmonkey"],
+    ["boomer", "boomerang", "boomerangmonkey"],
+    ["bomb", "bombshooter"],
+    ["tack", "tackshooter"],
+    ["ice", "icemonkey"],
+    ["glue", "gluegunner"],
+    ["sniper", "snipermonkey"],
+    ["sub", "monkeysub"],
+    ["bucc", "boat", "buccaneer", "monkeybuccaneer"],
+    ["ace", "monkeyace"],
+    ["heli", "helipilot"],
+    ["mortar", "mortarmonkey"],
+    ["dartling", "dartlinggunner"],
+    ["wizard", "wizardmonkey"],
+    ["super", "supermonkey"],
+    ["ninja", "ninjamonkey"],
+    ["alch", "alchemist"],
+    ["druid"],
+    ["spac", "spikefactory"],
+    ["village", "monkeyvillage"],
+    ["engi", "engineer", "engineermonkey"]
+]
+
+conn = sqlite3.connect('4tccc_data.db')
+cursor = conn.cursor() 
 
 #all elements of a are in b, for lists/tuples, if a is empty it return true
 def is_subset(a, b):
@@ -44,9 +77,10 @@ def space_fill(string, length, back=True):
 
 #formats tower arrays in an easy way to view
 def tower_print(towers):
+    temp = []
     for i in range(len(towers)):
-        towers[i] = space_fill(towers[i], 8)
-    return '|'.join(towers)
+        temp.append(space_fill(towers[i], 8))
+    return '|'.join(temp)
 
 #changes any valid tower in towers to be it's default name
 def tower_alias(towers):
@@ -79,9 +113,8 @@ def find4tc(towers):
     else:
         header = '{0} Combos'.format(', '.join(towers))
 
-    file = open(remainingAddress)
-    remaningCombos = json.load(file)
-    file.close()
+    cursor.execute('SELECT * FROM remaining_combos')
+    remaningCombos = cursor.fetchall()
 
     displayStr = ''
     matches = 0
@@ -100,29 +133,29 @@ def find4tc(towers):
 #returns leaderboard formatted for easy reading
 #if name is provided returns score, if amount is provided it returns a shortened version of the leaderboard
 def get_leaderboard(name=None, amount=None):
-    file = open(lbAddress)
-    leaderboard = json.load(file)
-    file.close()
-
     if name != None:
-        for score in leaderboard:
-            if score[0] == name:
-                return ["{0}'s score is {1}".format(name, score[1]), None, None]
-        return ["{0} hasn't submitted yet".format(name), None, None]
+        cursor.execute('SELECT score FROM leaderboard WHERE name=?', (name,))
+        score = cursor.fetchone()
+        if score == None:
+            return ["{0} hasn't submitted yet".format(name), None, None]
+        return ["{0}'s score is {1}".format(name, score[0]), None, None]
+
+    cursor.execute('SELECT * FROM leaderboard')
+    leaderboard = cursor.fetchall()
 
     displayStr = ''
     header = ''
     if amount == None or int(amount) >= len(leaderboard):
         header = 'Full Leaderboard'
         for score in leaderboard:
-            displayStr += '{0}: {1}\n'.format(space_fill(str(score[1]), 4, False), score[0])
+            displayStr += '{0}: {1}\n'.format(space_fill(str(score[0]), 4, False), score[1])
     else:
         header = 'Top {0} Leaderboard'.format(amount)
         amount = int(amount)
         for score in leaderboard:
             if amount == 0:
                 break
-            displayStr += '{0}: {1}\n'.format(space_fill(str(score[1]), 4, False), score[0])
+            displayStr += '{0}: {1}\n'.format(space_fill(str(score[0]), 4, False), score[1])
             amount -= 1
 
     return [None, '```{0}```'.format(displayStr[:-1]), header]
@@ -130,111 +163,88 @@ def get_leaderboard(name=None, amount=None):
 #returns all the submission formatted for easy reading, if a name is provided if returns ony submissions by that person
 #if towers is provided it returns who completed the combo, must have 4 towers
 def get_submissions(name=None):
-    file = open(submittedAddress)
-    submittedCombos = json.load(file)
-    file.close()
-
-    displayStr = 'Code    |Tower1  |Tower2  |Tower3  |Tower4  '
+    displayStr = 'Code    |Tower1  |Tower2  |Tower3  |Tower4  |Combos  '
     header = ''
+
     if name == None:
+        cursor.execute('SELECT * FROM submissions')
+        submissions = cursor.fetchall()
+
         header = 'All Submissions'
         displayStr += '|Name\n'
-        for submission in submittedCombos:
-            for _ in range(4 - len(submission[2])):
-                submission[2].append('')
-            temp = [submission[1]] + submission[2] + [submission[0]]
+
+        for submission in submissions:
+            temp = []
+            for i in submission:
+                temp.append(str(i or ''))
             displayStr += tower_print(temp) + '\n'
     else:
+        cursor.execute('SELECT code, tower1, tower2, tower3, tower4, combos FROM submissions WHERE name=?', (name,))
+        submissions = cursor.fetchall()
+
+        if len(submissions) == 0:
+            return ["{0} doesn't exist".format(name), None, None]
+
         header = "{0}'s submissions".format(name)
         displayStr += '\n'
-        nameNotExist = True
-        for submission in submittedCombos:
-            if submission[0] == name:
-                nameNotExist = False
-                for _ in range(4 - len(submission[2])):
-                    submission[2].append('')
-                temp = [submission[1]] + submission[2]
-                displayStr += tower_print(temp) + '\n'
 
-        if nameNotExist:
-            return ["{0} doesn't exist".format(name), None, None]
+        for submission in submissions:
+            temp = []
+            for i in submission:
+                temp.append(str(i or ''))
+            displayStr += tower_print(temp) + '\n'
 
     return [None, '```{0}```'.format(displayStr[:-1]), header]
 
-#change name in submissions and leaderboard
+#change name in names, submissions and leaderboard
 def change_name(old, new):
-    file = open(lbAddress)
-    leaderboard = json.load(file)
-    file.close()
-
     submittedNew = False
     submittedOld = False
 
-    for score in leaderboard:
-        if score[0] == new:
-            submittedNew = True
-        if score[0] == old:
-            submittedOld = True
+    cursor.execute('SELECT * FROM leaderboard WHERE name=?', (new,))
+    if cursor.fetchone() != None:
+        submittedNew = True
+
+    cursor.execute('SELECT * FROM leaderboard WHERE name=?', (old,))
+    if cursor.fetchone() != None:
+        submittedOld = True
 
     if submittedNew and submittedOld:
-        raise Exception('cannot change name since the name you are changing to exists and you have submitted under your current alias, this is to prevent combo theft')
+        raise Exception('cannot change name since the name you are changing to exists and you have submitted under your current name, this is to prevent combo theft')
 
-    for score in leaderboard:
-        if score[0] == old:
-            score[0] = new
+    cursor.execute('UPDATE names SET name=? WHERE name=?', (new, old))
+    cursor.execute('UPDATE leaderboard SET name=? WHERE name=?', (new, old))
+    cursor.execute('UPDATE submissions SET name=? WHERE name=?', (new, old))
+    conn.commit()
 
-    file = open(lbAddress, 'w')
-    json.dump(leaderboard, file, indent=4)
-    file.close()
+#adds new name or changes an existing name
+def set_name(discordId, name):
+    cursor.execute('SELECT name FROM names WHERE discordId=?', (discordId,))
+    oldName = cursor.fetchone()
 
-    file = open(submittedAddress)
-    submittedCombos = json.load(file)
-    file.close()
-
-    for submission in submittedCombos:
-        if submission[0] == old:
-            submission[0] = new
-
-    file = open(submittedAddress, 'w')
-    json.dump(submittedCombos, file, indent=4)
-    file.close()
-
-#adds new alias or changes an existing alias
-def set_alias(discordId, name):
-    file = open(aliasAddress)
-    aliases = json.load(file)
-    file.close()
-
-    alias = aliases.get(discordId, None)
-    if alias == None:
-        displayStr = '{0} has been added as your alias'.format(name)
+    if oldName == None:
+        displayStr = '{0} has been added as your name'.format(name)
+        cursor.execute('INSERT INTO names VALUES (?, ?)', (discordId, name))
+        conn.commit()
     else:
-        if alias == name:
-            return 'Name already added as your alias'
+        if oldName[0] == name:
+            return 'You have previously set that as your name'
         try:
-            change_name(alias, name)
+            change_name(oldName[0], name)
         except Exception as e:
             return str(e)
-        displayStr = '{0} changed to {1}'.format(alias, name)
+        displayStr = '{0} changed to {1}'.format(oldName[0], name)
 
-    aliases[discordId] = name
-
-    file = open(aliasAddress, 'w')
-    json.dump(aliases, file, indent=4)
-    file.close()
     return displayStr
 
 #returns name from discord id
-def get_alias(discordId):
-    discordId = str(discordId)
-    file = open(aliasAddress)
-    aliases = json.load(file)
-    file.close()
-    name = aliases.get(discordId, None)
+def get_name(discordId):
+    cursor.execute('SELECT name FROM names WHERE discordId=?', (discordId,))
+    name = cursor.fetchone()
     if name == None:
-        raise Exception('Name not provided and you have no alias set')
+        raise Exception('Name not provided and you have no name set')
     else:
-        return name
+        return name[0]
 
 #returns raw challenge data from challenge code
 def get_challenge_data(code):
@@ -340,67 +350,60 @@ def get_towers(challengeData):
             if towers[i] == namesNK[x]:
                 towers[i] = names4tc[x]
 
-    return towers
+    return tuple(towers)
 
 #removes combos from remaining combos
 def remove4tc(towers):
-    file = open(remainingAddress)
-    remainingCombos = json.load(file)
-    file.close()
-
+    cursor.execute('SELECT * FROM remaining_combos')
+    remaining_combos = cursor.fetchall()
+    
     matches = 0
-    for i in range(len(remainingCombos) -1, 0, -1):
-        if is_subset(towers, remainingCombos[i]):
-            del remainingCombos[i]
+    combosToRemove = []
+    for combo in remaining_combos:
+        if is_subset(towers, combo):
+            combosToRemove.append(combo)
             matches += 1
 
+    cursor.executemany('DELETE FROM remaining_combos WHERE tower1=? AND tower2=? AND tower3=? AND tower4=?', combosToRemove)
+
     if matches == 0:
-        file.close()
         raise Exception('Already submitted')
 
-    file = open(remainingAddress, 'w')
-    json.dump(remainingCombos, file, indent=4)
-    file.close()
+    conn.commit()
     return matches
 
 #updates leaderboard with new combos
 def update_leaderboard(name, combos):
-    file = open(lbAddress)
-    leaderboard = json.load(file)
-    file.close()
+    cursor.execute('SELECT * FROM leaderboard WHERE name=?', (name,))
+    row = cursor.fetchone()
+    if row != None:
+        cursor.execute('UPDATE leaderboard SET score=? WHERE name=?', (row[0] + combos, name))
+    else:
+        cursor.execute('INSERT INTO leaderboard VALUES (?, ?)', (combos, name))
+    
+    #sort leaderboard in descending order, couldn't get ORDER BY sql to work so the sorting is done in python instead
+    cursor.execute('SELECT * FROM leaderboard')
+    leaderboard = cursor.fetchall()
+    leaderboard.sort(reverse=True, key=lambda score: score[0])
+    cursor.execute('DELETE FROM leaderboard')
+    cursor.executemany('INSERT INTO leaderboard VALUES (?, ?)', leaderboard)
 
-    nameNotExist = True
-    for score in leaderboard:
-        if score[0] == name:
-            score[1] += combos
-            nameNotExist = False
-            break
-
-    if nameNotExist:
-        leaderboard.append([name, combos])
-
-    #sort leaderboard in descending order of combos completed
-    leaderboard.sort(reverse=True, key=lambda score: score[1])
-
-    file = open(lbAddress, 'w')
-    json.dump(leaderboard, file, indent=4)
-    file.close()
+    conn.commit()
 
 #adds a new submission
-def add_submission(name, code, towers):
-    file = open(submittedAddress)
-    submittedCombos = json.load(file)
-    file.close()
-    submittedCombos.append([name, code, towers])
-    file = open(submittedAddress, 'w')
-    json.dump(submittedCombos, file, indent=4)
-    file.close
+def add_submission(code, towers, combos, name):
+    sqlData = (code,) + towers
+    for _ in range(4 - len(towers)):
+        sqlData += (None,)
+    sqlData += (combos, name)
+    cursor.execute('INSERT INTO submissions VALUES (?, ?, ?, ?, ?, ?, ?)', sqlData)
+    conn.commit()
 
 #checks if challenge code provided is valid submission and adds it, if it is valid
 def submit4tc(code, name=None, discordId=None):
     if name == None:
         try:
-            name = get_alias(discordId)
+            name = get_name(discordId)
         except Exception as e:
             return str(e)
 
@@ -418,7 +421,23 @@ def submit4tc(code, name=None, discordId=None):
         towers = get_towers(challengeData)
         combosRemoved = remove4tc(towers)
         update_leaderboard(name, combosRemoved)
-        add_submission(name, code, towers)
+        add_submission(code, towers, combosRemoved, name)
         return '```Submission:\nName: {0}\nCode: {1}\nTowers: {2}\nCombos removed: {3}```'.format(name, code, ', '.join(towers), combosRemoved)
     except Exception as e:
         return str(e)
+
+#adds data about the webpage into the database to be used by the webpage cgi
+def create_webpage(header, body):
+    while True:
+        key = ''
+        for _ in range(4):
+            key += chr(random.randrange(65, 90))
+        cursor.execute('SELECT * FROM webpages WHERE key=?', (key,))
+        if cursor.fetchone() == None:
+            break
+
+    sqlData = (key, int(time.time()), header, body)
+    cursor.execute('INSERT INTO webpages VALUES (?, ?, ?, ?)', sqlData)
+    conn.commit()
+
+    return websiteUrl + key
