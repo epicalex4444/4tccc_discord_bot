@@ -57,9 +57,6 @@ async def help(ctx, arg=None):
             helpMessage += '\n'
         helpMessage += '\nIf you have found a bug, report it to epicalex4444#5552 on discord\nFor more in depth info see https://github.com/epicalex4444/4tccc_discord_bot```'
     else:
-        if arg == 'towers':
-            return await ctx.send("```Towers names: Quincy, Gwen, Striker, Obyn, Church, Ben, Ezili, Pat, Adora, Brick, Etienne, Dart, Boomer, Bomb, Tack, Ice, Glue, Sniper, Sub, Bucc, Ace, Heli, Mortar, Dartling, Wizard, Super, Ninja, Alch, Druid, Spac, Village, Engi\nTower names don't have to be capitalised```")
-
         commandNotFound = True
         for command in commands:
             if command.name == arg or arg in command.aliases:
