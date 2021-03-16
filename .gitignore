@@ -1,3 +1,4 @@
 token
 *.db-journal
 __pycache__
+invalid_combos.json
