@@ -41,13 +41,13 @@ towerAliases = [
     ["heli", "helipilot"],
     ["mortar", "mortarmonkey"],
     ["dartling", "dartlinggunner"],
-    ["wizard", "wizardmonkey"],
+    ["wizard", "wizardmonkey", "wiz"],
     ["super", "supermonkey"],
     ["ninja", "ninjamonkey"],
     ["alch", "alchemist"],
     ["druid"],
-    ["spac", "spikefactory"],
-    ["village", "monkeyvillage"],
+    ["spac", "spikefactory", "spactory"],
+    ["village", "monkeyvillage", "vill"],
     ["engi", "engineer", "engineermonkey"]
 ]
 
@@ -243,7 +243,7 @@ def get_name(discordId):
     cursor.execute('SELECT name FROM names WHERE discordId=?', (discordId,))
     name = cursor.fetchone()
     if name == None:
-        raise Exception('Name not provided and you have no name set')
+        raise Exception('Name not provided and you have no name set, you can set your name via the !name command')
     else:
         return name[0]
 
