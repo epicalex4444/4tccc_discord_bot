@@ -261,7 +261,9 @@ def mathematically_possible(towers):
 
     #Village is expensive so bomb, ice and alch -> village doesn't work although some variants of those starts are not mathatically impossible
     if 'Village' in towers:
-        if 'Boomer' in towers or 'Tack' in towers or 'Druid' in towers:
+        if 'Boomer' in towers or 'Tack' in towers or 'Druid' in towers or 'Alch' in towers:
+            canBeat24 = True
+        elif 'Ice' in towers and ('Bomb' in towers or 'Striker' in towers or 'Brick' in towers):
             canBeat24 = True
 
     #all 4tc combos can mathematically beat all the other threats such as 28 and 25
