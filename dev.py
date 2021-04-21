@@ -263,7 +263,7 @@ def mathematically_possible(towers):
     if 'Village' in towers:
         if 'Boomer' in towers or 'Tack' in towers or 'Druid' in towers or 'Alch' in towers:
             canBeat24 = True
-        elif 'Ice' in towers and ('Bomb' in towers or 'Striker' in towers or 'Brick' in towers):
+        elif 'Ice' in towers and ('Bomb' in towers or 'Striker' in towers or 'Brickell' in towers):
             canBeat24 = True
 
     #all 4tc combos can mathematically beat all the other threats such as 28 and 25
