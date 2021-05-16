@@ -116,6 +116,8 @@ async def leaderboard(ctx, *, arg):
 #used to submit a combo, name is required if you haven't specified your name with !name
 @bot.command(name='submit', help='!submit code *name', description="used to submit a combo, name is required if you haven't specified your name with !name", rest_is_raw=True)
 async def submit(ctx, *, arg):
+    if arg.startswith(' Can you beat this Bloons TD 6 challenge? https://join.btd6.com/Challenge/'):
+        arg = ' ' + arg[74:]
     if arg == '':
         return await ctx.send('Code must be provided for a submission')
 
