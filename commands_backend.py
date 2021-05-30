@@ -461,8 +461,8 @@ def towerlb_backend():
         combosDict[combo[3]] += 1
 
     displayStr = '```'
-    for tower, points in combosDict.items():
+    for tower, points in sorted(combosDict.items(), key=lambda x:x[1], reverse=True):
         displayStr += '{}:{}\n'.format(tower, points)
 
     displayStr += '```'
-    return  displayStr
+    return displayStr
