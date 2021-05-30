@@ -442,3 +442,27 @@ def create_webpage(header, body):
     conn.commit()
 
     return websiteUrl + key
+
+#returns message to be sent containing how many combos for each tower
+def towerlb_backend():
+    cursor.execute('SELECT * FROM remaining_combos')
+    remaningCombos = cursor.fetchall()
+
+    combosDict = {}
+    for hero in hereos4tc:
+        combosDict[hero] = 0
+    for tower in towers4tc:
+        combosDict[tower] = 0
+
+    for combo in remaningCombos:
+        combosDict[combo[0]] += 1
+        combosDict[combo[1]] += 1
+        combosDict[combo[2]] += 1
+        combosDict[combo[3]] += 1
+
+    displayStr = '```'
+    for tower, points in combosDict.items():
+        displayStr += '{}:{}\n'.format(tower, points)
+
+    displayStr += '```'
+    return  displayStr

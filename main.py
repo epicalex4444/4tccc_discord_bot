@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands, tasks #discord.ext seems to be a different thing entirely from discord
-from commands_backend import set_name, find4tc, get_submissions, get_leaderboard, submit4tc, create_webpage
+from commands_backend import set_name, find4tc, get_submissions, get_leaderboard, submit4tc, create_webpage, towerlb_backend
 
 #token is stored in a blank file as plain text so we don't accidentely upload it to github
 file = open('./token')
@@ -139,5 +139,9 @@ async def bot_invite(ctx):
 @bot.command(name='server', help='!server', description='shows server invite')
 async def server_invite(ctx):
     await ctx.send('https://discord.gg/Gapyp6kw3b')
+
+@bot.command(name='towerlb', help='!towerlb', description='shows how many combos each tower has left')
+async def towerlb(ctx):
+    await ctx.send(towerlb_backend())
 
 bot.run(token)
