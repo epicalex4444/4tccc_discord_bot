@@ -44,6 +44,21 @@ async def on_ready():
     await bot.change_presence(status=discord.Status.online, activity=discord.Game("!help"))
     print('{0} ready'.format(bot.user))
 
+#randy memes
+myDayBeSoFine = False
+@bot.event
+async def on_message(message):
+    global myDayBeSoFine
+    if message.author.id == 279126808455151628:
+        if myDayBeSoFine and message.content.lower() == 'then bam':
+            ctx = await bot.get_context(message)
+            await ctx.send('randy opens his mouth to speak')
+        if message.content.lower() == 'my day be so fine':
+            myDayBeSoFine = True
+        else:
+            myDayBeSoFine = False
+    await bot.process_commands(message)
+
 #shows general help message or how to use a specific command
 @bot.command(name='help', help='!help *command_name', description='shows general help message or how to use a specific command')
 async def help(ctx, arg=None):
