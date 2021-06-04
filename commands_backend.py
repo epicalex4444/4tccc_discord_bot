@@ -10,9 +10,9 @@ challengeDataUrl = 'https://static-api.nkstatic.com/appdocs/11/es/challenges/'
 
 websiteUrl = 'https://4tccc.mooo.com/'
 
-hereos4tc = ['Quincy', 'Gwen', 'Striker', 'Obyn', 'Church', 'Ben', 'Ezili', 'Pat', 'Adora', 'Brickell', 'Etienne', 'Sauda']
+hereos4tc = ['Quincy', 'Gwen', 'Striker', 'Obyn', 'Church', 'Ben', 'Ezili', 'Pat', 'Adora', 'Brickell', 'Etienne', 'Sauda', 'Psi']
 towers4tc = ['Dart', 'Boomer', 'Bomb', 'Tack', 'Ice', 'Glue', 'Sniper', 'Sub', 'Bucc', 'Ace', 'Heli', 'Mortar', 'Dartling', 'Wizard', 'Super', 'Ninja', 'Alch', 'Druid', 'Spac', 'Village', 'Engineer']
-hereosNK = ['Quincy', 'Gwendolin', 'StrikerJones', 'ObynGreenfoot', 'CaptainChurchill', 'Benjamin', 'Ezili', 'PatFusty', 'Adora', 'AdmiralBrickell', 'Etienne', 'Sauda']
+hereosNK = ['Quincy', 'Gwendolin', 'StrikerJones', 'ObynGreenfoot', 'CaptainChurchill', 'Benjamin', 'Ezili', 'PatFusty', 'Adora', 'AdmiralBrickell', 'Etienne', 'Sauda'i, 'Psi']
 towersNK = ['DartMonkey', 'BoomerangMonkey', 'BombShooter', 'TackShooter', 'IceMonkey', 'GlueGunner', 'SniperMonkey', 'MonkeySub', 'MonkeyBuccaneer', 'MonkeyAce', 'HeliPilot', 'MortarMonkey', 'DartlingGunner', 'WizardMonkey', 'SuperMonkey', 'NinjaMonkey', 'Alchemist', 'Druid', 'SpikeFactory', 'MonkeyVillage', 'EngineerMonkey']
 
 towerAliases = [
@@ -27,6 +27,7 @@ towerAliases = [
     ["adora"],
     ["brick", "brickell", "admiralbrickell"],
     ["etienne", "eti"],
+    ['psi'],
     ['sauda'],
     ["dart", "dartmonkey"],
     ["boomer", "boomerang", "boomerangmonkey"],

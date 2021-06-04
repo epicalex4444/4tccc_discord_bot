@@ -7,9 +7,9 @@ import os
 
 challengeDataUrl = 'https://static-api.nkstatic.com/appdocs/11/es/challenges/'
 
-hereos4tc = ['Quincy', 'Gwen', 'Striker', 'Obyn', 'Church', 'Ben', 'Ezili', 'Pat', 'Adora', 'Brickell', 'Etienne', 'Sauda']
+hereos4tc = ['Quincy', 'Gwen', 'Striker', 'Obyn', 'Church', 'Ben', 'Ezili', 'Pat', 'Adora', 'Brickell', 'Etienne', 'Sauda', 'Psi']
 towers4tc = ['Dart', 'Boomer', 'Bomb', 'Tack', 'Ice', 'Glue', 'Sniper', 'Sub', 'Bucc', 'Ace', 'Heli', 'Mortar', 'Dartling', 'Wizard', 'Super', 'Ninja', 'Alch', 'Druid', 'Spac', 'Village', 'Engineer']
-hereosNK = ['Quincy', 'Gwendolin', 'StrikerJones', 'ObynGreenfoot', 'CaptainChurchill', 'Benjamin', 'Ezili', 'PatFusty', 'Adora', 'AdmiralBrickell', 'Etienne', 'Sauda']
+hereosNK = ['Quincy', 'Gwendolin', 'StrikerJones', 'ObynGreenfoot', 'CaptainChurchill', 'Benjamin', 'Ezili', 'PatFusty', 'Adora', 'AdmiralBrickell', 'Etienne', 'Sauda', 'Psi']
 towersNK = ['DartMonkey', 'BoomerangMonkey', 'BombShooter', 'TackShooter', 'IceMonkey', 'GlueGunner', 'SniperMonkey', 'MonkeySub', 'MonkeyBuccaneer', 'MonkeyAce', 'HeliPilot', 'MortarMonkey', 'DartlingGunner', 'WizardMonkey', 'SuperMonkey', 'NinjaMonkey', 'Alchemist', 'Druid', 'SpikeFactory', 'MonkeyVillage', 'EngineerMonkey']
 
 conn = sqlite3.connect('4tccc_data.db')
@@ -256,7 +256,7 @@ def mathematically_possible(towers):
             canBeat6 = True
 
     for tower in towers:
-        if tower in ['Quincy', 'Gwen', 'Obyn', 'Etienne', 'Ezili', 'Sauda', 'Dart', 'Sniper', 'Sub', 'Bucc', 'Ace', 'Heli', 'Mortar', 'Dartling', 'Wizard', 'Ninja', 'Spac', 'Engineer']:
+        if tower in ['Quincy', 'Gwen', 'Obyn', 'Etienne', 'Ezili', 'Sauda', 'Dart', 'Sniper', 'Sub', 'Bucc', 'Ace', 'Heli', 'Mortar', 'Dartling', 'Wizard', 'Ninja', 'Spac', 'Engineer', 'Psi']:
             canBeat24 = True
 
     #Village is expensive so bomb, ice and alch -> village doesn't work although some variants of those starts are not mathatically impossible
