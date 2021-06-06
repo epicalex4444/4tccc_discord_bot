@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands, tasks #discord.ext seems to be a different thing entirely from discord
-from commands_backend import set_name, find4tc, get_submissions, get_leaderboard, submit4tc, create_webpage, towerlb_backend
+import commands_backend as cb
 
 #token is stored in a blank file as plain text so we don't accidentely upload it to github
 file = open('token')
@@ -25,7 +25,7 @@ async def send(ctx, discordMessage):
         if discordMessage.message.startswith('```') and discordMessage.message.endswith('```'):
             discordMessage.message = discordMessage.message[3:-3]
         await ctx.send('Message too long to send, creating a webpage link for the message instead')
-        await ctx.send(create_webpage(discordMessage.header, discordMessage.message))
+        await ctx.send(cb.create_webpage(discordMessage.header, discordMessage.message))
     else:
         await ctx.send(discordMessage.message)
 
@@ -93,7 +93,7 @@ async def name(ctx, *, arg):
     if arg == '':
         response = 'You need to provide a name'
     else:
-        response = set_name(ctx.author.id, arg[1:])
+        response = cb.set_name(ctx.author.id, arg[1:])
 
     await ctx.send(response)
 
@@ -102,16 +102,16 @@ async def name(ctx, *, arg):
 async def find(ctx, tower0=None, tower1=None, tower2=None, tower3=None):
     towers = [tower0, tower1, tower2, tower3]
     towers = [tower for tower in towers if tower is not None] #python smh, removes all None from the list
-    discordMessage = find4tc(towers)
+    discordMessage = cb.find4tc(towers)
     await send(ctx, discordMessage)
 
 #finds all submissions or submissions from name
 @bot.command(name='submissions', help='!submisions *name', description='finds all submissions or submissions from name', rest_is_raw=True)
 async def submissions(ctx, *, arg):
     if arg == '':
-        discordMessage = get_submissions()
+        discordMessage = cb.get_submissions()
     else:
-        discordMessage = get_submissions(arg[1:])
+        discordMessage = cb.get_submissions(arg[1:])
 
     await send(ctx, discordMessage)
 
@@ -119,15 +119,15 @@ async def submissions(ctx, *, arg):
 @bot.command(name='leaderboard', help='!leaderboard *"name" *amount', description='shows the leaderboard', aliases=['lb'], rest_is_raw=True)
 async def leaderboard(ctx, *, arg):
     if arg == '':
-        discordMessage = get_leaderboard()
+        discordMessage = cb.get_leaderboard()
     elif arg[1:].isdigit():
-        discordMessage = get_leaderboard(amount=arg[1:])
+        discordMessage = cb.get_leaderboard(amount=arg[1:])
     elif arg[1] != '"' or arg[-1] != '"':
         return await ctx.send('Name must start and end with double quotes')
     elif arg == ' ""':
         return await ctx.send('Name cannot be nothing')
     else:
-        discordMessage = get_leaderboard(name=arg[2:-1])
+        discordMessage = cb.get_leaderboard(name=arg[2:-1])
 
     await send(ctx, discordMessage)
 
@@ -144,9 +144,9 @@ async def submit(ctx, *, arg):
         spaceIndex = arg[1:].find(' ')
         code = arg[1:spaceIndex + 1]
         name = arg[spaceIndex + 2:]
-        discordMessage = submit4tc(code, name=name)
+        discordMessage = cb.submit4tc(code, name=name)
     else:
-        discordMessage = submit4tc(arg[1:], discordId=ctx.author.id)
+        discordMessage = cb.submit4tc(arg[1:], discordId=ctx.author.id)
 
     await send(ctx, discordMessage)
 
@@ -160,6 +160,6 @@ async def server_invite(ctx):
 
 @bot.command(name='towerlb', help='!towerlb', description='shows how many combos each tower has left')
 async def towerlb(ctx):
-    await ctx.send(towerlb_backend())
+    await ctx.send(cb.towerlb_backend())
 
 bot.run(token)
