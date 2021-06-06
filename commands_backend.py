@@ -6,7 +6,7 @@ import sqlite3
 import time
 import random
 
-#url has json formated challenge data that is encrypted with zlib than base64
+#this url has json formated challenge data that is encrypted with zlib than base64
 challengeDataUrl = 'https://static-api.nkstatic.com/appdocs/11/es/challenges/'
 
 websiteUrl = 'https://4tccc.mooo.com/'
@@ -22,7 +22,7 @@ towers4tc = []
 towersNK = []
 towerAliases = []
 
-for key, value in towerNames['heros'].items():
+for key, value in towerNames['heroes'].items():
     towers4tc.append(value['4tc_name'])
     towersNK.append(key)
     if key == value['4tc_name']:
