@@ -6,7 +6,7 @@ import sqlite3
 import time
 import random
 
-#url has json formated challene data that is encrypted with zlib than base64
+#url has json formated challenge data that is encrypted with zlib than base64
 challengeDataUrl = 'https://static-api.nkstatic.com/appdocs/11/es/challenges/'
 
 websiteUrl = 'https://4tccc.mooo.com/'
@@ -279,7 +279,7 @@ def get_version(cD):
     return 22 #22.0 - current
 
 #checks if the settings of the challenge match a valid 4tc challenge
-def valid_settings(cD, version):
+def valid_settings(cD):
     errorStr = ''
 
     if cD['difficulty'] != 'Hard':
@@ -317,11 +317,12 @@ def valid_settings(cD, version):
         errorStr += "Bloon health isn't 100%\n"
     if cD['bloonModifiers']['healthMultipliers']['moabs'] != 1:
         errorStr += "MOAB health isn't 100%\n"
-    if version >= 22 and cD['bloonModifiers']['regrowRateMultiplier'] != 1:
-        errorStr += "Regrow rate isn't 100%\n"
+    if cD['bloonModifiers'].get('regrowRateMultiplier', None) != None: #regrow rate was added in 22.0
+        if cD['bloonModifiers']['regrowRateMultiplier'] != 1:
+            errorStr += "Regrow rate isn't 100%\n"
     if not cD['disableSelling']:
         errorStr += 'Selling enabled\n'
-    if version >= 11:
+    if cD['bloonModifiers'].get('allCamo', None) != None: #all camo and all regen was added in 11.0
         if cD['bloonModifiers']['allCamo']:
             errorStr += 'All camo enabled\n'
         if cD['bloonModifiers']['allRegen']:
@@ -406,8 +407,7 @@ def submit4tc(code, name=None, discordId=None):
 
     try:
         challengeData = get_challenge_data(code)
-        version = get_version(challengeData)
-        valid_settings(challengeData, version)
+        valid_settings(challengeData)
         towers = get_towers(challengeData)
         combosRemoved = remove4tc(towers)
         update_leaderboard(name, combosRemoved)
