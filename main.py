@@ -3,33 +3,31 @@ from discord.ext import commands, tasks #discord.ext seems to be a different thi
 from commands_backend import set_name, find4tc, get_submissions, get_leaderboard, submit4tc, create_webpage, towerlb_backend
 
 #token is stored in a blank file as plain text so we don't accidentely upload it to github
-file = open('./token')
+file = open('token')
 token = file.read()
 file.close()
 
-ownerId = 482762949958696980
-
-bot = commands.Bot(command_prefix='!', intents=discord.Intents(messages=True), owner_id=ownerId, help_command=None, case_insensitive=True)
+bot = commands.Bot(command_prefix='!', intents=discord.Intents(messages=True), owner_id=482762949958696980, help_command=None, case_insensitive=True)
 
 #response = [immediate, message, header]
 #immediate is always sent as a discord message, message is sent as a discord message if it is
 #short enough else it is the body of the webpage, header is the header off the webpage if it exists
-async def send(ctx, response):
+async def send(ctx, discordMessage):
     #some messages don't need to send anything immediately
-    if response[0] != None:
-        await ctx.send(response[0])
+    if discordMessage.imediate != None:
+        await ctx.send(discordMessage.imediate)
 
     #used for messages that guaranteed won't exceed 2000 chars
-    if response[1] == None:
+    if discordMessage.message == None:
         return
 
-    if len(response[1]) > 2000:
-        if response[1].startswith('```') and response[1].endswith('```'):
-            response[1] = response[1][3:-3]
+    if len(discordMessage.message) > 2000:
+        if discordMessage.message.startswith('```') and discordMessage.message.endswith('```'):
+            discordMessage.message = discordMessage.message[3:-3]
         await ctx.send('Message too long to send, creating a webpage link for the message instead')
-        await ctx.send(create_webpage(response[2], response[1]))
+        await ctx.send(create_webpage(discordMessage.header, discordMessage.message))
     else:
-        await ctx.send(response[1])
+        await ctx.send(discordMessage.message)
 
 #disables command not foun error in order to stop printing to the console
 @bot.event
@@ -99,34 +97,34 @@ async def name(ctx, *, arg):
 async def find(ctx, tower0=None, tower1=None, tower2=None, tower3=None):
     towers = [tower0, tower1, tower2, tower3]
     towers = [tower for tower in towers if tower is not None] #python smh, removes all None from the list
-    response = find4tc(towers)
-    await send(ctx, response)
+    discordMessage = find4tc(towers)
+    await send(ctx, discordMessage)
 
 #finds all submissions or submissions from name
 @bot.command(name='submissions', help='!submisions *name', description='finds all submissions or submissions from name', rest_is_raw=True)
 async def submissions(ctx, *, arg):
     if arg == '':
-        response = get_submissions()
+        discordMessage = get_submissions()
     else:
-        response = get_submissions(arg[1:])
+        discordMessage = get_submissions(arg[1:])
 
-    await send(ctx, response)
+    await send(ctx, discordMessage)
 
 #shows the leaderboard
 @bot.command(name='leaderboard', help='!leaderboard *"name" *amount', description='shows the leaderboard', aliases=['lb'], rest_is_raw=True)
 async def leaderboard(ctx, *, arg):
     if arg == '':
-        response = get_leaderboard()
+        discordMessage = get_leaderboard()
     elif arg[1:].isdigit():
-        response = get_leaderboard(amount=arg[1:])
+        discordMessage = get_leaderboard(amount=arg[1:])
     elif arg[1] != '"' or arg[-1] != '"':
-        response = ['Name must start and end with double quotes', None, None]
+        return await ctx.send('Name must start and end with double quotes')
     elif arg == ' ""':
-        response = ['Name cannot be nothing', None, None]
+        return await ctx.send('Name cannot be nothing')
     else:
-        response = get_leaderboard(name=arg[2:-1])
+        discordMessage = get_leaderboard(name=arg[2:-1])
 
-    await send(ctx, response)
+    await send(ctx, discordMessage)
 
 #used to submit a combo, name is required if you haven't specified your name with !name
 @bot.command(name='submit', help='!submit code *name', description="used to submit a combo, name is required if you haven't specified your name with !name", rest_is_raw=True)
@@ -141,11 +139,11 @@ async def submit(ctx, *, arg):
         spaceIndex = arg[1:].find(' ')
         code = arg[1:spaceIndex + 1]
         name = arg[spaceIndex + 2:]
-        response = submit4tc(code, name=name)
+        discordMessage = submit4tc(code, name=name)
     else:
-        response = submit4tc(arg[1:], discordId=ctx.author.id)
+        discordMessage = submit4tc(arg[1:], discordId=ctx.author.id)
 
-    await ctx.send(response)
+    await send(ctx, discordMessage)
 
 @bot.command(name='bot', help='!bot', description='shows bot invite link')
 async def bot_invite(ctx):

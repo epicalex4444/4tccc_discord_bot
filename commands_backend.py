@@ -41,6 +41,15 @@ for tower in towerAliases:
     for i in range(len(tower)):
         tower[i] = tower[i].lower()
 
+#imediate is always sent over discord
+#message may be to large to send over discord, instead done over a website
+#header is website header
+class discordMessage:
+    def __init__(self, imediate=None, message=None, header=None):
+        self.imediate = imediate
+        self.message = message
+        self.header = header
+
 #all elements of a are in b, for lists/tuples, if a is empty it return true
 def is_subset(a, b):
     for aElement in a:
@@ -94,12 +103,12 @@ def find4tc(towers):
 
     invalidTowers = validate_towers(towers)
     if invalidTowers != []:
-        return ['Invalid Towers: {0}'.format(', '.join(invalidTowers)), None, None]
+        return discordMessage(imediate='Invalid Towers: {}'.format(', '.join(invalidTowers)))
 
     if towers == []:
         header = 'All Remaining Combos'
     else:
-        header = '{0} Combos'.format(', '.join(towers))
+        header = '{} Combos'.format(', '.join(towers))
 
     cursor.execute('SELECT * FROM remaining_combos')
     remaningCombos = cursor.fetchall()
@@ -112,11 +121,11 @@ def find4tc(towers):
             matches += 1
 
     if matches == 1:
-        return ['1 combo found', '```{0}```'.format(displayStr[:-1]), header]
+        return discordMessage(imediate='1 combo found', message='```{}```'.format(displayStr[:-1]), header=header)
     elif matches == 0:
-        return ['0 combos found', None, None]
+        return discordMessage(imediate='0 combos found')
     else:
-        return ['{0} combos found'.format(matches), '```{0}```'.format(displayStr[:-1]), header]
+        return discordMessage(imediate='{} combos found'.format(matches), message='```{}```'.format(displayStr[:-1]), header=header)
 
 #returns leaderboard formatted for easy reading
 #if name is provided returns score, if amount is provided it returns a shortened version of the leaderboard
@@ -125,8 +134,8 @@ def get_leaderboard(name=None, amount=None):
         cursor.execute('SELECT score FROM leaderboard WHERE name=?', (name,))
         score = cursor.fetchone()
         if score == None:
-            return ["{0} hasn't submitted yet".format(name), None, None]
-        return ["{0}'s score is {1}".format(name, score[0]), None, None]
+            return discordMessage(imediate="{} hasn't submitted yet".format(name))
+        return discordMessage(imediate="{}'s score is {}".format(name, score[0]))
 
     cursor.execute('SELECT * FROM leaderboard')
     leaderboard = cursor.fetchall()
@@ -136,17 +145,17 @@ def get_leaderboard(name=None, amount=None):
     if amount == None or int(amount) >= len(leaderboard):
         header = 'Full Leaderboard'
         for score in leaderboard:
-            displayStr += '{0}: {1}\n'.format(space_fill(str(score[0]), 4, False), score[1])
+            displayStr += '{}: {}\n'.format(space_fill(str(score[0]), 4, False), score[1])
     else:
-        header = 'Top {0} Leaderboard'.format(amount)
+        header = 'Top {} Leaderboard'.format(amount)
         amount = int(amount)
         for score in leaderboard:
             if amount == 0:
                 break
-            displayStr += '{0}: {1}\n'.format(space_fill(str(score[0]), 4, False), score[1])
+            displayStr += '{}: {}\n'.format(space_fill(str(score[0]), 4, False), score[1])
             amount -= 1
 
-    return [None, '```{0}```'.format(displayStr[:-1]), header]
+    return discordMessage(message='```{}```'.format(displayStr[:-1]), header=header)
 
 #returns all the submission formatted for easy reading, if a name is provided if returns ony submissions by that person
 #if towers is provided it returns who completed the combo, must have 4 towers
@@ -171,9 +180,9 @@ def get_submissions(name=None):
         submissions = cursor.fetchall()
 
         if len(submissions) == 0:
-            return ["{0} doesn't exist".format(name), None, None]
+            return discordMessage(imediate="{} doesn't exist".format(name))
 
-        header = "{0}'s submissions".format(name)
+        header = "{}'s submissions".format(name)
         displayStr += '\n'
 
         for submission in submissions:
@@ -182,7 +191,7 @@ def get_submissions(name=None):
                 temp.append(str(i or ''))
             displayStr += tower_print(temp) + '\n'
 
-    return [None, '```{0}```'.format(displayStr[:-1]), header]
+    return discordMessage(message='```{}```'.format(displayStr[:-1]), header=header)
 
 #change name in names, submissions and leaderboard
 def change_name(old, new):
@@ -211,7 +220,7 @@ def set_name(discordId, name):
     oldName = cursor.fetchone()
 
     if oldName == None:
-        displayStr = '{0} has been added as your name'.format(name)
+        displayStr = '{} has been added as your name'.format(name)
         cursor.execute('INSERT INTO names VALUES (?, ?)', (discordId, name))
         conn.commit()
     else:
@@ -221,7 +230,7 @@ def set_name(discordId, name):
             change_name(oldName[0], name)
         except Exception as e:
             return str(e)
-        displayStr = '{0} changed to {1}'.format(oldName[0], name)
+        displayStr = '{} changed to {}'.format(oldName[0], name)
 
     return displayStr
 
@@ -321,7 +330,7 @@ def valid_settings(cD, version):
             errorStr += 'All regrow enabled\n'
 
     if errorStr != '':
-        raise Exception('```{0}```'.format(errorStr[:-1]))
+        raise Exception('```{}```'.format(errorStr[:-1]))
 
 #gets towers used from challenge data
 def get_towers(challengeData):
@@ -407,7 +416,7 @@ def submit4tc(code, name=None, discordId=None):
         combosRemoved = remove4tc(towers)
         update_leaderboard(name, combosRemoved)
         add_submission(code, towers, combosRemoved, name)
-        return '```Submission:\nName: {0}\nCode: {1}\nTowers: {2}\nCombos removed: {3}```'.format(name, code, ', '.join(towers), combosRemoved)
+        return discordMessage(imediate='```Submission:\nName: {}\nCode: {}\nTowers: {}\nCombos removed: {}```'.format(name, code, ', '.join(towers), combosRemoved))
     except Exception as e:
         return str(e)
 
