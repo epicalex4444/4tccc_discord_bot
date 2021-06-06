@@ -254,30 +254,6 @@ def get_challenge_data(code):
     except (requests.exceptions.RequestException):
         raise Exception("Couldn't establish a connection with nk servers")
 
-#returns approximate verison, works by checking for challenge data changes over time
-def get_version(cD):
-    if cD['bloonModifiers'].get('allCamo', 'undefined') == 'undefined':
-        return 9 #9.0 - 10.2
-    if cD.get('numberOfPlayers', 'undefined') == 'undefined':
-        return 11 #11.0 - 11.2
-    if cD.get('replaces', 'undefined') == 'undefined':
-        return 12 #12.0
-    if cD['towers'][9]['tower'] != 'Adora':
-        return 12.1 #12.1 - 13.1
-    if cD['towers'][0].get('path1NumBlockedTiers', 'undefined') == 'undefined':
-        return 14 #14.0 - 15.2
-    if cD['towers'][10]['tower'] != 'AdmiralBrickell':
-        return 16 #16.0 - 17.1
-    if cD.get('displayIncludedPowers', 'undefined') == 'undefined':
-        return 18 #18.0 - 18.1
-    if cD['towers'][11]['tower'] != 'Etienne':
-        return 19 #19.0 - 19.2
-    if cD.get('roundSets', 'undefined') == 'undefined':
-        return 20 #20.0 - 20.1
-    if cD['bloonModifiers'].get('regrowRateMultiplier', 'undefined') == 'undefined':
-        return 21 # 21.0 - 21.1
-    return 22 #22.0 - current
-
 #checks if the settings of the challenge match a valid 4tc challenge
 def valid_settings(cD):
     errorStr = ''
@@ -453,3 +429,6 @@ def towerlb_backend():
 
     displayStr += '```'
     return displayStr
+
+def new_tower(cD):
+    return NotImplementedError
