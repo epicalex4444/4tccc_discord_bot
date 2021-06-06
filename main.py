@@ -1,5 +1,5 @@
 import discord
-from discord.ext import commands, tasks #discord.ext seems to be a different thing entirely from discord
+from discord.ext import commands, tasks
 import commands_backend as cb
 
 #token is stored in a blank file as plain text so we don't accidentely upload it to github
@@ -9,15 +9,11 @@ file.close()
 
 bot = commands.Bot(command_prefix='!', intents=discord.Intents(messages=True), owner_id=482762949958696980, help_command=None, case_insensitive=True)
 
-#response = [immediate, message, header]
-#immediate is always sent as a discord message, message is sent as a discord message if it is
-#short enough else it is the body of the webpage, header is the header off the webpage if it exists
+#used for sending the a discordMessage object
 async def send(ctx, discordMessage):
-    #some messages don't need to send anything immediately
     if discordMessage.imediate != None:
         await ctx.send(discordMessage.imediate)
 
-    #used for messages that guaranteed won't exceed 2000 chars
     if discordMessage.message == None:
         return
 
@@ -29,14 +25,14 @@ async def send(ctx, discordMessage):
     else:
         await ctx.send(discordMessage.message)
 
-#disables command not foun error in order to stop printing to the console
+#disables command not found error in order to stop printing to the console
 @bot.event
 async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
         return
     raise error
 
-#logs to the console when the bot is on
+#logs to the console when the bot is on, and sets the bot presence
 @bot.event
 async def on_ready():
     await bot.change_presence(status=discord.Status.online, activity=discord.Game("!help"))
@@ -57,7 +53,6 @@ async def on_message(message):
             myDayBeSoFine = False
     await bot.process_commands(message)
 
-#shows general help message or how to use a specific command
 @bot.command(name='help', help='!help *command_name', description='shows general help message or how to use a specific command')
 async def help(ctx, arg=None):
     commands = bot.commands
@@ -87,51 +82,39 @@ you can try visiting the github or contacting someone in the 4tccc server
         return await ctx.send("that command doesn't exist, visit <https://github.com/epicalex4444/4tccc_discord_bot> for a command list")
     await ctx.send('```' + helpMessage + '```')
 
-#used to specify an name so you don't have to use the name parameter in submit
 @bot.command(name='name', help='!name name', description="used to specify an name so you don't have to use the name parameter in submit", rest_is_raw=True)
 async def name(ctx, *, arg):
     if arg == '':
-        response = 'You need to provide a name'
+        await ctx.send('You need to provide a name')
     else:
-        response = cb.set_name(ctx.author.id, arg[1:])
+        await ctx.send(cb.set_name(ctx.author.id, arg[1:]))
 
-    await ctx.send(response)
-
-#finds all the combos remaining that have all of the specified towers
 @bot.command(name='find', help='!find *towers', description='finds all the combos remaining that have all of the specified towers')
 async def find(ctx, tower0=None, tower1=None, tower2=None, tower3=None):
     towers = [tower0, tower1, tower2, tower3]
-    towers = [tower for tower in towers if tower is not None] #python smh, removes all None from the list
-    discordMessage = cb.find4tc(towers)
-    await send(ctx, discordMessage)
+    towers = [tower for tower in towers if tower is not None]
+    await send(ctx, cb.find4tc(towers))
 
-#finds all submissions or submissions from name
 @bot.command(name='submissions', help='!submisions *name', description='finds all submissions or submissions from name', rest_is_raw=True)
 async def submissions(ctx, *, arg):
     if arg == '':
-        discordMessage = cb.get_submissions()
+        await send(ctx, cb.get_submissions())
     else:
-        discordMessage = cb.get_submissions(arg[1:])
+        await send(ctx, cb.get_submissions(arg[1:]))
 
-    await send(ctx, discordMessage)
-
-#shows the leaderboard
 @bot.command(name='leaderboard', help='!leaderboard *"name" *amount', description='shows the leaderboard', aliases=['lb'], rest_is_raw=True)
 async def leaderboard(ctx, *, arg):
     if arg == '':
-        discordMessage = cb.get_leaderboard()
+        await send(ctx, cb.get_leaderboard())
     elif arg[1:].isdigit():
-        discordMessage = cb.get_leaderboard(amount=arg[1:])
+        await send(ctx, cb.get_leaderboard(amount=arg[1:]))
     elif arg[1] != '"' or arg[-1] != '"':
-        return await ctx.send('Name must start and end with double quotes')
+        await ctx.send('Name must start and end with double quotes')
     elif arg == ' ""':
-        return await ctx.send('Name cannot be nothing')
+        await ctx.send('Name cannot be nothing')
     else:
-        discordMessage = cb.get_leaderboard(name=arg[2:-1])
+        await send(ctx, cb.get_leaderboard(name=arg[2:-1]))
 
-    await send(ctx, discordMessage)
-
-#used to submit a combo, name is required if you haven't specified your name with !name
 @bot.command(name='submit', help='!submit code *name', description="used to submit a combo, name is required if you haven't specified your name with !name", rest_is_raw=True)
 async def submit(ctx, *, arg):
     if arg.startswith(' Can you beat this Bloons TD 6 challenge? https://join.btd6.com/Challenge/'):
@@ -144,11 +127,9 @@ async def submit(ctx, *, arg):
         spaceIndex = arg[1:].find(' ')
         code = arg[1:spaceIndex + 1]
         name = arg[spaceIndex + 2:]
-        discordMessage = cb.submit4tc(code, name=name)
+        await send(ctx, cb.submit4tc(code, name=name))
     else:
-        discordMessage = cb.submit4tc(arg[1:], discordId=ctx.author.id)
-
-    await send(ctx, discordMessage)
+        await send(ctx, cb.submit4tc(arg[1:], discordId=ctx.author.id))
 
 @bot.command(name='bot', help='!bot', description='shows bot invite link')
 async def bot_invite(ctx):
