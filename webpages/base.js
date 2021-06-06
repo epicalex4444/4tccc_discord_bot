@@ -152,7 +152,7 @@ function setup_side() {
     const side = document.getElementById('side');
 
     //start webpage expiry timer
-    const timeCreated = 1612336528 / 60; //mins
+    const timeCreated = document.querySelector('meta[name="timeCreated"]').content / 60; //mins
     const currTime = new Date().getTime() / 60000; //mins
     let timeRemaining = Math.ceil(1440 - (currTime - timeCreated));
     let hours = Math.max(0, Math.floor(timeRemaining / 60));
