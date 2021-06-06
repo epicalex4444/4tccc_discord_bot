@@ -40,7 +40,7 @@ async def on_command_error(ctx, error):
 @bot.event
 async def on_ready():
     await bot.change_presence(status=discord.Status.online, activity=discord.Game("!help"))
-    print('{0} ready'.format(bot.user))
+    print('{} ready'.format(bot.user))
 
 #randy memes
 myDayBeSoFine = False
@@ -62,25 +62,30 @@ async def on_message(message):
 async def help(ctx, arg=None):
     commands = bot.commands
     if arg == None:
-        helpMessage = '```* represents that the parameter is optional\n\nCommands:\n'
-        for command in commands:
-            helpMessage += '{0}\nDescription: {1}\n'.format(command.help, command.description)
-            if len(command.aliases) != 0:
-                helpMessage += 'Aliases: {0}\n'.format(', '.join(command.aliases))
-            helpMessage += '\n'
-        helpMessage += '\nIf you have found a bug, report it to epicalex4444#5552 on discord\nFor more in depth info see https://github.com/epicalex4444/4tccc_discord_bot```'
-    else:
-        commandNotFound = True
-        for command in commands:
-            if command.name == arg or arg in command.aliases:
-                helpMessage = '{0}\nDescription: {1}'.format(command.help, command.description)
-                if len(command.aliases) != 0:
-                    helpMessage += '\nAliases: ' + ', '.join(command.aliases)
-                commandNotFound = False
-        if commandNotFound:
-            return await ctx.send("that command doesn't exist, use !help with no arguments to see the commands")
+        return await ctx.send('''```
+Need a command list?
+visit https://github.com/epicalex4444/4tccc_discord_bot
 
-    await ctx.send(helpMessage)
+Need help with a specific command?
+use !help commandName
+
+Found a bug?
+report bugs to epicalex4444#5552 on discord or make an issue on github
+
+Still need help?
+you can try visiting the github or contacting someone in the 4tccc server
+```''')
+
+    commandNotFound = True
+    for command in commands:
+        if command.name == arg or arg in command.aliases:
+            helpMessage = '{}\nDescription: {}'.format(command.help, command.description)
+            if len(command.aliases) != 0:
+                helpMessage += '\nAliases: ' + ', '.join(command.aliases)
+            commandNotFound = False
+    if commandNotFound:
+        return await ctx.send("that command doesn't exist, visit <https://github.com/epicalex4444/4tccc_discord_bot> for a command list")
+    await ctx.send('```' + helpMessage + '```')
 
 #used to specify an name so you don't have to use the name parameter in submit
 @bot.command(name='name', help='!name name', description="used to specify an name so you don't have to use the name parameter in submit", rest_is_raw=True)
