@@ -1,0 +1,142 @@
+{
+    "heros": {
+        "Quincy": {
+            "4tc_name": "Quincy",
+            "aliases": []
+        },
+        "Gwendolin": {
+            "4tc_name": "Gwen",
+            "aliases": []
+        },
+        "StrikerJones": {
+            "4tc_name": "Striker",
+            "aliases": ["Jones"]
+        },
+        "ObynGreenfoot": {
+            "4tc_name": "Obyn",
+            "aliases": []
+        },
+        "CaptainChurchill": {
+            "4tc_name": "Church",
+            "aliases": ["Churchill"]
+        },
+        "Benjamin": {
+            "4tc_name": "Ben",
+            "aliases": []
+        },
+        "Ezili": {
+            "4tc_name": "Ezili",
+            "aliases": []
+        },
+        "PatFusty": {
+            "4tc_name": "Pat",
+            "aliases": []
+        },
+        "Adora": {
+            "4tc_name": "Adora",
+            "aliases": []
+        },
+        "AdmiralBrickell": {
+            "4tc_name": "Brickell",
+            "aliases": ["Brick"]
+        },
+        "Etienne": {
+            "4tc_name": "Etienne",
+            "aliases": ["Eti"]
+        },
+        "Sauda": {
+            "4tc_name": "Sauda",
+            "aliases": []
+        },
+        "Psi": {
+            "4tc_name": "Psi",
+            "aliases": []
+        }
+    },
+    "towers": {
+        "DartMonkey": {
+            "4tc_name": "Dart",
+            "aliases": []
+        },
+        "BoomerangMonkey": {
+            "4tc_name": "Boomer",
+            "aliases": ["Boomerang"]
+        },
+        "BombShooter": {
+            "4tc_name": "Bomb",
+            "aliases": []
+        },
+        "TackShooter": {
+            "4tc_name": "Tack",
+            "aliases": []
+        },
+        "IceMonkey": {
+            "4tc_name": "Ice",
+            "aliases": []
+        },
+        "GlueGunner": {
+            "4tc_name": "Glue",
+            "aliases": []
+        },
+        "SniperMonkey": {
+            "4tc_name": "Sniper",
+            "aliases": []
+        },
+        "MonkeySub": {
+            "4tc_name": "Sub",
+            "aliases": []
+        },
+        "MonkeyBuccaneer": {
+            "4tc_name": "Bucc",
+            "aliases": ["Boat", "Buccaneer"]
+        },
+        "MonkeyAce": {
+            "4tc_name": "Ace",
+            "aliases": []
+        },
+        "HeliPilot": {
+            "4tc_name": "Heli",
+            "aliases": []
+        },
+        "MortarMonkey": {
+            "4tc_name": "Mortar",
+            "aliases": []
+        },
+        "DartlingGunner": {
+            "4tc_name": "Dartling",
+            "aliases": []
+        },
+        "WizardMonkey": {
+            "4tc_name": "Wizard",
+            "aliases": ["Wiz"]
+        },
+        "SuperMonkey": {
+            "4tc_name": "Super",
+            "aliases": []
+        },
+        "NinjaMonkey": {
+            "4tc_name": "Ninja",
+            "aliases": []
+        },
+        "Alchemist": {
+            "4tc_name": "Alch",
+            "aliases": []
+        },
+        "Druid": {
+            "4tc_name": "Druid",
+            "aliases": []
+        },
+        "SpikeFactory": {
+            "4tc_name": "Spac",
+            "aliases": ["Spactory"]
+        },
+        "MonkeyVillage": {
+            "4tc_name": "Village",
+            "aliases": ["Vill"]
+        },
+        "EngineerMonkey": {
+            "4tc_name": "Engineer",
+            "aliases": ["Engi"]
+        }
+    }
+}

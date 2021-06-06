@@ -10,50 +10,36 @@ challengeDataUrl = 'https://static-api.nkstatic.com/appdocs/11/es/challenges/'
 
 websiteUrl = 'https://4tccc.mooo.com/'
 
-hereos4tc = ['Quincy', 'Gwen', 'Striker', 'Obyn', 'Church', 'Ben', 'Ezili', 'Pat', 'Adora', 'Brickell', 'Etienne', 'Sauda', 'Psi']
-towers4tc = ['Dart', 'Boomer', 'Bomb', 'Tack', 'Ice', 'Glue', 'Sniper', 'Sub', 'Bucc', 'Ace', 'Heli', 'Mortar', 'Dartling', 'Wizard', 'Super', 'Ninja', 'Alch', 'Druid', 'Spac', 'Village', 'Engineer']
-hereosNK = ['Quincy', 'Gwendolin', 'StrikerJones', 'ObynGreenfoot', 'CaptainChurchill', 'Benjamin', 'Ezili', 'PatFusty', 'Adora', 'AdmiralBrickell', 'Etienne', 'Sauda', 'Psi']
-towersNK = ['DartMonkey', 'BoomerangMonkey', 'BombShooter', 'TackShooter', 'IceMonkey', 'GlueGunner', 'SniperMonkey', 'MonkeySub', 'MonkeyBuccaneer', 'MonkeyAce', 'HeliPilot', 'MortarMonkey', 'DartlingGunner', 'WizardMonkey', 'SuperMonkey', 'NinjaMonkey', 'Alchemist', 'Druid', 'SpikeFactory', 'MonkeyVillage', 'EngineerMonkey']
-
-towerAliases = [
-    ["quincy"],
-    ["gwen", "gwendolin"],
-    ["striker", "jones", "strikerJones"],
-    ["obyn", "obyngreenfoot"],
-    ["church", "churchill", "captainchurchill"],
-    ["ben", "benjamin"],
-    ["ezili"],
-    ["pat", "patfusty"],
-    ["adora"],
-    ["brick", "brickell", "admiralbrickell"],
-    ["etienne", "eti"],
-    ['psi'],
-    ['sauda'],
-    ["dart", "dartmonkey"],
-    ["boomer", "boomerang", "boomerangmonkey"],
-    ["bomb", "bombshooter"],
-    ["tack", "tackshooter"],
-    ["ice", "icemonkey"],
-    ["glue", "gluegunner"],
-    ["sniper", "snipermonkey"],
-    ["sub", "monkeysub"],
-    ["bucc", "boat", "buccaneer", "monkeybuccaneer"],
-    ["ace", "monkeyace"],
-    ["heli", "helipilot"],
-    ["mortar", "mortarmonkey"],
-    ["dartling", "dartlinggunner"],
-    ["wizard", "wizardmonkey", "wiz"],
-    ["super", "supermonkey"],
-    ["ninja", "ninjamonkey"],
-    ["alch", "alchemist"],
-    ["druid"],
-    ["spac", "spikefactory", "spactory"],
-    ["village", "monkeyvillage", "vill"],
-    ["engi", "engineer", "engineermonkey"]
-]
-
 conn = sqlite3.connect('4tccc_data.db')
-cursor = conn.cursor() 
+cursor = conn.cursor()
+
+file = open('towerNames.json', 'r')
+towerNames = json.load(file)
+file.close()
+
+towers4tc = []
+towersNK = []
+towerAliases = []
+
+for key, value in towerNames['heros'].items():
+    towers4tc.append(value['4tc_name'])
+    towersNK.append(key)
+    if key == value['4tc_name']:
+        towerAliases.append([key] + value['aliases'])
+    else:
+        towerAliases.append([value['4tc_name'], key] + value['aliases'])
+
+for key, value in towerNames['towers'].items():
+    towers4tc.append(value['4tc_name'])
+    towersNK.append(key)
+    if key == value['4tc_name']:
+        towerAliases.append([key] + value['aliases'])
+    else:
+        towerAliases.append([value['4tc_name'], key] + value['aliases'])
+
+for tower in towerAliases:
+    for i in range(len(tower)):
+        tower[i] = tower[i].lower()
 
 #all elements of a are in b, for lists/tuples, if a is empty it return true
 def is_subset(a, b):
@@ -86,19 +72,19 @@ def tower_print(towers):
 
 #changes any valid tower in towers to be it's default name
 def tower_alias(towers):
-    defaultNames = hereos4tc + towers4tc
-    for item in range(len(towers)):
-        for tower in range(len(towerAliases)):
-            if towers[item].lower() in towerAliases[tower]:
-                towers[item] = defaultNames[tower]
+    print(towerAliases)
+    for i in range(len(towers)):
+        for j in range(len(towerAliases)):
+            if towers[i].lower() in towerAliases[j]:
+                towers[i] = towers4tc[j]
+                break
     return towers
 
 #return the invalid tower in a list
 def validate_towers(towers):
-    validTowers = towers4tc + hereos4tc
     invalidTowers = []
     for tower in towers:
-        if not tower in validTowers:
+        if not tower in towers4tc:
             invalidTowers.append(tower)
     return invalidTowers
 
@@ -344,13 +330,10 @@ def get_towers(challengeData):
         if tower['max'] != 0:
             towers.append(tower['tower'])
 
-    namesNK = hereosNK + towersNK
-    names4tc = hereos4tc + towers4tc
-
     for i in range(len(towers)):
-        for x in range(len(namesNK)):
-            if towers[i] == namesNK[x]:
-                towers[i] = names4tc[x]
+        for x in range(len(towersNK)):
+            if towers[i] == towersNK[x]:
+                towers[i] = towers4tc[x]
 
     return tuple(towers)
 
@@ -450,8 +433,6 @@ def towerlb_backend():
     remaningCombos = cursor.fetchall()
 
     combosDict = {}
-    for hero in hereos4tc:
-        combosDict[hero] = 0
     for tower in towers4tc:
         combosDict[tower] = 0
 
