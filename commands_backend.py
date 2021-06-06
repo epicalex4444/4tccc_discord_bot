@@ -6,6 +6,7 @@ import sqlite3
 import time
 import random
 
+#url has json formated challene data that is encrypted with zlib than base64
 challengeDataUrl = 'https://static-api.nkstatic.com/appdocs/11/es/challenges/'
 
 websiteUrl = 'https://4tccc.mooo.com/'
@@ -80,7 +81,7 @@ def tower_print(towers):
     temp.append(towers[-1])
     return '|'.join(temp)
 
-#changes any valid tower in towers to be it's default name
+#changes any valid tower in towers to be it's 4tc name
 def tower_alias(towers):
     for i in range(len(towers)):
         for j in range(len(towerAliases)):
@@ -89,7 +90,7 @@ def tower_alias(towers):
                 break
     return towers
 
-#return the invalid tower in a list
+#return any invalid tower in a list
 def validate_towers(towers):
     invalidTowers = []
     for tower in towers:
@@ -97,7 +98,7 @@ def validate_towers(towers):
             invalidTowers.append(tower)
     return invalidTowers
 
-#takes towers list with 0-4, towers can be unordered, returns found 4tc's formatted for easy reading
+#takes towers list with 0-4, towers can be unordered, returns a discord message
 def find4tc(towers):
     towers = tower_alias(towers)
 
@@ -127,8 +128,8 @@ def find4tc(towers):
     else:
         return discordMessage(imediate='{} combos found'.format(matches), message='```{}```'.format(displayStr[:-1]), header=header)
 
-#returns leaderboard formatted for easy reading
-#if name is provided returns score, if amount is provided it returns a shortened version of the leaderboard
+#returns a discord message, if name is provided returns score
+#if amount is provided it returns a shortened version of the leaderboard
 def get_leaderboard(name=None, amount=None):
     if name != None:
         cursor.execute('SELECT score FROM leaderboard WHERE name=?', (name,))
@@ -157,8 +158,7 @@ def get_leaderboard(name=None, amount=None):
 
     return discordMessage(message='```{}```'.format(displayStr[:-1]), header=header)
 
-#returns all the submission formatted for easy reading, if a name is provided if returns ony submissions by that person
-#if towers is provided it returns who completed the combo, must have 4 towers
+#returns discord message, if a name is provided if returns ony submissions by that person
 def get_submissions(name=None):
     displayStr = 'Code    |Tower1  |Tower2  |Tower3  |Tower4  |Combos  '
     header = ''
@@ -193,7 +193,7 @@ def get_submissions(name=None):
 
     return discordMessage(message='```{}```'.format(displayStr[:-1]), header=header)
 
-#change name in names, submissions and leaderboard
+#change name in submissions and leaderboard
 def change_name(old, new):
     submittedNew = False
     submittedOld = False
@@ -214,7 +214,7 @@ def change_name(old, new):
     cursor.execute('UPDATE submissions SET name=? WHERE name=?', (new, old))
     conn.commit()
 
-#adds new name or changes an existing name
+#adds a new name or changes an existing name
 def set_name(discordId, name):
     cursor.execute('SELECT name FROM names WHERE discordId=?', (discordId,))
     oldName = cursor.fetchone()
@@ -246,10 +246,8 @@ def get_name(discordId):
 #returns raw challenge data from challenge code
 def get_challenge_data(code):
     try:
-        #this url contains challenge data that is encrypted with zlib than base64
         response = requests.get(challengeDataUrl + code, timeout=10)
         response.raise_for_status()
-        #decrypts data and turns it into a dictionary
         return json.loads(zlib.decompress(base64.b64decode(response.text)))
     except requests.exceptions.HTTPError:
         raise Exception('Invalid Code')
@@ -280,7 +278,7 @@ def get_version(cD):
         return 21 # 21.0 - 21.1
     return 22 #22.0 - current
 
-#checks if the settings of the challenge match a valid 4tc challenge, cD = challengeData
+#checks if the settings of the challenge match a valid 4tc challenge
 def valid_settings(cD, version):
     errorStr = ''
 
@@ -330,7 +328,7 @@ def valid_settings(cD, version):
             errorStr += 'All regrow enabled\n'
 
     if errorStr != '':
-        raise Exception('```{}```'.format(errorStr[:-1]))
+        raise Exception('```' + errorStr[:-1] + '```')
 
 #gets towers used from challenge data
 def get_towers(challengeData):
@@ -403,8 +401,6 @@ def submit4tc(code, name=None, discordId=None):
 
     code = code.upper()
 
-    #parses out invalid codes that are not 7 chars long and/or contain non letters
-    #this is for efficiency reasons since requesting is very slow
     if len(code) != 7 or not code.isalpha():
         return 'Invalid Code'
 
