@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 
-import cgi
 import sqlite3
 import os
 
-conn = sqlite3.connect('/home/alex/4tccc_discord_bot/4tccc_data.db')
+conn = sqlite3.connect('../4tccc_data.db')
 cursor = conn.cursor()
 cursor.execute('SELECT epoche, header, body FROM webpages WHERE key=?', (os.environ['REQUEST_URI'][1:],))
 webpageData = cursor.fetchone()
