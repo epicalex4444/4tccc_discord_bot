@@ -42,6 +42,8 @@ for tower in towerAliases:
     for i in range(len(tower)):
         tower[i] = tower[i].lower()
 
+numTowers = len(towersNK) + 1 #1 extra for selected hero
+
 #imediate is always sent over discord
 #message may be to large to send over discord, instead done over a website
 #header is website header
@@ -383,6 +385,7 @@ def submit4tc(code, name=None, discordId=None):
 
     try:
         challengeData = get_challenge_data(code)
+        check_new_tower(challengeData)
         valid_settings(challengeData)
         towers = get_towers(challengeData)
         combosRemoved = remove4tc(towers)
@@ -430,5 +433,36 @@ def towerlb_backend():
     displayStr += '```'
     return displayStr
 
-def new_tower(cD):
-    return NotImplementedError
+#checks if there is a new tower and adds it if there is
+#4tc = NK name by default but can easily be changed in the json
+def check_new_tower(cD):
+    global numTowers
+    global towersNK
+    global towers4tc
+    global towerAliases
+    global towerNames
+
+    if numTowers == len(cD['towers']):
+        return
+    
+    i = 0
+    for t in cD['towers']:
+        if towersNK[i] != t['tower']:
+            break
+        i += 1
+
+    tower = cD['towers'][i]
+
+    towers4tc = towers4tc[:i] + [tower['tower']] + towers4tc[i + 1:]
+    towersNK = towersNK[:i] + [tower['tower']] + towersNK[i + 1:]
+    towerAliases = towerAliases[:i] + [[tower['tower'].lower()]] + towerAliases[i + 1:]
+    numTowers += 1
+
+    if tower['isHero']:
+        towerNames['heroes'][towersNK[i]]['4tc_name'] = towersNK[i]
+        towerNames['heroes'][towersNK[i]]['aliases'] = []
+    else:
+        towerNames['towers'][towersNK[i]]['4tc_name'] = towersNK[i]
+        towerNames['towers'][towersNK[i]]['aliases'] = []
+
+    json.dump(towerNames, 'towerNames.json')
