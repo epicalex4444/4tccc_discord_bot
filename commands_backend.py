@@ -66,13 +66,13 @@ def space_fill(string, length, back=True):
 #formats tower arrays in an easy way to view
 def tower_print(towers):
     temp = []
-    for i in range(len(towers)):
+    for i in range(len(towers) - 1):
         temp.append(space_fill(towers[i], 8))
+    temp.append(towers[-1])
     return '|'.join(temp)
 
 #changes any valid tower in towers to be it's default name
 def tower_alias(towers):
-    print(towerAliases)
     for i in range(len(towers)):
         for j in range(len(towerAliases)):
             if towers[i].lower() in towerAliases[j]:
