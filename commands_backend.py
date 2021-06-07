@@ -5,6 +5,7 @@ import zlib
 import sqlite3
 import time
 import random
+import queue
 
 #this url has json formated challenge data that is encrypted with zlib than base64
 challengeDataUrl = 'https://static-api.nkstatic.com/appdocs/11/es/challenges/'
@@ -42,7 +43,7 @@ for tower in towerAliases:
     for i in range(len(tower)):
         tower[i] = tower[i].lower()
 
-numTowers = len(towersNK) + 1 #1 extra for selected hero
+webpageQueue = queue.SimpleQueue()
 
 #imediate is always sent over discord
 #message may be to large to send over discord, instead done over a website
@@ -404,9 +405,11 @@ def create_webpage(header, body):
         if cursor.fetchone() == None:
             break
 
-    sqlData = (key, int(time.time()), header, body)
-    cursor.execute('INSERT INTO webpages VALUES (?, ?, ?, ?)', sqlData)
+    epoche = int(time.time())
+    cursor.execute('INSERT INTO webpages VALUES (?, ?, ?, ?)', (key, epoche, header, body))
     conn.commit()
+
+    webpageQueue.put((key, epoche))
 
     return websiteUrl + key
 
@@ -431,3 +434,21 @@ def towerlb_backend():
 
     displayStr += '```'
     return displayStr
+
+#adds existing webpages into the webpage queue
+def init_queue():
+    cursor.execute('SELECT key, epoche FROM webpages')
+    for webpage in cursor.fetchall():
+        webpageQueue.put(webpage)
+
+#continually watches and deletes webpages
+def webpage_deleter():
+    tConn = sqlite3.connect('4tccc_data.db')
+    tCursor = tConn.cursor()
+
+    while True:
+        if not webpageQueue.empty():
+            webpage = webpageQueue.get()
+            time.sleep(max(0, 86400 - (time.time() - webpage[1])))
+            tCursor.execute('DELETE FROM webpages WHERE key=?', (webpage[0],))
+            tConn.commit()

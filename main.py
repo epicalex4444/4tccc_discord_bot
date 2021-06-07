@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands, tasks
 import commands_backend as cb
+import threading
 
 #token is stored in a blank file as plain text so we don't accidentely upload it to github
 file = open('token')
@@ -32,10 +33,13 @@ async def on_command_error(ctx, error):
         return
     raise error
 
-#logs to the console when the bot is on, and sets the bot presence
+#logs to the console when the bot is on,
+#sets the bot presence, and start webpage auto deletion
 @bot.event
 async def on_ready():
     await bot.change_presence(status=discord.Status.online, activity=discord.Game("!help"))
+    cb.init_queue()
+    threading.Thread(target=cb.webpage_deleter, daemon=True).start()
     print('{} ready'.format(bot.user))
 
 #randy memes
