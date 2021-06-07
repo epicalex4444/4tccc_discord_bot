@@ -1,50 +1,54 @@
 # 4tccc_discord_bot
-if you don't know what 4tccc is go here https://www.reddit.com/r/btd6/comments/eeqcn8/reintroducing_the_4tc_community_challenge_a/  
+4 towers chimps community challenge is a challenge in which  
+you find and complete chimps with 4 or less towers,   
+to find things that haven't been done you use the !find command  
+once you have completed a challenge you must get it's challenge code  
+and submit it with the !submit command, this command also requires you  
+have a name which you can set with the !name command  
+
+### rules:
+submissions must have a challenge code  
+the challenge must be a regular chimps game  
+except that you can only have a max of 4 towers  
 
 ### invites:
 bot invite: https://discord.com/api/oauth2/authorize?client_id=790526190749745192&permissions=2048&scope=bot  
 4tccc server: https://discord.gg/Gapyp6kw3b  
 
 ### bug reports:
-open up an issue on github or message me on discord  
+open up an issue on github or message epicalex4444#5552 on discord  
 
 ### commands:
 note that * means that the parameter is optional  
 
 __help command:__  
 usage: !help \*command_name  
-using help with no parametres will give you a generalised help message  
-using with a command name will give you help using that specific command  
+shows general help message or how to use a specific command  
 
 __submit command:__  
 usage: !submit code \*name  
-used for submitting 4tccc challenge codes  
-name is only optional if you have already set an alias using the !alias command  
-tralining spaces are removed when discord messages are sent, so names can't contain them either  
+used to submit a combo, name is required if you haven't specified your name with !name  
 
 __submissions command:__  
 usage: !submissions \*name  
-with no parametres you ca see all the past submissions  
-you can include a name to see submissions only from a specific person  
+finds all submissions or submissions from name  
 
 __find command:__  
 usage: !find \*towers  
-towers represents 4 seperate tower parametres  
-you can search with 0-4 different towers  
-searching with no towers shows all of the remaining combos  
+finds all the combos remaining that have all of the specified towers  
 
-__alias command:__  
-usage: !alias name  
-this command is used so you can omit name in the submit function  
-names are stored per discord user, you can only have 1 copy of each name, so if you want to submit with an alt you will need to put your name in  
-players are able to change thier name using this command if the name they are submitting to doesn't exist or they have not submitted under thier current alias
+__name command:__  
+usage: !name name  
+used to specify an name so you don't have to use the name parameter in submit  
 
 __leaderboard command:__  
 usage: !leaderboard \*"name" \*amount  
 aliases: lb  
-using without will return the whole leaderboard  
-using with name will give you the points of a player  
-using with amount will shorten the leaderboard to amount 
+shows the leaderboard  
+
+__towerlb command:__
+usage: !towerlb  
+shows how many combos each tower has left  
 
 __bot command:__  
 usage: !bot  
