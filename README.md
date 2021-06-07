@@ -58,5 +58,7 @@ __server command:__
 usage: !server  
 shows 4tccc server invite link  
 
-commands are set to ignore things past the last arguement, but the name arguements can have spaces so anything after a name will be part of the name  
-discord has a character per message limit of 2000 so any message after that is sent as a hastebin link instead, this also keeps chats cleaner  
+### misc:
+commands are set to ignore things past the last arguement  
+name arguements can have spaces but they can't start or end with spaces because discord removes them  
+discord has a message limit of 2000 charecters so any message after that is sent as a webpage link instead  
