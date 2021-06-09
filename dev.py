@@ -150,8 +150,6 @@ def reset_remaining_combos():
             pos4 = 2
         else:
             break
-    
-    remainingCombos = [combo for combo in remainingCombos if mathematically_possible(combo)]
 
 #clears out old data
 def reset_database():
@@ -172,6 +170,9 @@ for submission in oldSubmissions:
     combosRemoved = remove4tc(towers)
     update_leaderboard(submission[0], combosRemoved)
     add_submission(submission[1], towers, combosRemoved, submission[0])
+
+#remove impossible combos, done after because of legacy combos
+remainingCombos = [combo for combo in remainingCombos if mathematically_possible(combo)]
 
 #sort leaderboard
 leaderboard.sort(reverse=True, key=lambda score: score[0])
