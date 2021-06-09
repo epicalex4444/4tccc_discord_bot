@@ -40,12 +40,12 @@ def remove4tc(towers):
 def update_leaderboard(name, combos):
     global leaderboard
     nameNotFound = True
-    for score in leaderboard:
-        if score[0] == name:
-            score[1] += combos
+    for i, score in enumerate(leaderboard):
+        if score[1] == name:
+            leaderboard[i] = (score[0] + combos, score[1])
             nameNotFound = False
     if nameNotFound:
-        leaderboard.append([name, combos])
+        leaderboard.append((combos, name))
 
 #adds a new submission
 def add_submission(code, towers, combos, name):
@@ -64,19 +64,16 @@ def mathematically_possible(towers):
     canBeat45 = False
 
     for tower in towers:
-        if tower in ['Quincy', 'Ezili', 'Sauda', 'Dart', 'Boomer', 'Bomb', 'Tack', 'Ice', 'Sniper', 'Sub', 'Bucc', 'Wizard', 'Ninja', 'Alch', 'Druid', 'Engineer']:
+        if (not canBeat6) and tower in ['Quincy', 'Ezili', 'Sauda', 'Dart', 'Boomer', 'Bomb', 'Tack', 'Ice', 'Sniper', 'Sub', 'Bucc', 'Wizard', 'Ninja', 'Alch', 'Druid', 'Engineer']:
             canBeat6 = True
-        if tower in ['Quincy', 'Obyn', 'Etienne', 'Sauda', 'Dart', 'Sniper', 'Sub', 'Bucc', 'Ace', 'Heli', 'Mortar', 'Dartling', 'Wizard', 'Ninja', 'Spac', 'Engineer']:
+        if (not canBeat24) and tower in ['Quincy', 'Gwen', 'Obyn', 'Ezili', 'Etienne', 'Sauda', 'Psi', 'Dart', 'Sniper', 'Sub', 'Bucc', 'Ace', 'Heli', 'Mortar', 'Dartling', 'Wizard', 'Ninja', 'Spac', 'Engineer']:
             canBeat24 = True
-            canBeat45 = True
-        if tower in ['Gwen', 'Ezili', 'Psi']:
-            canBeat24 = True
-        if tower == 'Village':
+        if (not canBeat45) and tower in ['Quincy', 'Obyn', 'Church', 'Brickell', 'Etienne', 'Sauda', 'Dart', 'Ice', 'Glue', 'Sniper', 'Sub', 'Bucc', 'Ace', 'Heli', 'Mortar', 'Dartling', 'Wizard', 'Super', 'Ninja', 'Spac', 'Village', 'Engineer']:
             canBeat45 = True
 
     #ice can start but there is no way for it to reach village on it's own because of whites
     #yet ice + striker and ice + brickell are cheap enough to be able to afford village
-    if 'Village' in towers:
+    if (not canBeat24) and 'Village' in towers:
         if 'Boomer' in towers or 'Tack' in towers or 'Druid' in towers or 'Alch' in towers or 'Bomb' in towers:
             canBeat24 = True
         elif 'Ice' in towers and ('Striker' in towers or 'Brickell' in towers):
@@ -85,7 +82,7 @@ def mathematically_possible(towers):
     return canBeat6 and canBeat24 and canBeat45
 
 #generates all the 4tc's and removes mathematically impossible ones 
-def reset_remanaining_combos():
+def reset_remaining_combos():
     global remainingCombos
 
     file = open('towerNames.json', 'r')
@@ -165,7 +162,7 @@ def reset_database():
     cursor.execute('DELETE FROM submissions')
     cursor.execute('DELETE FROM leaderboard')
 
-reset_remanaining_combos()
+reset_remaining_combos()
 reset_database()
 
 #loops over all the old submissions updating the leaderboard, remainingCombos and submissions
