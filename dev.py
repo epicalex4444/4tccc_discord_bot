@@ -58,16 +58,21 @@ def add_submission(code, towers, combos, name):
 
 #returns whether combo is mathematically possible meaning whether it can damage all bloons
 #by the time they come out, even if the method to do so obviosely won't work in practise
-#currently with 4 towers combos can only be mathematically impossible because they can't beat 6 or 24
 def mathematically_possible(towers):
     canBeat6 = False
     canBeat24 = False
+    canBeat45 = False
 
     for tower in towers:
         if tower in ['Quincy', 'Ezili', 'Sauda', 'Dart', 'Boomer', 'Bomb', 'Tack', 'Ice', 'Sniper', 'Sub', 'Bucc', 'Wizard', 'Ninja', 'Alch', 'Druid', 'Engineer']:
             canBeat6 = True
-        if tower in ['Quincy', 'Gwen', 'Obyn', 'Etienne', 'Ezili', 'Sauda', 'Dart', 'Sniper', 'Sub', 'Bucc', 'Ace', 'Heli', 'Mortar', 'Dartling', 'Wizard', 'Ninja', 'Spac', 'Engineer', 'Psi']:
+        if tower in ['Quincy', 'Obyn', 'Etienne', 'Sauda', 'Dart', 'Sniper', 'Sub', 'Bucc', 'Ace', 'Heli', 'Mortar', 'Dartling', 'Wizard', 'Ninja', 'Spac', 'Engineer']:
             canBeat24 = True
+            canBeat45 = True
+        if tower in ['Gwen', 'Ezili', 'Psi']:
+            canBeat24 = True
+        if tower == 'Village':
+            canBeat45 = True
 
     #ice can start but there is no way for it to reach village on it's own because of whites
     #yet ice + striker and ice + brickell are cheap enough to be able to afford village
@@ -77,7 +82,7 @@ def mathematically_possible(towers):
         elif 'Ice' in towers and ('Striker' in towers or 'Brickell' in towers):
             canBeat24 = True
 
-    return canBeat6 and canBeat24
+    return canBeat6 and canBeat24 and canBeat45
 
 #generates all the 4tc's and removes mathematically impossible ones 
 def reset_remanaining_combos():
