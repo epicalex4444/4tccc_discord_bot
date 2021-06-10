@@ -393,7 +393,7 @@ def submit4tc(code, name=None, discordId=None):
         add_submission(code, towers, combosRemoved, name)
         return discordMessage(imediate='```Submission:\nName: {}\nCode: {}\nTowers: {}\nCombos removed: {}```'.format(name, code, ', '.join(towers), combosRemoved))
     except Exception as e:
-        return str(e)
+        return discordMessage(imediate=str(e))
 
 #adds data about the webpage into the database to be used by the webpage cgi
 def create_webpage(header, body):
