@@ -382,7 +382,7 @@ def submit4tc(code, name=None, discordId=None):
     code = code.upper()
 
     if len(code) != 7 or not code.isalpha():
-        return 'Invalid Code'
+        return discordMessage(imediate='Invalid Code')
 
     try:
         challengeData = get_challenge_data(code)
