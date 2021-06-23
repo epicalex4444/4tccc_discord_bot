@@ -377,7 +377,7 @@ def submit4tc(code, name=None, discordId=None):
         try:
             name = get_name(discordId)
         except Exception as e:
-            return str(e)
+            return discordMessage(imediate=str(e))
 
     code = code.upper()
 
