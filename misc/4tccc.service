@@ -1,0 +1,13 @@
+[Unit]
+Description=4tccc discord bot
+After=network.target multi-user.target
+
+[Service]
+Type=simple
+Restart=Always
+WorkingDirectory=/home/alex/4tccc_discord_bot
+ExecStart=/usr/bin/python3 /home/alex/4tccc_discord_bot/main.py
+
+[Install]
+WantedBy=multi-user.target
+
