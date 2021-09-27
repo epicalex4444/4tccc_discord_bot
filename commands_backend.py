@@ -10,7 +10,7 @@ import queue
 #this url has json formated challenge data that is encrypted with zlib than base64
 challengeDataUrl = 'https://static-api.nkstatic.com/appdocs/11/es/challenges/'
 
-websiteUrl = 'https://4tccc.mooo.com/'
+websiteUrl = 'http://4tccc.mooo.com/'
 
 conn = sqlite3.connect('4tccc_data.db')
 cursor = conn.cursor()
