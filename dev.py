@@ -66,18 +66,13 @@ def mathematically_possible(towers):
     for tower in towers:
         if (not canBeat6) and tower in ['Quincy', 'Ezili', 'Sauda', 'Dart', 'Boomer', 'Bomb', 'Tack', 'Ice', 'Sniper', 'Sub', 'Bucc', 'Wizard', 'Ninja', 'Alch', 'Druid', 'Engineer']:
             canBeat6 = True
-        if (not canBeat24) and tower in ['Quincy', 'Gwen', 'Obyn', 'Ezili', 'Etienne', 'Sauda', 'Psi', 'Dart', 'Sniper', 'Sub', 'Bucc', 'Ace', 'Heli', 'Mortar', 'Dartling', 'Wizard', 'Ninja', 'Spac', 'Engineer']:
+        if (not canBeat24) and tower in ['Quincy', 'Gwen', 'Obyn', 'Ezili', 'Etienne', 'Sauda', 'Psi', 'Dart', 'Ice', 'Sniper', 'Sub', 'Bucc', 'Ace', 'Heli', 'Mortar', 'Dartling', 'Wizard', 'Ninja', 'Spac', 'Engineer']:
             canBeat24 = True
         if (not canBeat45) and tower in ['Quincy', 'Obyn', 'Church', 'Brickell', 'Etienne', 'Sauda', 'Dart', 'Ice', 'Glue', 'Sniper', 'Sub', 'Bucc', 'Ace', 'Heli', 'Mortar', 'Dartling', 'Wizard', 'Super', 'Ninja', 'Spac', 'Village', 'Engineer']:
             canBeat45 = True
 
-    #ice can start but there is no way for it to reach village on it's own because of whites
-    #yet ice + striker and ice + brickell are cheap enough to be able to afford village
-    if (not canBeat24) and 'Village' in towers:
-        if 'Boomer' in towers or 'Tack' in towers or 'Druid' in towers or 'Alch' in towers or 'Bomb' in towers:
-            canBeat24 = True
-        elif 'Ice' in towers and ('Striker' in towers or 'Brickell' in towers):
-            canBeat24 = True
+    if (not canBeat24) and 'Village' in towers and ('Boomer' in towers or 'Tack' in towers or 'Druid' in towers or 'Alch' in towers or 'Bomb' in towers):
+        canBeat24 = True
 
     return canBeat6 and canBeat24 and canBeat45
 
