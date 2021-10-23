@@ -442,9 +442,9 @@ def threetowerlb_backend():
 
     combosDict = {}
     tlen = len(towers4tc)
-    for i in range(len-2):
-        for j in range(1, len-1):
-            for k in range(2, len):
+    for i in range(tlen-2):
+        for j in range(1, tlen-1):
+            for k in range(2, tlen):
                 combosDict[towers4tc[i]+towers4tc[j]+towers4tc[k]]
     for combo in remaningCombos:
         combosDict[combo[0]+combo[1]+combo[2]] += 1
