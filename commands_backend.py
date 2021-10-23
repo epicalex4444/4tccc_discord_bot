@@ -462,9 +462,7 @@ def threetowerlb_backend():
             displayStr += ' '
         displayStr += '|{}\n'.format(points)
 
-    displayStr += '```'
-
-    return discordMessage(message=displayStr, header='Leaderboard of 3 Tower Combos')
+    return discordMessage(message=displayStr[:-1]+ '```', header='Leaderboard of 3 Tower Combos')
 
 #adds existing webpages into the webpage queue
 def init_queue():
