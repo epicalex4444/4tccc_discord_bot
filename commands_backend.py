@@ -435,6 +435,32 @@ def towerlb_backend():
     displayStr += '```'
     return displayStr
 
+#returns message to be sent containing how many combos for each 3 tower combo
+def threetowerlb_backend():
+    cursor.execute('SELECT * FROM remaining_combos')
+    remaningCombos = cursor.fetchall()
+
+    combosDict = {}
+    tlen = len(towers4tc)
+    for i in range(len-2):
+        for j in range(1, len-1):
+            for k in range(2, len):
+                combosDict[towers4tc[i]+towers4tc[j]+towers4tc[k]]
+    for combo in remaningCombos:
+        combosDict[combo[0]+combo[1]+combo[2]] += 1
+        combosDict[combo[0]+combo[1]+combo[3]] += 1
+        combosDict[combo[0]+combo[2]+combo[3]] += 1
+        combosDict[combo[1]+combo[2]+combo[3]] += 1
+
+    displayStr = '```'
+    for tower, points in sorted(combosDict.items(), key=lambda x:x[1], reverse=True):
+        if (points == 1):
+            continue
+        displayStr += '{}:{}\n'.format(tower, points)
+
+    displayStr += '```'
+    return displayStr
+
 #adds existing webpages into the webpage queue
 def init_queue():
     cursor.execute('SELECT key, epoche FROM webpages')

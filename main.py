@@ -146,5 +146,9 @@ async def server_invite(ctx):
 @bot.command(name='towerlb', help='!towerlb', description='shows how many combos each tower has left')
 async def towerlb(ctx):
     await ctx.send(cb.towerlb_backend())
+    
+@bot.command(name='3towerlb', help='!3towerlb', description='shows how many combos each 3 tower combo has, not counting the 3 tower combos with 1')
+async def threetowerlb(ctx):
+    await ctx.send(cb.threetowerlb_backend())
 
 bot.run(token)
