@@ -435,6 +435,37 @@ def towerlb_backend():
     displayStr += '```'
     return displayStr
 
+#returns message to be sent containing how many combos for each 3 tower combo
+def threetowerlb_backend():
+    cursor.execute('SELECT * FROM remaining_combos')
+    remaningCombos = cursor.fetchall()
+
+    combosDict = {}
+    tlen = len(towers4tc)
+    for i in range(tlen - 2):
+        for j in range(1, tlen - 1):
+            for k in range(2, tlen):
+                combosDict[tower_print([towers4tc[i], towers4tc[j], towers4tc[k]])] = 0
+
+    for combo in remaningCombos:
+        combosDict[tower_print([combo[0], combo[1], combo[2]])] += 1
+        combosDict[tower_print([combo[0], combo[1], combo[3]])] += 1
+        combosDict[tower_print([combo[0], combo[2], combo[3]])] += 1
+        combosDict[tower_print([combo[1], combo[2], combo[3]])] += 1
+
+    displayStr = '```'
+    for towers, points in sorted(combosDict.items(), key=lambda x:x[1], reverse=True):
+        if points <= 1:
+            continue
+        displayStr += towers
+        for _ in range(9 - (len(towers) % 9)):
+            displayStr += ' '
+        displayStr += '|{}\n'.format(points)
+
+    displayStr += '```'
+
+    return discordMessage(message=displayStr, header='Leaderboard of 3 Tower Combos')
+
 #adds existing webpages into the webpage queue
 def init_queue():
     cursor.execute('SELECT key, epoche FROM webpages')
