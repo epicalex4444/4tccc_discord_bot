@@ -391,7 +391,7 @@ def submit4tc(code, name=None, discordId=None):
         combosRemoved = remove4tc(towers)
         update_leaderboard(name, combosRemoved)
         add_submission(code, towers, combosRemoved, name)
-        return discordMessage(imediate='```Submission:\nName: {}\nCode: {}\nTowers: {}\nCombos removed: {}```'.format(name, code, ', '.join(towers), combosRemoved))
+        return discordMessage(imediate='```Submission:\nName: {}\nCode: {}\nTowers: {}\nMap: {}\nCombos removed: {}```'.format(name, code, ', '.join(towers), challengeData['map'], combosRemoved))
     except Exception as e:
         return discordMessage(imediate=str(e))
 
