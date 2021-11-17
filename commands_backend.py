@@ -249,7 +249,10 @@ def get_name(discordId):
 #returns raw challenge data from challenge code
 def get_challenge_data(code):
     try:
-        response = requests.get(challengeDataUrl + code, timeout=10)
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0'
+        }
+        response = requests.get(challengeDataUrl + code, headers=headers, timeout=10)
         response.raise_for_status()
         return json.loads(zlib.decompress(base64.b64decode(response.text)))
     except requests.exceptions.HTTPError:
