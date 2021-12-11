@@ -309,6 +309,11 @@ def valid_settings(cD):
             errorStr += 'All camo enabled\n'
         if cD['bloonModifiers']['allRegen']:
             errorStr += 'All regrow enabled\n'
+    if cD.get('removeableCostMultiplier', None) != None: #29.0 added removeableCostMultiplyer and abilityCooldownReductionMultiplier
+        if cD['removeableCostMultiplier'] != 1:
+            errorStr += "removeable cost multiplier doesn't equal 1\n"
+        if cD['abilityCooldownReductionMultiplier'] != 1:
+            errorStr += "ability cooldown multiplier doesn't equal 1\n"
 
     if errorStr != '':
         raise Exception('```' + errorStr[:-1] + '```')
