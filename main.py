@@ -8,7 +8,7 @@ file = open('token')
 token = file.read()
 file.close()
 
-bot = commands.Bot(command_prefix='!', intents=discord.Intents(messages=True), owner_id=482762949958696980, help_command=None, case_insensitive=True)
+bot = commands.Bot(command_prefix='!', intents=discord.Intents(messages=True), owner_id=482762949958696980, help_command=None, case_insensitive=True, allowed_mentions=discord.AllowedMentions().none())
 
 #used for sending the a discordMessage object
 async def send(ctx, discordMessage):
